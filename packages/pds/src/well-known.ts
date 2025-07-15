@@ -25,5 +25,12 @@ export const createRouter = (ctx: AppContext): Router => {
     res.type('text/plain').send(did)
   })
 
+  router.get('/tls-check', async function (req, res) {
+    const _domain = req.query.domain as string
+    // 这里可以根据需要添加实际的TLS检查逻辑
+    // 目前按照要求返回success:true
+    res.json({ success: true })
+  })
+
   return router
 }

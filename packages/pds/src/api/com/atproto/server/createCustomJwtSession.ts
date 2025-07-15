@@ -1,53 +1,68 @@
 import * as plc from '@did-plc/lib'
-import { isEmailValid } from '@hapi/address'
-import { isDisposableEmail } from 'disposable-email-domains-js'
 import { DidDocument, MINUTE, check } from '@atproto/common'
 import { ExportableKeypair, Keypair, Secp256k1Keypair } from '@atproto/crypto'
 import { AtprotoData, ensureAtpDocument } from '@atproto/identity'
 import { AuthRequiredError, InvalidRequestError } from '@atproto/xrpc-server'
-import { AccountStatus } from '../../../../account-manager/account-manager'
-import { NEW_PASSWORD_MAX_LENGTH } from '../../../../account-manager/helpers/scrypt'
+import {
+  AccountStatus,
+  formatAccountStatus,
+} from '../../../../account-manager/account-manager'
+import { JwtVerifier } from '../../../../auth/jwt-verifier'
 import { AppContext } from '../../../../context'
+import { softDeleted } from '../../../../db/util'
 import { baseNormalizeAndValidate } from '../../../../handle'
 import { Server } from '../../../../lexicon'
-import { InputSchema as CreateAccountInput } from '../../../../lexicon/types/com/atproto/server/createAccount'
+import { InputSchema as CreateCustomJwtSessionInput } from '../../../../lexicon/types/com/atproto/server/createCustomJwtSession'
 import { syncEvtDataFromCommit } from '../../../../sequencer'
-import { safeResolveDidDoc } from './util'
+import { didDocForSession, safeResolveDidDoc } from './util'
 
 export default function (server: Server, ctx: AppContext) {
-  server.com.atproto.server.createAccount({
+  server.com.atproto.server.createCustomJwtSession({
     rateLimit: {
       durationMs: 5 * MINUTE,
       points: 100,
     },
-    auth: ctx.authVerifier.userServiceAuthOptional,
-    handler: async ({ input, auth, req }) => {
-      // @NOTE Until this code and the OAuthStore's `createAccount` are
-      // refactored together, any change made here must be reflected over there.
+    handler: async ({ input, req }) => {
+      const jwtVerifier = new JwtVerifier({
+        jwkEndpoint: ctx.cfg.jwksConfig?.jwksEndpoint || '',
+        jwtVerifierId: ctx.cfg.jwksConfig?.jwtVerifierId || '',
+      })
+      const decodedJwt = await jwtVerifier.verifyJwt(
+        input.body.options.id_token,
+      )
+      input.body.handle =
+        decodedJwt.verifierId.split(':')[0].replace(/^@/, '') +
+        'bs.' +
+        ctx.cfg.service.hostname // 或 decodedJwt.claims.user_id
+      const user = await ctx.accountManager.getAccount(input.body.handle)
+      if (user) {
+        const isSoftDeleted = softDeleted(user)
+        const [{ accessJwt, refreshJwt }, didDoc] = await Promise.all([
+          ctx.accountManager.createSession(user.did, null, isSoftDeleted),
+          didDocForSession(ctx, user.did),
+        ])
+        const { status, active } = formatAccountStatus(user)
+        return {
+          encoding: 'application/json',
+          body: {
+            did: user.did,
+            didDoc,
+            handle: user.handle ?? '',
+            accessJwt,
+            refreshJwt,
+            active,
+            status,
+          },
+        }
+      }
 
-      const requester = auth.credentials?.did ?? null
-      const {
-        did,
-        handle,
-        email,
-        password,
-        inviteCode,
-        signingKey,
-        plcOp,
-        deactivated,
-      } = ctx.entrywayAgent
+      const { did, handle, signingKey, plcOp, deactivated } = ctx.entrywayAgent
         ? await validateInputsForEntrywayPds(ctx, input.body)
-        : await validateInputsForLocalPds(ctx, input.body, requester)
-
-      console.log('createAccount.did:', did)
-      console.log('createAccount.handle:', handle)
-      console.log('createAccount.email:', email)
-      console.log('createAccount.password:', password)
-      console.log('createAccount.inviteCode:', inviteCode)
-      console.log('createAccount.signingKey:', signingKey)
-      console.log('createAccount.plcOp:', plcOp)
-      console.log('createAccount.deactivated:', deactivated)
-      console.log('input.body:', input.body)
+        : await validateInputsForLocalPds(
+            ctx,
+            input.body,
+            input.body.did || null,
+          )
 
       let didDoc: DidDocument | undefined
       let creds: { accessJwt: string; refreshJwt: string }
@@ -72,16 +87,15 @@ export default function (server: Server, ctx: AppContext) {
 
         didDoc = await safeResolveDidDoc(ctx, did, true)
 
-        creds = await ctx.accountManager.createAccountAndSession({
+        creds = await ctx.accountManager.createCustomJwtSession({
           did,
           handle,
-          email,
-          password,
           repoCid: commit.cid,
           repoRev: commit.rev,
-          inviteCode,
-          deactivated,
+          externalId: decodedJwt.verifierId,
+          externalProvider: 'custom_jwt',
         })
+        console.log('creds:', creds)
 
         if (!deactivated) {
           await ctx.sequencer.sequenceIdentityEvt(did, handle)
@@ -99,6 +113,8 @@ export default function (server: Server, ctx: AppContext) {
         await ctx.actorStore.destroy(did)
         throw err
       }
+      const account = await ctx.accountManager.getAccount(handle)
+      const { status, active } = formatAccountStatus(account)
 
       return {
         encoding: 'application/json',
@@ -108,6 +124,8 @@ export default function (server: Server, ctx: AppContext) {
           didDoc,
           accessJwt: creds.accessJwt,
           refreshJwt: creds.refreshJwt,
+          active,
+          status,
         },
       }
     },
@@ -116,10 +134,10 @@ export default function (server: Server, ctx: AppContext) {
 
 const validateInputsForEntrywayPds = async (
   ctx: AppContext,
-  input: CreateAccountInput,
+  input: CreateCustomJwtSessionInput,
 ) => {
   const { did, plcOp } = input
-  const handle = baseNormalizeAndValidate(input.handle)
+  const handle = baseNormalizeAndValidate(input.handle || '')
   if (!did || !input.plcOp) {
     throw new InvalidRequestError(
       'non-entryway pds requires bringing a DID and plcOp',
@@ -175,59 +193,13 @@ const validateInputsForEntrywayPds = async (
 
 const validateInputsForLocalPds = async (
   ctx: AppContext,
-  input: CreateAccountInput,
+  input: CreateCustomJwtSessionInput,
   requester: string | null,
 ) => {
-  const { email, password, inviteCode } = input
   if (input.plcOp) {
     throw new InvalidRequestError('Unsupported input: "plcOp"')
   }
 
-  if (password && password.length > NEW_PASSWORD_MAX_LENGTH) {
-    throw new InvalidRequestError(
-      `Password too long. Maximum length is ${NEW_PASSWORD_MAX_LENGTH} characters.`,
-    )
-  }
-
-  if (ctx.cfg.invites.required && !inviteCode) {
-    throw new InvalidRequestError(
-      'No invite code provided',
-      'InvalidInviteCode',
-    )
-  }
-
-  if (!email) {
-    throw new InvalidRequestError('Email is required')
-  } else if (!isEmailValid(email) || isDisposableEmail(email)) {
-    throw new InvalidRequestError(
-      'This email address is not supported, please use a different email.',
-    )
-  }
-
-  // normalize & ensure valid handle
-  const handle = await ctx.accountManager.normalizeAndValidateHandle(
-    input.handle,
-    { did: input.did },
-  )
-
-  // check that the invite code still has uses
-  if (ctx.cfg.invites.required && inviteCode) {
-    await ctx.accountManager.ensureInviteIsAvailable(inviteCode)
-  }
-
-  // check that the handle and email are available
-  const [handleAccnt, emailAcct] = await Promise.all([
-    ctx.accountManager.getAccount(handle),
-    ctx.accountManager.getAccountByEmail(email),
-  ])
-  if (handleAccnt) {
-    throw new InvalidRequestError(`Handle already taken: ${handle}`)
-  } else if (emailAcct) {
-    throw new InvalidRequestError(`Email already taken: ${email}`)
-  }
-
-  // determine the did & any plc ops we need to send
-  // if the provided did document is poorly setup, we throw
   const signingKey = await Secp256k1Keypair.create({ exportable: true })
 
   let did: string
@@ -243,17 +215,19 @@ const validateInputsForLocalPds = async (
     plcOp = null
     deactivated = true
   } else {
-    const formatted = await formatDidAndPlcOp(ctx, handle, input, signingKey)
+    const formatted = await formatDidAndPlcOp(
+      ctx,
+      input.handle || '',
+      input,
+      signingKey,
+    )
     did = formatted.did
     plcOp = formatted.plcOp
   }
 
   return {
     did,
-    handle,
-    email,
-    password,
-    inviteCode,
+    handle: input.handle || '',
     signingKey,
     plcOp,
     deactivated,
@@ -263,7 +237,7 @@ const validateInputsForLocalPds = async (
 const formatDidAndPlcOp = async (
   ctx: AppContext,
   handle: string,
-  input: CreateAccountInput,
+  input: CreateCustomJwtSessionInput,
   signingKey: Keypair,
 ): Promise<{
   did: string
@@ -274,9 +248,7 @@ const formatDidAndPlcOp = async (
   if (ctx.cfg.identity.recoveryDidKey) {
     rotationKeys.unshift(ctx.cfg.identity.recoveryDidKey)
   }
-  if (input.recoveryKey) {
-    rotationKeys.unshift(input.recoveryKey)
-  }
+
   const plcCreate = await plc.createOp({
     signingKey: signingKey.did(),
     rotationKeys,

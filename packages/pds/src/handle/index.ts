@@ -31,6 +31,16 @@ export const ensureHandleServiceConstraints = (
   const supportedDomain =
     availableUserDomains.find((domain) => handle.endsWith(domain)) ?? ''
   const front = handle.slice(0, handle.length - supportedDomain.length)
+  // 新增：禁止以bs.<hostname>为前缀的handle被普通用户注册
+  for (const domain of availableUserDomains) {
+    const reservedPrefix = `bs.${domain}`
+    if (handle.endsWith(domain) && handle.startsWith(reservedPrefix)) {
+      throw new InvalidRequestError(
+        `Handles starting with 'bs.' + hostname are reserved for system use`,
+        'HandleNotAvailable',
+      )
+    }
+  }
   if (front.includes('.')) {
     throw new InvalidRequestError(
       'Invalid characters in handle',

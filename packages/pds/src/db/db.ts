@@ -28,6 +28,7 @@ export class Database<Schema> {
     location: string,
     opts?: { pragmas?: Record<string, string> },
   ): Database<T> {
+    console.log('location:', location)
     const sqliteDb = new SqliteDB(location, {
       timeout: 0, // handled by application
     })

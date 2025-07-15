@@ -19,6 +19,7 @@ import { AccountStatus, ActorAccount } from './helpers/account'
 import * as auth from './helpers/auth'
 import * as emailToken from './helpers/email-token'
 import * as invite from './helpers/invite'
+import * as ActorJwtLogin from './helpers/jwt-login'
 import * as password from './helpers/password'
 import * as repo from './helpers/repo'
 import * as scrypt from './helpers/scrypt'
@@ -75,6 +76,19 @@ export class AccountManager {
     flags?: account.AvailabilityFlags,
   ): Promise<ActorAccount | null> {
     return account.getAccountByEmail(this.db, email, flags)
+  }
+
+  async getAccountByJwt(
+    externalId: string,
+    externalProvider: string,
+  ): Promise<ActorAccount | null> {
+    const entry = await ActorJwtLogin.findJwtLogin(
+      this.db,
+      externalId,
+      externalProvider,
+    )
+    if (!entry) return null
+    return account.getAccount(this.db, entry.did)
   }
 
   async isAccountActivated(did: string): Promise<boolean> {
@@ -149,6 +163,52 @@ export class AccountManager {
     }
 
     return normalized
+  }
+
+  // 在 AccountManager 类中添加新方法
+  async createCustomJwtSession(opts: {
+    did: string
+    handle?: string
+    repoCid: CID
+    repoRev: string
+    externalId: string
+    externalProvider: string
+  }) {
+    const entry = await ActorJwtLogin.findJwtLogin(
+      this.db,
+      opts.externalId,
+      opts.externalProvider,
+    )
+    if (!entry) {
+      await ActorJwtLogin.createJwtLogin(
+        this.db,
+        opts.did,
+        opts.externalId,
+        opts.externalProvider,
+      )
+    }
+
+    const existingAccount = await this.getAccount(opts.did, {
+      includeDeactivated: true,
+      includeTakenDown: true,
+    })
+
+    if (existingAccount) {
+      return await this.createSession(opts.did, null, false)
+    } else {
+      if (!opts.handle || !opts.repoCid || !opts.repoRev) {
+        throw new InvalidRequestError(
+          'New user requires handle, repoCid, and repoRev',
+        )
+      }
+
+      return await this.createAccountAndSession({
+        did: opts.did,
+        handle: opts.handle,
+        repoCid: opts.repoCid,
+        repoRev: opts.repoRev,
+      })
+    }
   }
 
   async createAccount({
