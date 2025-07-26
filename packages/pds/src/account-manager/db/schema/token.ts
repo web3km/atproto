@@ -10,7 +10,7 @@ import {
   RefreshToken,
   Sub,
   TokenId,
-} from '@atproto/oauth-provider'
+} from '@bluesky-social/oauth-provider'
 import { DateISO, JsonEncoded } from '../../../db/cast'
 
 export interface Token {

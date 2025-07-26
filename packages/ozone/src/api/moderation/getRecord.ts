@@ -1,5 +1,5 @@
-import { AtUri } from '@atproto/syntax'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { AtUri } from '@bluesky-social/syntax'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../context'
 import { Server } from '../../lexicon'
 import { addAccountInfoToRepoView, getPdsAccountInfos } from '../util'

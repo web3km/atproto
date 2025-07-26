@@ -3,11 +3,11 @@ import {
   Did,
   DidDocument,
   DidService,
-} from '@atproto/did'
+} from '@bluesky-social/did'
 import {
   OAuthAuthorizationServerMetadata,
   oauthIssuerIdentifierSchema,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import {
   IdentityInfo,
   IdentityResolver,

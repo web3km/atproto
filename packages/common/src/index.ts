@@ -1,4 +1,4 @@
-export * from '@atproto/common-web'
+export * from '@bluesky-social/common-web'
 export * from './buffers'
 export * from './dates'
 export * from './env'

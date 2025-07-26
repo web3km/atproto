@@ -1,5 +1,5 @@
-import { AtpAgent } from '@atproto/api'
-import { mapDefined } from '@atproto/common'
+import { AtpAgent } from '@bluesky-social/api'
+import { mapDefined } from '@bluesky-social/common'
 import { AppContext } from '../../../../context'
 import { DataPlaneClient } from '../../../../data-plane'
 import { HydrateCtx, Hydrator } from '../../../../hydration/hydrator'

@@ -1,7 +1,7 @@
 import assert from 'node:assert'
 import { AddressInfo } from 'node:net'
-import { getPdsEndpoint, isValidDidDoc } from '@atproto/common-web'
-import { TestNetworkNoAppView } from '@atproto/dev-env'
+import { getPdsEndpoint, isValidDidDoc } from '@bluesky-social/common-web'
+import { TestNetworkNoAppView } from '@bluesky-social/dev-env'
 import {
   AtpAgent,
   AtpSessionData,

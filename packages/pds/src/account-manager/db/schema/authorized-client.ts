@@ -1,5 +1,5 @@
 import { Selectable } from 'kysely'
-import { AuthorizedClientData, OAuthClientId } from '@atproto/oauth-provider'
+import { AuthorizedClientData, OAuthClientId } from '@bluesky-social/oauth-provider'
 import { DateISO, JsonEncoded } from '../../../db'
 
 export interface AuthorizedClient {

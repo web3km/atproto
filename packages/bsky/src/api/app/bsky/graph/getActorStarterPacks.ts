@@ -1,5 +1,5 @@
-import { mapDefined } from '@atproto/common'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { mapDefined } from '@bluesky-social/common'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import { DataPlaneClient } from '../../../../data-plane'
 import { HydrateCtx, Hydrator } from '../../../../hydration/hydrator'

@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/bsync",
+  "name": "@bluesky-social/bsync",
   "version": "0.0.20",
   "license": "MIT",
   "description": "Sychronizing service for app.bsky App View (Bluesky API)",
@@ -28,8 +28,8 @@
     "node": ">=18.7.0"
   },
   "dependencies": {
-    "@atproto/common": "workspace:^",
-    "@atproto/syntax": "workspace:^",
+    "@bluesky-social/common": "workspace:^",
+    "@bluesky-social/syntax": "workspace:^",
     "@bufbuild/protobuf": "^1.5.0",
     "@connectrpc/connect": "^1.1.4",
     "@connectrpc/connect-node": "^1.1.4",

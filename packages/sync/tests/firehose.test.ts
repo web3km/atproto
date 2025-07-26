@@ -1,10 +1,10 @@
-import { createDeferrable, wait } from '@atproto/common'
+import { createDeferrable, wait } from '@bluesky-social/common'
 import {
   SeedClient,
   TestNetworkNoAppView,
   mockResolvers,
-} from '@atproto/dev-env'
-import { IdResolver } from '@atproto/identity'
+} from '@bluesky-social/dev-env'
+import { IdResolver } from '@bluesky-social/identity'
 import { Firehose, FirehoseOptions, MemoryRunner } from '../src'
 import { Create, Event } from '../src/events'
 

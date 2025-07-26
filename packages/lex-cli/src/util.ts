@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import { join } from 'node:path'
 import chalk from 'chalk'
 import { ZodError, type ZodFormattedError } from 'zod'
-import { type LexiconDoc, parseLexiconDoc } from '@atproto/lexicon'
+import { type LexiconDoc, parseLexiconDoc } from '@bluesky-social/lexicon'
 import { type FileDiff, type GeneratedAPI } from './types'
 
 export function readAllLexicons(paths: string[]): LexiconDoc[] {

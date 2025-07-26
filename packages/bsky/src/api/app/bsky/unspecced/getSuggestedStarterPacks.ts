@@ -1,6 +1,6 @@
-import AtpAgent, { AtUri } from '@atproto/api'
-import { dedupeStrs, mapDefined, noUndefinedVals } from '@atproto/common'
-import { InternalServerError } from '@atproto/xrpc-server'
+import AtpAgent, { AtUri } from '@bluesky-social/api'
+import { dedupeStrs, mapDefined, noUndefinedVals } from '@bluesky-social/common'
+import { InternalServerError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import {
   HydrateCtx,

@@ -1,5 +1,5 @@
-import { AtprotoDid } from '@atproto/did'
-import { Key } from '@atproto/jwk'
+import { AtprotoDid } from '@bluesky-social/did'
+import { Key } from '@bluesky-social/jwk'
 import {
   CachedGetter,
   GetCachedOptions,

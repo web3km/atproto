@@ -1,7 +1,7 @@
-import { DidDocument } from '@atproto/common-web'
+import { DidDocument } from '@bluesky-social/common-web'
 
-export { didDocument } from '@atproto/common-web'
-export type { DidDocument } from '@atproto/common-web'
+export { didDocument } from '@bluesky-social/common-web'
+export type { DidDocument } from '@bluesky-social/common-web'
 
 export type IdentityResolverOpts = {
   timeout?: number

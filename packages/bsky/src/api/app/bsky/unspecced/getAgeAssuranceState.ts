@@ -1,4 +1,4 @@
-import { UpstreamFailureError } from '@atproto/xrpc-server'
+import { UpstreamFailureError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import { Server } from '../../../../lexicon'
 import { ActorInfo } from '../../../../proto/bsky_pb'

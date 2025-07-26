@@ -1,4 +1,4 @@
-import { AtUri } from '@atproto/syntax'
+import { AtUri } from '@bluesky-social/syntax'
 import { DataPlaneClient } from '../data-plane/client'
 import { ids } from '../lexicon/lexicons'
 import { Record as LabelerRecord } from '../lexicon/types/app/bsky/labeler/service'

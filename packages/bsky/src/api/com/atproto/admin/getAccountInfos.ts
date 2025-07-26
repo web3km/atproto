@@ -1,5 +1,5 @@
-import { mapDefined } from '@atproto/common'
-import { INVALID_HANDLE } from '@atproto/syntax'
+import { mapDefined } from '@bluesky-social/common'
+import { INVALID_HANDLE } from '@bluesky-social/syntax'
 import { AppContext } from '../../../../context'
 import { Server } from '../../../../lexicon'
 

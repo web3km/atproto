@@ -18,7 +18,7 @@ const {
   BunnyInvalidator,
   CloudfrontInvalidator,
   MultiImageInvalidator,
-} = require('@atproto/aws')
+} = require('@bluesky-social/aws')
 const {
   Database,
   OzoneService,
@@ -26,7 +26,7 @@ const {
   envToSecrets,
   httpLogger,
   readEnv,
-} = require('@atproto/ozone')
+} = require('@bluesky-social/ozone')
 
 const main = async () => {
   const env = readEnv()

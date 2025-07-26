@@ -1,13 +1,13 @@
 import { sql } from 'kysely'
 import { CID } from 'multiformats/cid'
-import { chunkArray } from '@atproto/common'
+import { chunkArray } from '@bluesky-social/common'
 import {
   BlockMap,
   CarBlock,
   CidSet,
   ReadableBlockstore,
   writeCarStream,
-} from '@atproto/repo'
+} from '@bluesky-social/repo'
 import { countAll } from '../../db'
 import { ActorDb } from '../db'
 

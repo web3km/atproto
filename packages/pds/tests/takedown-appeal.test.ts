@@ -1,5 +1,5 @@
-import { AtpAgent, ComAtprotoModerationDefs } from '@atproto/api'
-import { SeedClient, TestNetwork } from '@atproto/dev-env'
+import { AtpAgent, ComAtprotoModerationDefs } from '@bluesky-social/api'
+import { SeedClient, TestNetwork } from '@bluesky-social/dev-env'
 import { ids } from '../src/lexicon/lexicons'
 import { forSubjectStatusSnapshot } from './_util'
 

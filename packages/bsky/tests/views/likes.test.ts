@@ -1,5 +1,5 @@
-import { AtpAgent } from '@atproto/api'
-import { SeedClient, TestNetwork, likesSeed } from '@atproto/dev-env'
+import { AtpAgent } from '@bluesky-social/api'
+import { SeedClient, TestNetwork, likesSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 import { constantDate, forSnapshot, paginateAll, stripViewer } from '../_util'
 

@@ -1,8 +1,8 @@
-import * as bsky from '@atproto/bsky'
-import * as bsync from '@atproto/bsync'
-import { ExportableKeypair, Keypair } from '@atproto/crypto'
-import * as ozone from '@atproto/ozone'
-import * as pds from '@atproto/pds'
+import * as bsky from '@bluesky-social/bsky'
+import * as bsync from '@bluesky-social/bsync'
+import { ExportableKeypair, Keypair } from '@bluesky-social/crypto'
+import * as ozone from '@bluesky-social/ozone'
+import * as pds from '@bluesky-social/pds'
 
 export type IntrospectConfig = {
   port?: number

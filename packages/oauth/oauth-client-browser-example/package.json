@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/oauth-client-browser-example",
+  "name": "@bluesky-social/oauth-client-browser-example",
   "version": "0.0.5",
   "license": "MIT",
   "description": "Example single page application app using ATPROTO OAuth",
@@ -28,11 +28,11 @@
   ],
   "devDependencies": {
     "@atproto-labs/rollup-plugin-bundle-manifest": "workspace:*",
-    "@atproto/api": "workspace:*",
-    "@atproto/oauth-client": "workspace:*",
-    "@atproto/oauth-client-browser": "workspace:*",
-    "@atproto/oauth-types": "workspace:*",
-    "@atproto/xrpc": "workspace:*",
+    "@bluesky-social/api": "workspace:*",
+    "@bluesky-social/oauth-client": "workspace:*",
+    "@bluesky-social/oauth-client-browser": "workspace:*",
+    "@bluesky-social/oauth-types": "workspace:*",
+    "@bluesky-social/xrpc": "workspace:*",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-html": "^1.0.4",
     "@rollup/plugin-json": "^6.1.0",

@@ -1,6 +1,6 @@
 import { TypeOf, z } from 'zod'
-import { atprotoDidSchema } from '@atproto/did'
-import { oauthTokenResponseSchema } from '@atproto/oauth-types'
+import { atprotoDidSchema } from '@bluesky-social/did'
+import { oauthTokenResponseSchema } from '@bluesky-social/oauth-types'
 import { SpaceSeparatedValue, includesSpaceSeparatedValue } from './util'
 
 export type AtprotoScope = SpaceSeparatedValue<'atproto'>

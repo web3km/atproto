@@ -1,16 +1,16 @@
 import { CID } from 'multiformats/cid'
 import PQueue from 'p-queue'
-import { TID } from '@atproto/common'
-import { BlobRef, LexValue, RepoRecord } from '@atproto/lexicon'
+import { TID } from '@bluesky-social/common'
+import { BlobRef, LexValue, RepoRecord } from '@bluesky-social/lexicon'
 import {
   BlockMap,
   WriteOpAction,
   getAndParseRecord,
   readCarStream,
   verifyDiff,
-} from '@atproto/repo'
-import { AtUri } from '@atproto/syntax'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+} from '@bluesky-social/repo'
+import { AtUri } from '@bluesky-social/syntax'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { ActorStoreTransactor } from '../../../../actor-store/actor-store-transactor'
 import { AppContext } from '../../../../context'
 import { Server } from '../../../../lexicon'

@@ -3,7 +3,7 @@ import {
   AuthorizedClients,
   ClientId,
   Sub,
-} from '@atproto/oauth-provider'
+} from '@bluesky-social/oauth-provider'
 import { fromJson, toDateISO, toJson } from '../../db'
 import { AccountDb } from '../db'
 

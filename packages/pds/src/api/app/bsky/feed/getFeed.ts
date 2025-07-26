@@ -1,5 +1,5 @@
-import { InvalidRequestError } from '@atproto/oauth-provider'
-import { AtUri } from '@atproto/syntax'
+import { InvalidRequestError } from '@bluesky-social/oauth-provider'
+import { AtUri } from '@bluesky-social/syntax'
 import { AppContext } from '../../../../context'
 import { Server } from '../../../../lexicon'
 import { ids } from '../../../../lexicon/lexicons'

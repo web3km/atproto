@@ -32,8 +32,8 @@
     }
   },
   "dependencies": {
-    "@atproto/xrpc": "workspace:^",
-    "@atproto/xrpc-server": "workspace:^"
+    "@bluesky-social/xrpc": "workspace:^",
+    "@bluesky-social/xrpc-server": "workspace:^"
   },
   "devDependencies": {
     "typescript": "^5.6.3"

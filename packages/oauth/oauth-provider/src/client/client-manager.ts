@@ -1,4 +1,4 @@
-import { Jwks, Keyset, jwksSchema } from '@atproto/jwk'
+import { Jwks, Keyset, jwksSchema } from '@bluesky-social/jwk'
 import {
   OAuthAuthorizationServerMetadata,
   OAuthClientIdDiscoverable,
@@ -9,7 +9,7 @@ import {
   isOAuthClientIdDiscoverable,
   isOAuthClientIdLoopback,
   oauthClientMetadataSchema,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import {
   Fetch,
   bindFetch,

@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/sync",
+  "name": "@bluesky-social/sync",
   "version": "0.1.29",
   "license": "MIT",
   "description": "atproto sync library",
@@ -25,12 +25,12 @@
     "test": "../dev-infra/with-test-redis-and-db.sh jest"
   },
   "dependencies": {
-    "@atproto/common": "workspace:^",
-    "@atproto/identity": "workspace:^",
-    "@atproto/lexicon": "workspace:^",
-    "@atproto/repo": "workspace:^",
-    "@atproto/syntax": "workspace:^",
-    "@atproto/xrpc-server": "workspace:^",
+    "@bluesky-social/common": "workspace:^",
+    "@bluesky-social/identity": "workspace:^",
+    "@bluesky-social/lexicon": "workspace:^",
+    "@bluesky-social/repo": "workspace:^",
+    "@bluesky-social/syntax": "workspace:^",
+    "@bluesky-social/xrpc-server": "workspace:^",
     "multiformats": "^9.9.0",
     "p-queue": "^6.6.2",
     "ws": "^8.12.0"

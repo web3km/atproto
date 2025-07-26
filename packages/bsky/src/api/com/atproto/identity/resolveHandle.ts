@@ -1,5 +1,5 @@
-import * as ident from '@atproto/syntax'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import * as ident from '@bluesky-social/syntax'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import { Server } from '../../../../lexicon'
 

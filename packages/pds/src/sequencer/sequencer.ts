@@ -1,6 +1,6 @@
 import EventEmitter from 'node:events'
 import TypedEmitter from 'typed-emitter'
-import { SECOND, cborDecode, wait } from '@atproto/common'
+import { SECOND, cborDecode, wait } from '@bluesky-social/common'
 import { AccountStatus } from '../account-manager/helpers/account'
 import { Crawlers } from '../crawlers'
 import { seqLogger as log } from '../logger'

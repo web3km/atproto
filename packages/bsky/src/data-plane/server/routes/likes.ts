@@ -1,6 +1,6 @@
 import assert from 'node:assert'
 import { ServiceImpl } from '@connectrpc/connect'
-import { keyBy } from '@atproto/common'
+import { keyBy } from '@bluesky-social/common'
 import { Service } from '../../../proto/bsky_connect'
 import { Database } from '../db'
 import { TimeCidKeyset, paginate } from '../db/pagination'

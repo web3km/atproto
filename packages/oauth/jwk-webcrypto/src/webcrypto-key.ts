@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { JwkError, jwkSchema } from '@atproto/jwk'
-import { GenerateKeyPairOptions, JoseKey } from '@atproto/jwk-jose'
+import { JwkError, jwkSchema } from '@bluesky-social/jwk'
+import { GenerateKeyPairOptions, JoseKey } from '@bluesky-social/jwk-jose'
 import { fromSubtleAlgorithm, isCryptoKeyPair } from './util.js'
 
 // Webcrypto keys are bound to a single algorithm

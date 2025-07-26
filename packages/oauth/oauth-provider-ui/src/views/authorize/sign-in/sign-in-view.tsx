@@ -1,6 +1,6 @@
 import { Trans, useLingui } from '@lingui/react/macro'
 import { ReactNode, useCallback, useEffect, useMemo, useState } from 'react'
-import type { Session } from '@atproto/oauth-provider-api'
+import type { Session } from '@bluesky-social/oauth-provider-api'
 import {
   LayoutTitlePage,
   LayoutTitlePageProps,

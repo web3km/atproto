@@ -1,5 +1,5 @@
-import { streamToBuffer } from '@atproto/common'
-import * as crypto from '@atproto/crypto'
+import { streamToBuffer } from '@bluesky-social/common'
+import * as crypto from '@bluesky-social/crypto'
 import {
   CidSet,
   Repo,

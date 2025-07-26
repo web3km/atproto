@@ -1,4 +1,4 @@
-import { dedupeStrs, mapDefined } from '@atproto/common'
+import { dedupeStrs, mapDefined } from '@bluesky-social/common'
 import { AppContext } from '../../../../context'
 import {
   HydrateCtx,

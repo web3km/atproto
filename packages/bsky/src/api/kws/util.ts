@@ -1,6 +1,6 @@
 import crypto from 'node:crypto'
 import express from 'express'
-import { TID } from '@atproto/common'
+import { TID } from '@bluesky-social/common'
 import { AppContext } from '../../context'
 import {
   AgeAssuranceEvent,

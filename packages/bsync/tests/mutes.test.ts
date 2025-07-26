@@ -1,6 +1,6 @@
 import { Code, ConnectError } from '@connectrpc/connect'
 import getPort from 'get-port'
-import { wait } from '@atproto/common'
+import { wait } from '@bluesky-social/common'
 import {
   BsyncClient,
   BsyncService,

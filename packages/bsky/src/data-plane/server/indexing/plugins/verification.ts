@@ -1,6 +1,6 @@
 import { Selectable } from 'kysely'
 import { CID } from 'multiformats/cid'
-import { AtUri, normalizeDatetimeAlways } from '@atproto/syntax'
+import { AtUri, normalizeDatetimeAlways } from '@bluesky-social/syntax'
 import * as lex from '../../../../lexicon/lexicons'
 import * as Verification from '../../../../lexicon/types/app/bsky/graph/verification'
 import { BackgroundQueue } from '../../background'

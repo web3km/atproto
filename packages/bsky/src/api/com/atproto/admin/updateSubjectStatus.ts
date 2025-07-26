@@ -1,5 +1,5 @@
 import { Timestamp } from '@bufbuild/protobuf'
-import { AuthRequiredError, InvalidRequestError } from '@atproto/xrpc-server'
+import { AuthRequiredError, InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import { Server } from '../../../../lexicon'
 import {

@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/common",
+  "name": "@bluesky-social/common",
   "version": "0.4.11",
   "license": "MIT",
   "description": "Shared web-platform-friendly code for atproto libraries",
@@ -22,7 +22,7 @@
     "node": ">=18.7.0"
   },
   "dependencies": {
-    "@atproto/common-web": "workspace:^",
+    "@bluesky-social/common-web": "workspace:^",
     "@ipld/dag-cbor": "^7.0.3",
     "cbor-x": "^1.5.1",
     "iso-datestring-validator": "^2.2.2",

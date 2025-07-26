@@ -1,4 +1,4 @@
-import { Key, Keyset } from '@atproto/jwk'
+import { Key, Keyset } from '@bluesky-social/jwk'
 import {
   OAuthAuthorizationRequestParameters,
   OAuthClientIdDiscoverable,
@@ -6,7 +6,7 @@ import {
   OAuthClientMetadataInput,
   OAuthResponseMode,
   oauthClientMetadataSchema,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import {
   AtprotoDid,
   DidCache,

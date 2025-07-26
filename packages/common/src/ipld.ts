@@ -6,7 +6,7 @@ import * as Block from 'multiformats/block'
 import { CID } from 'multiformats/cid'
 import * as rawCodec from 'multiformats/codecs/raw'
 import { sha256 } from 'multiformats/hashes/sha2'
-import { check, schema } from '@atproto/common-web'
+import { check, schema } from '@bluesky-social/common-web'
 
 export const cborEncode = cborCodec.encode
 export const cborDecode = cborCodec.decode

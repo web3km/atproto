@@ -1,4 +1,4 @@
-import { Keypair } from '@atproto/crypto'
+import { Keypair } from '@bluesky-social/crypto'
 import { ActorStoreResources } from './actor-store-resources'
 import { ActorStoreTransactor } from './actor-store-transactor'
 import { ActorDb } from './db'

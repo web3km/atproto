@@ -1,5 +1,5 @@
-import { HOUR, MINUTE, mapDefined } from '@atproto/common'
-import { AtUri, INVALID_HANDLE, normalizeDatetimeAlways } from '@atproto/syntax'
+import { HOUR, MINUTE, mapDefined } from '@bluesky-social/common'
+import { AtUri, INVALID_HANDLE, normalizeDatetimeAlways } from '@bluesky-social/syntax'
 import { Actor, ProfileViewerState } from '../hydration/actor'
 import { FeedItem, Like, Post, Repost } from '../hydration/feed'
 import { Follow, Verification } from '../hydration/graph'

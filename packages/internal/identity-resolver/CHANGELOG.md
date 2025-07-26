@@ -65,14 +65,14 @@
 ### Patch Changes
 
 - Updated dependencies [[`670b6b5de`](https://github.com/bluesky-social/atproto/commit/670b6b5de2bf91e6944761c98eb1126fb6a681ee)]:
-  - @atproto/syntax@0.4.0
+  - @bluesky-social/syntax@0.4.0
 
 ## 0.1.14
 
 ### Patch Changes
 
 - Updated dependencies [[`850e39843`](https://github.com/bluesky-social/atproto/commit/850e39843cb0ec9ea716675f7568c0c601f45e29)]:
-  - @atproto/syntax@0.3.4
+  - @bluesky-social/syntax@0.3.4
   - @atproto-labs/did-resolver@0.1.11
 
 ## 0.1.13
@@ -80,7 +80,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`c53d943c8`](https://github.com/bluesky-social/atproto/commit/c53d943c8be5b8886254e020970a68c0f745b14c)]:
-  - @atproto/syntax@0.3.3
+  - @bluesky-social/syntax@0.3.3
 
 ## 0.1.12
 
@@ -91,7 +91,7 @@
 - Updated dependencies [[`61dc0d60e`](https://github.com/bluesky-social/atproto/commit/61dc0d60e19b88c6427a54c6d95a391b5f4da7bd)]:
   - @atproto-labs/handle-resolver@0.1.7
   - @atproto-labs/did-resolver@0.1.10
-  - @atproto/syntax@0.3.2
+  - @bluesky-social/syntax@0.3.2
 
 ## 0.1.11
 
@@ -134,7 +134,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`bac9be2d3`](https://github.com/bluesky-social/atproto/commit/bac9be2d3ec904d1f984a871f43cf89aca17289d)]:
-  - @atproto/syntax@0.3.1
+  - @bluesky-social/syntax@0.3.1
 
 ## 0.1.5
 

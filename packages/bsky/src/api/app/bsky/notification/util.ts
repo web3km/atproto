@@ -1,4 +1,4 @@
-import { Un$Typed } from '@atproto/api'
+import { Un$Typed } from '@bluesky-social/api'
 import {
   ChatPreference,
   FilterablePreference,

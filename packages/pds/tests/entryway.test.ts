@@ -5,11 +5,11 @@ import * as plcLib from '@did-plc/lib'
 import getPort from 'get-port'
 import { decodeJwt } from 'jose'
 import * as ui8 from 'uint8arrays'
-import { AtpAgent } from '@atproto/api'
-import { Secp256k1Keypair, randomStr } from '@atproto/crypto'
-import { SeedClient, TestPds, TestPlc, mockResolvers } from '@atproto/dev-env'
-import * as pdsEntryway from '@atproto/pds-entryway'
-import { parseReqNsid } from '@atproto/xrpc-server'
+import { AtpAgent } from '@bluesky-social/api'
+import { Secp256k1Keypair, randomStr } from '@bluesky-social/crypto'
+import { SeedClient, TestPds, TestPlc, mockResolvers } from '@bluesky-social/dev-env'
+import * as pdsEntryway from '@bluesky-social/pds-entryway'
+import { parseReqNsid } from '@bluesky-social/xrpc-server'
 
 describe('entryway', () => {
   let plc: TestPlc

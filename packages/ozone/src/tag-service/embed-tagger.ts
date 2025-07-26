@@ -4,7 +4,7 @@ import {
   AppBskyEmbedRecordWithMedia,
   AppBskyEmbedVideo,
   AppBskyFeedPost,
-} from '@atproto/api'
+} from '@bluesky-social/api'
 import { ids } from '../lexicon/lexicons'
 import { langLogger as log } from '../logger'
 import { ContentTagger } from './content-tagger'

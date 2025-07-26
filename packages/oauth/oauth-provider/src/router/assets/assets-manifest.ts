@@ -29,7 +29,7 @@ type Asset =
       stream: () => Readable
     }
 
-const ASSETS_URL_PREFIX = '/@atproto/oauth-provider/~assets/'
+const ASSETS_URL_PREFIX = '/@bluesky-social/oauth-provider/~assets/'
 
 export function parseAssetsManifest(manifestPath: string) {
   // Using `require` instead of `JSON.parse(readFileSync())` so that node's

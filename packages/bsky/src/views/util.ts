@@ -1,5 +1,5 @@
 import * as util from 'node:util'
-import { BlobRef } from '@atproto/lexicon'
+import { BlobRef } from '@bluesky-social/lexicon'
 import { Record as PostRecord } from '../lexicon/types/app/bsky/feed/post'
 import {
   Record as PostgateRecord,

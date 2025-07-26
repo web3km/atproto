@@ -1,5 +1,5 @@
-import { AtUri, INVALID_HANDLE } from '@atproto/syntax'
-import { createServiceAuthHeaders } from '@atproto/xrpc-server'
+import { AtUri, INVALID_HANDLE } from '@bluesky-social/syntax'
+import { createServiceAuthHeaders } from '@bluesky-social/xrpc-server'
 import { AccountManager } from '../account-manager/account-manager'
 import { ActorStoreReader } from '../actor-store/actor-store-reader'
 import { BskyAppView } from '../bsky-app-view'

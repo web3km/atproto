@@ -1,8 +1,8 @@
 import * as cbor from '@ipld/dag-cbor'
-import { TID, cborDecode, check, cidForCbor, schema } from '@atproto/common'
-import * as crypto from '@atproto/crypto'
-import { Keypair } from '@atproto/crypto'
-import { LexValue, RepoRecord, ipldToLex, lexToIpld } from '@atproto/lexicon'
+import { TID, cborDecode, check, cidForCbor, schema } from '@bluesky-social/common'
+import * as crypto from '@bluesky-social/crypto'
+import { Keypair } from '@bluesky-social/crypto'
+import { LexValue, RepoRecord, ipldToLex, lexToIpld } from '@bluesky-social/lexicon'
 import { DataDiff } from './data-diff'
 import {
   Commit,

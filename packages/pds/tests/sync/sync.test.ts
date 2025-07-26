@@ -1,11 +1,11 @@
 import { CID } from 'multiformats/cid'
-import { AtpAgent } from '@atproto/api'
-import { TID, cidForCbor } from '@atproto/common'
-import { Keypair, randomStr } from '@atproto/crypto'
-import { SeedClient, TestNetworkNoAppView } from '@atproto/dev-env'
-import * as repo from '@atproto/repo'
-import { MemoryBlockstore } from '@atproto/repo'
-import { AtUri } from '@atproto/syntax'
+import { AtpAgent } from '@bluesky-social/api'
+import { TID, cidForCbor } from '@bluesky-social/common'
+import { Keypair, randomStr } from '@bluesky-social/crypto'
+import { SeedClient, TestNetworkNoAppView } from '@bluesky-social/dev-env'
+import * as repo from '@bluesky-social/repo'
+import { MemoryBlockstore } from '@bluesky-social/repo'
+import { AtUri } from '@bluesky-social/syntax'
 
 describe('repo sync', () => {
   let network: TestNetworkNoAppView

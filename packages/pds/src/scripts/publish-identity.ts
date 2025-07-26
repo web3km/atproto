@@ -1,5 +1,5 @@
 import fs from 'node:fs/promises'
-import { wait } from '@atproto/common'
+import { wait } from '@bluesky-social/common'
 import { Sequencer } from '../sequencer'
 import { parseIntArg } from './util'
 

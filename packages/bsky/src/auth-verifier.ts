@@ -3,14 +3,14 @@ import express from 'express'
 import * as jose from 'jose'
 import KeyEncoder from 'key-encoder'
 import * as ui8 from 'uint8arrays'
-import { SECP256K1_JWT_ALG, parseDidKey } from '@atproto/crypto'
+import { SECP256K1_JWT_ALG, parseDidKey } from '@bluesky-social/crypto'
 import {
   AuthRequiredError,
   VerifySignatureWithKeyFn,
   cryptoVerifySignatureWithKey,
   parseReqNsid,
   verifyJwt as verifyServiceJwt,
-} from '@atproto/xrpc-server'
+} from '@bluesky-social/xrpc-server'
 import {
   Code,
   DataPlaneClient,

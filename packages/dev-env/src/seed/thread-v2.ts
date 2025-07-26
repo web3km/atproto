@@ -1,5 +1,5 @@
-import { AppBskyFeedPost } from '@atproto/api'
-import type { DatabaseSchema } from '@atproto/bsky'
+import { AppBskyFeedPost } from '@bluesky-social/api'
+import type { DatabaseSchema } from '@bluesky-social/bsky'
 import { TestNetwork } from '../network'
 import { TestNetworkNoAppView } from '../network-no-appview'
 import { RecordRef, SeedClient } from './client'

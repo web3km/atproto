@@ -1,5 +1,5 @@
-import { AtpAgent } from '@atproto/api'
-import { Secp256k1Keypair } from '@atproto/crypto'
+import { AtpAgent } from '@bluesky-social/api'
+import { Secp256k1Keypair } from '@bluesky-social/crypto'
 import {
   ModeratorClient,
   SeedClient,
@@ -7,7 +7,7 @@ import {
   TestOzone,
   basicSeed,
   createOzoneDid,
-} from '@atproto/dev-env'
+} from '@bluesky-social/dev-env'
 import { ids } from '../src/lexicon/lexicons'
 import { LABELER_HEADER_NAME } from '../src/util'
 

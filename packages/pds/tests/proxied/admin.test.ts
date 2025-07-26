@@ -1,5 +1,5 @@
-import { AtpAgent } from '@atproto/api'
-import { SeedClient, TestNetwork } from '@atproto/dev-env'
+import { AtpAgent } from '@bluesky-social/api'
+import { SeedClient, TestNetwork } from '@bluesky-social/dev-env'
 import { forSnapshot } from '../_util'
 import basicSeed from '../seeds/basic'
 

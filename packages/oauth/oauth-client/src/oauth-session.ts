@@ -1,5 +1,5 @@
-import { AtprotoDid } from '@atproto/did'
-import { OAuthAuthorizationServerMetadata } from '@atproto/oauth-types'
+import { AtprotoDid } from '@bluesky-social/did'
+import { OAuthAuthorizationServerMetadata } from '@bluesky-social/oauth-types'
 import { Fetch, bindFetch } from '@atproto-labs/fetch'
 import { AtprotoScope } from './atproto-token-response.js'
 import { TokenInvalidError } from './errors/token-invalid-error.js'

@@ -1,6 +1,6 @@
-import { AtpAgent } from '@atproto/api'
-import { mapDefined, noUndefinedVals } from '@atproto/common'
-import { HeadersMap } from '@atproto/xrpc'
+import { AtpAgent } from '@bluesky-social/api'
+import { mapDefined, noUndefinedVals } from '@bluesky-social/common'
+import { HeadersMap } from '@bluesky-social/xrpc'
 import { AppContext } from '../../../../context'
 import { DataPlaneClient } from '../../../../data-plane'
 import {

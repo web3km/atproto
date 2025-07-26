@@ -1,8 +1,8 @@
 import assert from 'node:assert'
 import fs from 'node:fs/promises'
-import { AppBskyEmbedExternal, AtpAgent } from '@atproto/api'
-import { HOUR, MINUTE } from '@atproto/common'
-import { SeedClient, TestNetwork, basicSeed } from '@atproto/dev-env'
+import { AppBskyEmbedExternal, AtpAgent } from '@bluesky-social/api'
+import { HOUR, MINUTE } from '@bluesky-social/common'
+import { SeedClient, TestNetwork, basicSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 import { forSnapshot, stripViewer } from '../_util'
 

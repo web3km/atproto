@@ -1,10 +1,10 @@
-import { AtpAgent } from '@atproto/api'
+import { AtpAgent } from '@bluesky-social/api'
 import {
   SeedClient,
   TestNetwork,
   basicSeed,
   usersBulkSeed,
-} from '@atproto/dev-env'
+} from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 import { forSnapshot, paginateAll } from '../_util'
 

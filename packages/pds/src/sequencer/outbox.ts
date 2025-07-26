@@ -1,5 +1,5 @@
-import { AsyncBuffer, AsyncBufferFullError } from '@atproto/common'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { AsyncBuffer, AsyncBufferFullError } from '@bluesky-social/common'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { SeqEvt, Sequencer } from '.'
 
 export type OutboxOpts = {

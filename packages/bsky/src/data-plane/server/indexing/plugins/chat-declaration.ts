@@ -1,5 +1,5 @@
 import { CID } from 'multiformats/cid'
-import { AtUri } from '@atproto/syntax'
+import { AtUri } from '@bluesky-social/syntax'
 import * as lex from '../../../../lexicon/lexicons'
 import { BackgroundQueue } from '../../background'
 import { Database } from '../../db'

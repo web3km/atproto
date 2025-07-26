@@ -1,4 +1,4 @@
-import { TestNetwork } from '@atproto/dev-env'
+import { TestNetwork } from '@bluesky-social/dev-env'
 import { ProfileAssociatedChat } from '../dist/lexicon/types/app/bsky/actor/defs'
 import { StashClient } from '../dist/stash'
 import { Namespace } from '../src/stash'

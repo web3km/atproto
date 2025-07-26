@@ -1,11 +1,11 @@
-import { DidDocument } from '@atproto/did'
-import { Key } from '@atproto/jwk'
-import { WebcryptoKey } from '@atproto/jwk-webcrypto'
-import { InternalStateData, Session, TokenSet } from '@atproto/oauth-client'
+import { DidDocument } from '@bluesky-social/did'
+import { Key } from '@bluesky-social/jwk'
+import { WebcryptoKey } from '@bluesky-social/jwk-webcrypto'
+import { InternalStateData, Session, TokenSet } from '@bluesky-social/oauth-client'
 import {
   OAuthAuthorizationServerMetadata,
   OAuthProtectedResourceMetadata,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import { ResolvedHandle } from '@atproto-labs/handle-resolver'
 import { SimpleStore, Value } from '@atproto-labs/simple-store'
 import { DB, DBObjectStore } from './indexed-db/index.js'

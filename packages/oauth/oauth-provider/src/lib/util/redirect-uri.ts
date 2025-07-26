@@ -1,4 +1,4 @@
-import { isLoopbackHost } from '@atproto/oauth-types'
+import { isLoopbackHost } from '@bluesky-social/oauth-types'
 
 /**
  *

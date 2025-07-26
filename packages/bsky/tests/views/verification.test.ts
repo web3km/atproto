@@ -1,6 +1,6 @@
 import assert from 'node:assert'
-import { AtpAgent } from '@atproto/api'
-import { SeedClient, TestNetwork, verificationsSeed } from '@atproto/dev-env'
+import { AtpAgent } from '@bluesky-social/api'
+import { SeedClient, TestNetwork, verificationsSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 import { VerificationState } from '../../src/lexicon/types/app/bsky/actor/defs'
 

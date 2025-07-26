@@ -1,8 +1,8 @@
 import type { CID } from 'multiformats/cid'
-import { DidDocument } from '@atproto/identity'
-import type { RepoRecord } from '@atproto/lexicon'
-import { BlockMap } from '@atproto/repo'
-import { AtUri } from '@atproto/syntax'
+import { DidDocument } from '@bluesky-social/identity'
+import type { RepoRecord } from '@bluesky-social/lexicon'
+import { BlockMap } from '@bluesky-social/repo'
+import { AtUri } from '@bluesky-social/syntax'
 
 export type Event = CommitEvt | SyncEvt | IdentityEvt | AccountEvt
 

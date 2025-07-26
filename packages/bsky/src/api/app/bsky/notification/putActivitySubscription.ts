@@ -1,5 +1,5 @@
-import { TID } from '@atproto/common'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { TID } from '@bluesky-social/common'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import { isActivitySubscriptionEnabled } from '../../../../hydration/util'
 import { Server } from '../../../../lexicon'

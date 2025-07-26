@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/oauth-provider-frontend",
+  "name": "@bluesky-social/oauth-provider-frontend",
   "version": "0.1.10",
   "license": "MIT",
   "homepage": "https://atproto.com",
@@ -25,14 +25,14 @@
     "hydration-data.d.ts"
   ],
   "optionalDependencies": {
-    "@atproto/oauth-provider-api": "workspace:*"
+    "@bluesky-social/oauth-provider-api": "workspace:*"
   },
   "devDependencies": {
     "@atproto-labs/fetch": "workspace:*",
     "@atproto-labs/rollup-plugin-bundle-manifest": "workspace:*",
-    "@atproto/oauth-provider-api": "workspace:*",
-    "@atproto/oauth-types": "workspace:*",
-    "@atproto/syntax": "workspace:*",
+    "@bluesky-social/oauth-provider-api": "workspace:*",
+    "@bluesky-social/oauth-types": "workspace:*",
+    "@bluesky-social/syntax": "workspace:*",
     "@lingui/cli": "^5.2.0",
     "@lingui/core": "^5.2.0",
     "@lingui/react": "^5.2.0",

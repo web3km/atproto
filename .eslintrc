@@ -77,7 +77,7 @@
       "rules": {
         "n/no-extraneous-import": [
           "error",
-          { "allowModules": ["@atproto/dev-env"] }
+          { "allowModules": ["@bluesky-social/dev-env"] }
         ]
       }
     }

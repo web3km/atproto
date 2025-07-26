@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { AtUri } from '@atproto/syntax'
+import { AtUri } from '@bluesky-social/syntax'
 import { AppBskyActorDefs } from './client'
 import { Nux } from './client/types/app/bsky/actor/defs'
 
@@ -84,7 +84,7 @@ export function validateSavedFeed(savedFeed: AppBskyActorDefs.SavedFeed) {
 
 export type Did = `did:${string}`
 
-// @TODO use tools from @atproto/did
+// @TODO use tools from @bluesky-social/did
 export const isDid = (str: unknown): str is Did =>
   typeof str === 'string' &&
   str.startsWith('did:') &&

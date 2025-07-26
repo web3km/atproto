@@ -2,7 +2,7 @@ import { z } from 'zod'
 import {
   oauthAuthorizationResponseErrorSchema,
   oidcAuthorizationResponseErrorSchema,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 
 export const authorizationResponseErrorSchema = z.union([
   oauthAuthorizationResponseErrorSchema,

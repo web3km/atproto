@@ -1,10 +1,10 @@
-import AtpAgent from '@atproto/api'
+import AtpAgent from '@bluesky-social/api'
 import {
   ModeratorClient,
   SeedClient,
   TestNetwork,
   basicSeed,
-} from '@atproto/dev-env'
+} from '@bluesky-social/dev-env'
 import { ids } from '../src/lexicon/lexicons'
 
 describe('expiring label', () => {

@@ -1,8 +1,8 @@
 import net from 'node:net'
-import AtpAgent from '@atproto/api'
-import { cborEncode, noUndefinedVals } from '@atproto/common'
-import { Keypair } from '@atproto/crypto'
-import { IdResolver } from '@atproto/identity'
+import AtpAgent from '@bluesky-social/api'
+import { cborEncode, noUndefinedVals } from '@bluesky-social/common'
+import { Keypair } from '@bluesky-social/crypto'
+import { IdResolver } from '@bluesky-social/identity'
 import { LabelRow } from '../db/schema/label'
 import { Label } from '../lexicon/types/com/atproto/label/defs'
 

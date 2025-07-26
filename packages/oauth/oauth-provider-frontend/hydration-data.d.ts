@@ -1,7 +1,7 @@
 import {
   ActiveDeviceSession,
   CustomizationData,
-} from '@atproto/oauth-provider-api'
+} from '@bluesky-social/oauth-provider-api'
 
 export type HydrationData = {
   'account-page': {

@@ -1,12 +1,12 @@
-import { AppBskyFeedGetFeedSkeleton, AtpAgent } from '@atproto/api'
-import { mapDefined, noUndefinedVals } from '@atproto/common'
-import { ResponseType, XRPCError } from '@atproto/xrpc'
+import { AppBskyFeedGetFeedSkeleton, AtpAgent } from '@bluesky-social/api'
+import { mapDefined, noUndefinedVals } from '@bluesky-social/common'
+import { ResponseType, XRPCError } from '@bluesky-social/xrpc'
 import {
   InvalidRequestError,
   ServerTimer,
   UpstreamFailureError,
   serverTimingHeader,
-} from '@atproto/xrpc-server'
+} from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import {
   Code,

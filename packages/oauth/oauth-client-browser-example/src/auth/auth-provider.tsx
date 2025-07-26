@@ -1,8 +1,8 @@
 'use client'
 
 import { ReactNode, createContext, useContext, useMemo } from 'react'
-import { Agent } from '@atproto/api'
-import { OAuthSession } from '@atproto/oauth-client'
+import { Agent } from '@bluesky-social/api'
+import { OAuthSession } from '@bluesky-social/oauth-client'
 import { OAuthSignIn, UseOAuthOptions, useOAuth } from './use-oauth.ts'
 
 export type AuthContextValueSignedIn = {

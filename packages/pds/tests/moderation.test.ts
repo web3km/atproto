@@ -1,7 +1,7 @@
 import assert from 'node:assert'
-import { AtpAgent } from '@atproto/api'
-import { ImageRef, SeedClient, TestNetworkNoAppView } from '@atproto/dev-env'
-import { BlobNotFoundError } from '@atproto/repo'
+import { AtpAgent } from '@bluesky-social/api'
+import { ImageRef, SeedClient, TestNetworkNoAppView } from '@bluesky-social/dev-env'
+import { BlobNotFoundError } from '@bluesky-social/repo'
 import {
   RepoBlobRef,
   RepoRef,

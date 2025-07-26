@@ -1,12 +1,12 @@
 import assert from 'node:assert'
-import { ToolsOzoneModerationDefs } from '@atproto/api'
+import { ToolsOzoneModerationDefs } from '@bluesky-social/api'
 import {
   ModeratorClient,
   SeedClient,
   TestNetwork,
   basicSeed,
-} from '@atproto/dev-env'
-import { ResponseType, XRPCError } from '@atproto/xrpc'
+} from '@bluesky-social/dev-env'
+import { ResponseType, XRPCError } from '@bluesky-social/xrpc'
 import { forSnapshot, identity } from './_util'
 
 describe('blob divert', () => {

@@ -1,4 +1,4 @@
-import { EXAMPLE_LABELER, SeedClient, TestBsky } from '@atproto/dev-env'
+import { EXAMPLE_LABELER, SeedClient, TestBsky } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 import usersSeed from './users'
 

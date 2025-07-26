@@ -1,5 +1,5 @@
-import { Jwks } from '@atproto/jwk'
-import { OAuthClientMetadata } from '@atproto/oauth-types'
+import { Jwks } from '@bluesky-social/jwk'
+import { OAuthClientMetadata } from '@bluesky-social/oauth-types'
 
 export type { OAuthClientMetadata }
 

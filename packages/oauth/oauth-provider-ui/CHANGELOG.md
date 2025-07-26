@@ -1,4 +1,4 @@
-# @atproto/oauth-provider-ui
+# @bluesky-social/oauth-provider-ui
 
 ## 0.1.11
 

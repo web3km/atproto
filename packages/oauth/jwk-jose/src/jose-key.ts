@@ -26,7 +26,7 @@ import {
   jwkValidator,
   jwtHeaderSchema,
   jwtPayloadSchema,
-} from '@atproto/jwk'
+} from '@bluesky-social/jwk'
 import { RequiredKey, either } from './util.js'
 
 const { JOSEError } = errors

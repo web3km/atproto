@@ -1,4 +1,4 @@
-import { wait } from '@atproto/common'
+import { wait } from '@bluesky-social/common'
 import { Redis } from '../src/'
 import { ReadThroughCache } from '../src/cache/read-through'
 

@@ -2,9 +2,9 @@ import { Server } from 'node:http'
 import { AddressInfo } from 'node:net'
 import { type Express } from 'express'
 import { CID } from 'multiformats/cid'
-import { AppBskyFeedGetPostThread } from '@atproto/api'
-import { lexToJson } from '@atproto/lexicon'
-import { AtUri } from '@atproto/syntax'
+import { AppBskyFeedGetPostThread } from '@bluesky-social/api'
+import { lexToJson } from '@bluesky-social/lexicon'
+import { AtUri } from '@bluesky-social/syntax'
 import {
   isView as isEmbedRecordView,
   isViewRecord,

@@ -1,5 +1,5 @@
 import { CID } from 'multiformats/cid'
-import { cidForCbor } from '@atproto/common'
+import { cidForCbor } from '@bluesky-social/common'
 import { BadPathError, ImageUriBuilder } from '../../src/image/uri'
 
 describe('image uri builder', () => {

@@ -7,8 +7,8 @@ import {
   getServiceEndpoint,
   omit,
   streamToNodeBuffer,
-} from '@atproto/common'
-import { ResponseType, XRPCError as XRPCClientError } from '@atproto/xrpc'
+} from '@bluesky-social/common'
+import { ResponseType, XRPCError as XRPCClientError } from '@bluesky-social/xrpc'
 import {
   CatchallHandler,
   HandlerPipeThroughBuffer,
@@ -17,7 +17,7 @@ import {
   InvalidRequestError,
   XRPCError as XRPCServerError,
   parseReqNsid,
-} from '@atproto/xrpc-server'
+} from '@bluesky-social/xrpc-server'
 import { buildProxiedContentEncoding } from '@atproto-labs/xrpc-utils'
 import { AppContext } from './context'
 import { ids } from './lexicon/lexicons'

@@ -1,5 +1,5 @@
 import type { IncomingMessage, ServerResponse } from 'node:http'
-import type { ActiveDeviceSession } from '@atproto/oauth-provider-api'
+import type { ActiveDeviceSession } from '@bluesky-social/oauth-provider-api'
 import { buildCustomizationCss } from '../../customization/build-customization-css.js'
 import { buildCustomizationData } from '../../customization/build-customization-data.js'
 import { Customization } from '../../customization/customization.js'

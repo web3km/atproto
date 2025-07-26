@@ -1,4 +1,4 @@
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { selectInviteCodesQb } from '../../../../account-manager/helpers/invite'
 import { AppContext } from '../../../../context'
 import {

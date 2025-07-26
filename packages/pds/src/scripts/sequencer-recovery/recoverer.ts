@@ -1,5 +1,5 @@
-import { rmIfExists } from '@atproto/common'
-import { Secp256k1Keypair } from '@atproto/crypto'
+import { rmIfExists } from '@bluesky-social/common'
+import { Secp256k1Keypair } from '@bluesky-social/crypto'
 import {
   BlockMap,
   CidSet,
@@ -8,7 +8,7 @@ import {
   cborToLexRecord,
   parseDataKey,
   readCar,
-} from '@atproto/repo'
+} from '@bluesky-social/repo'
 import {
   AccountManager,
   AccountStatus,

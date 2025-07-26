@@ -6,10 +6,10 @@ import {
   fileExists,
   readIfExists,
   rmIfExists,
-} from '@atproto/common'
-import * as crypto from '@atproto/crypto'
-import { ExportableKeypair, Keypair } from '@atproto/crypto'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+} from '@bluesky-social/common'
+import * as crypto from '@bluesky-social/crypto'
+import { ExportableKeypair, Keypair } from '@bluesky-social/crypto'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { ActorStoreConfig } from '../config'
 import { retrySqlite } from '../db'
 import { DiskBlobStore } from '../disk-blobstore'

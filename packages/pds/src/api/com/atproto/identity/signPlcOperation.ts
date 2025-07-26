@@ -1,6 +1,6 @@
 import * as plc from '@did-plc/lib'
-import { check } from '@atproto/common'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { check } from '@bluesky-social/common'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import { Server } from '../../../../lexicon'
 import { ids } from '../../../../lexicon/lexicons'

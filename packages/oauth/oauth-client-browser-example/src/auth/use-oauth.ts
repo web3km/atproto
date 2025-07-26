@@ -7,7 +7,7 @@ import {
   BrowserOAuthClientLoadOptions,
   LoginContinuedInParentWindowError,
   OAuthSession,
-} from '@atproto/oauth-client-browser'
+} from '@bluesky-social/oauth-client-browser'
 
 type Simplify<T> = { [K in keyof T]: T[K] } & NonNullable<unknown>
 

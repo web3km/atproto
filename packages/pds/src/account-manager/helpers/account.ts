@@ -1,4 +1,4 @@
-import { DAY } from '@atproto/common'
+import { DAY } from '@bluesky-social/common'
 import { isErrUniqueViolation, notSoftDeletedClause } from '../../db'
 import { StatusAttr } from '../../lexicon/types/com/atproto/admin/defs'
 import { AccountDb, ActorEntry } from '../db'

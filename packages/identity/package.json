@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/identity",
+  "name": "@bluesky-social/identity",
   "version": "0.4.8",
   "license": "MIT",
   "description": "Library for decentralized identities in atproto using DIDs and handles",
@@ -25,8 +25,8 @@
     "node": ">=18.7.0"
   },
   "dependencies": {
-    "@atproto/common-web": "workspace:^",
-    "@atproto/crypto": "workspace:^"
+    "@bluesky-social/common-web": "workspace:^",
+    "@bluesky-social/crypto": "workspace:^"
   },
   "devDependencies": {
     "@did-plc/lib": "^0.0.1",

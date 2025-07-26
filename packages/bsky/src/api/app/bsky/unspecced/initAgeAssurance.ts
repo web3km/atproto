@@ -5,7 +5,7 @@ import {
   ForbiddenError,
   InvalidRequestError,
   MethodNotImplementedError,
-} from '@atproto/xrpc-server'
+} from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import { GateID } from '../../../../feature-gates'
 import { Server } from '../../../../lexicon'

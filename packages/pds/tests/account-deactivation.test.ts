@@ -1,10 +1,10 @@
-import { AtpAgent } from '@atproto/api'
+import { AtpAgent } from '@bluesky-social/api'
 import {
   ImageRef,
   SeedClient,
   TestNetworkNoAppView,
   basicSeed,
-} from '@atproto/dev-env'
+} from '@bluesky-social/dev-env'
 
 describe('account deactivation', () => {
   let network: TestNetworkNoAppView

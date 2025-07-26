@@ -1,4 +1,4 @@
-import { AtUri } from '@atproto/syntax'
+import { AtUri } from '@bluesky-social/syntax'
 import { ids } from '../lexicon/lexicons'
 import {
   Main as StrongRef,

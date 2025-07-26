@@ -1,15 +1,15 @@
-import { Lexicons } from '@atproto/lexicon'
+import { Lexicons } from '@bluesky-social/lexicon'
 import { lexicons as internalLexicons } from './client/lexicons'
 
-export { AtUri } from '@atproto/syntax'
+export { AtUri } from '@bluesky-social/syntax'
 export {
   BlobRef,
   jsonStringToLex,
   jsonToLex,
   lexToJson,
   stringifyLex,
-} from '@atproto/lexicon'
-export { parseLanguage } from '@atproto/common-web'
+} from '@bluesky-social/lexicon'
+export { parseLanguage } from '@bluesky-social/common-web'
 export * from './types'
 export * from './const'
 export * from './util'

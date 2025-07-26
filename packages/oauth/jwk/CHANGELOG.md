@@ -1,4 +1,4 @@
-# @atproto/jwk
+# @bluesky-social/jwk
 
 ## 0.4.0
 

@@ -3,10 +3,10 @@ import {
   cborEncode,
   readFromGenerator,
   wait,
-} from '@atproto/common'
-import { randomStr } from '@atproto/crypto'
-import { SeedClient, TestNetworkNoAppView } from '@atproto/dev-env'
-import { readCarWithRoot } from '@atproto/repo'
+} from '@bluesky-social/common'
+import { randomStr } from '@bluesky-social/crypto'
+import { SeedClient, TestNetworkNoAppView } from '@bluesky-social/dev-env'
+import { readCarWithRoot } from '@bluesky-social/repo'
 import { sequencer } from '../../pds'
 import { SeqEvt, Sequencer, formatSeqSyncEvt } from '../src/sequencer'
 import { Outbox } from '../src/sequencer/outbox'

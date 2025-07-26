@@ -1,8 +1,8 @@
-# @atproto/common
+# @bluesky-social/common
 
-Shared TypeScript code for other `@atproto/*` packages. This package is oriented towards writing servers, and is not designed to be browser-compatible.
+Shared TypeScript code for other `@bluesky-social/*` packages. This package is oriented towards writing servers, and is not designed to be browser-compatible.
 
-[![NPM](https://img.shields.io/npm/v/@atproto/common)](https://www.npmjs.com/package/@atproto/common)
+[![NPM](https://img.shields.io/npm/v/@bluesky-social/common)](https://www.npmjs.com/package/@bluesky-social/common)
 [![Github CI Status](https://github.com/bluesky-social/atproto/actions/workflows/repo.yaml/badge.svg)](https://github.com/bluesky-social/atproto/actions/workflows/repo.yaml)
 
 ## License

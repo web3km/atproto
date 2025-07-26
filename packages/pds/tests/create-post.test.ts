@@ -5,8 +5,8 @@ import {
   AtpAgent,
   RichText,
   Un$Typed,
-} from '@atproto/api'
-import { SeedClient, TestNetworkNoAppView } from '@atproto/dev-env'
+} from '@bluesky-social/api'
+import { SeedClient, TestNetworkNoAppView } from '@bluesky-social/dev-env'
 import basicSeed from './seeds/basic'
 
 describe('pds posts record creation', () => {

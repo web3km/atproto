@@ -1,5 +1,5 @@
 import { createHash, randomBytes } from 'node:crypto'
-import { JoseKey } from '@atproto/jwk-jose'
+import { JoseKey } from '@bluesky-social/jwk-jose'
 import {
   HandleResolver,
   OAuthClient,
@@ -7,8 +7,8 @@ import {
   OAuthClientOptions,
   RuntimeImplementation,
   RuntimeLock,
-} from '@atproto/oauth-client'
-import { OAuthResponseMode } from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-client'
+import { OAuthResponseMode } from '@bluesky-social/oauth-types'
 import {
   AtprotoHandleResolverNode,
   AtprotoHandleResolverNodeOptions,
@@ -41,7 +41,7 @@ export type NodeOAuthClientOptions = Override<
 
     /**
      * Used to build a {@link NodeOAuthClientOptions.runtimeImplementation} if
-     * none is provided. Pass in `requestLocalLock` from `@atproto/oauth-client`
+     * none is provided. Pass in `requestLocalLock` from `@bluesky-social/oauth-client`
      * to mute warning.
      */
     requestLock?: RuntimeLock

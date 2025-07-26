@@ -1,5 +1,5 @@
-import { TID } from '@atproto/common-web'
-import { TestNetworkNoAppView } from '@atproto/dev-env'
+import { TID } from '@bluesky-social/common-web'
+import { TestNetworkNoAppView } from '@bluesky-social/dev-env'
 import {
   AppBskyActorDefs,
   AppBskyActorProfile,

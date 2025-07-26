@@ -1,7 +1,7 @@
 import assert from 'node:assert'
 import path from 'node:path'
-import { DAY, HOUR, SECOND } from '@atproto/common'
-import { BrandingInput, HcaptchaConfig } from '@atproto/oauth-provider'
+import { DAY, HOUR, SECOND } from '@bluesky-social/common'
+import { BrandingInput, HcaptchaConfig } from '@bluesky-social/oauth-provider'
 import { ServerEnvironment } from './env'
 
 // off-config but still from env:

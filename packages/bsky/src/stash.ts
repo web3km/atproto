@@ -1,4 +1,4 @@
-import { LexValue, stringifyLex } from '@atproto/lexicon'
+import { LexValue, stringifyLex } from '@bluesky-social/lexicon'
 import { BsyncClient } from './bsync'
 import { lexicons } from './lexicon/lexicons'
 import {

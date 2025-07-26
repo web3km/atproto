@@ -1,4 +1,4 @@
-# @atproto/did
+# @bluesky-social/did
 
 ## 0.1.5
 

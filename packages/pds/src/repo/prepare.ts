@@ -1,5 +1,5 @@
 import { CID } from 'multiformats/cid'
-import { TID, check, dataToCborBlock } from '@atproto/common'
+import { TID, check, dataToCborBlock } from '@bluesky-social/common'
 import {
   BlobRef,
   LexValue,
@@ -8,7 +8,7 @@ import {
   ValidationError,
   lexToIpld,
   untypedJsonBlobRef,
-} from '@atproto/lexicon'
+} from '@bluesky-social/lexicon'
 import {
   RecordCreateOp,
   RecordDeleteOp,
@@ -16,12 +16,12 @@ import {
   RecordWriteOp,
   WriteOpAction,
   cborToLex,
-} from '@atproto/repo'
+} from '@bluesky-social/repo'
 import {
   AtUri,
   ensureValidDatetime,
   ensureValidRecordKey,
-} from '@atproto/syntax'
+} from '@bluesky-social/syntax'
 import { hasExplicitSlur } from '../handle/explicit-slurs'
 import * as lex from '../lexicon/lexicons'
 import * as AppBskyActorProfile from '../lexicon/types/app/bsky/actor/profile'

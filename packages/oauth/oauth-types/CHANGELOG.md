@@ -1,4 +1,4 @@
-# @atproto/oauth-types
+# @bluesky-social/oauth-types
 
 ## 0.4.0
 
@@ -13,7 +13,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`90b4775fc`](https://github.com/bluesky-social/atproto/commit/90b4775fc9c6959171bc12b961ce9421cc14d6ee), [`90b4775fc`](https://github.com/bluesky-social/atproto/commit/90b4775fc9c6959171bc12b961ce9421cc14d6ee), [`90b4775fc`](https://github.com/bluesky-social/atproto/commit/90b4775fc9c6959171bc12b961ce9421cc14d6ee)]:
-  - @atproto/jwk@0.4.0
+  - @bluesky-social/jwk@0.4.0
 
 ## 0.3.0
 
@@ -30,7 +30,7 @@
 - [#3847](https://github.com/bluesky-social/atproto/pull/3847) [`349b59175`](https://github.com/bluesky-social/atproto/commit/349b59175e82ceb9500ae7c6a9a0b9b6aec9d1b6) Thanks [@matthieusieben](https://github.com/matthieusieben)! - Prevent using `none` as `token_endpoint_auth_signing_alg_values_supported` in authorization server metadata documents.
 
 - Updated dependencies [[`349b59175`](https://github.com/bluesky-social/atproto/commit/349b59175e82ceb9500ae7c6a9a0b9b6aec9d1b6)]:
-  - @atproto/jwk@0.3.0
+  - @bluesky-social/jwk@0.3.0
 
 ## 0.2.8
 
@@ -39,7 +39,7 @@
 - [#3919](https://github.com/bluesky-social/atproto/pull/3919) [`a3b24ca77`](https://github.com/bluesky-social/atproto/commit/a3b24ca77ca24ac19b17cf9ee2a5ca9612ccf96c) Thanks [@matthieusieben](https://github.com/matthieusieben)! - Parse JSON encoded Authorization Request Parameters
 
 - Updated dependencies [[`3fa2ee3b6`](https://github.com/bluesky-social/atproto/commit/3fa2ee3b6a382709b10921da53e69a901bccbb05)]:
-  - @atproto/jwk@0.2.0
+  - @bluesky-social/jwk@0.2.0
 
 ## 0.2.7
 
@@ -62,7 +62,7 @@
 - [#3659](https://github.com/bluesky-social/atproto/pull/3659) [`371e04aad`](https://github.com/bluesky-social/atproto/commit/371e04aad2a3e8ae3fe185ce15fc8eb051cab78e) Thanks [@matthieusieben](https://github.com/matthieusieben)! - Add `OAuthAuthenticationErrorResponse`
 
 - Updated dependencies [[`26a077716`](https://github.com/bluesky-social/atproto/commit/26a07771673bf1090a61efb7c970235f0b2509fc)]:
-  - @atproto/jwk@0.1.5
+  - @bluesky-social/jwk@0.1.5
 
 ## 0.2.4
 
@@ -71,7 +71,7 @@
 - [#2945](https://github.com/bluesky-social/atproto/pull/2945) [`850e39843`](https://github.com/bluesky-social/atproto/commit/850e39843cb0ec9ea716675f7568c0c601f45e29) Thanks [@matthieusieben](https://github.com/matthieusieben)! - Properly support locales with 3 chars (Asturian)
 
 - Updated dependencies [[`850e39843`](https://github.com/bluesky-social/atproto/commit/850e39843cb0ec9ea716675f7568c0c601f45e29)]:
-  - @atproto/jwk@0.1.4
+  - @bluesky-social/jwk@0.1.4
 
 ## 0.2.3
 
@@ -82,14 +82,14 @@
 - [#3220](https://github.com/bluesky-social/atproto/pull/3220) [`61dc0d60e`](https://github.com/bluesky-social/atproto/commit/61dc0d60e19b88c6427a54c6d95a391b5f4da7bd) Thanks [@matthieusieben](https://github.com/matthieusieben)! - Support environments not providing URL.canParse
 
 - Updated dependencies [[`61dc0d60e`](https://github.com/bluesky-social/atproto/commit/61dc0d60e19b88c6427a54c6d95a391b5f4da7bd)]:
-  - @atproto/jwk@0.1.3
+  - @bluesky-social/jwk@0.1.3
 
 ## 0.2.2
 
 ### Patch Changes
 
 - Updated dependencies [[`2889c7699`](https://github.com/bluesky-social/atproto/commit/2889c76995ce3c569f595ac3c678218e9ce659f0), [`2889c7699`](https://github.com/bluesky-social/atproto/commit/2889c76995ce3c569f595ac3c678218e9ce659f0), [`2889c7699`](https://github.com/bluesky-social/atproto/commit/2889c76995ce3c569f595ac3c678218e9ce659f0), [`2889c7699`](https://github.com/bluesky-social/atproto/commit/2889c76995ce3c569f595ac3c678218e9ce659f0)]:
-  - @atproto/jwk@0.1.2
+  - @bluesky-social/jwk@0.1.2
 
 ## 0.2.1
 
@@ -174,7 +174,7 @@
 - [#2633](https://github.com/bluesky-social/atproto/pull/2633) [`acc9093d2`](https://github.com/bluesky-social/atproto/commit/acc9093d2845eba02b68fb2f9db33e4f1b59bb10) Thanks [@matthieusieben](https://github.com/matthieusieben)! - Add client_id_metadata_document_supported in metadata
 
 - Updated dependencies [[`acc9093d2`](https://github.com/bluesky-social/atproto/commit/acc9093d2845eba02b68fb2f9db33e4f1b59bb10)]:
-  - @atproto/jwk@0.1.1
+  - @bluesky-social/jwk@0.1.1
 
 ## 0.1.0
 
@@ -185,4 +185,4 @@
 ### Patch Changes
 
 - Updated dependencies [[`a8d6c1123`](https://github.com/bluesky-social/atproto/commit/a8d6c112359f5c4c0cfbe2df63443ed275f2a646)]:
-  - @atproto/jwk@0.1.0
+  - @bluesky-social/jwk@0.1.0

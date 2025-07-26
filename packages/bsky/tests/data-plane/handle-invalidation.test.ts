@@ -1,6 +1,6 @@
-import { AtpAgent } from '@atproto/api'
-import { DAY } from '@atproto/common'
-import { SeedClient, TestNetwork, usersSeed } from '@atproto/dev-env'
+import { AtpAgent } from '@bluesky-social/api'
+import { DAY } from '@bluesky-social/common'
+import { SeedClient, TestNetwork, usersSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 
 describe('handle invalidation', () => {

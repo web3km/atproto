@@ -1,6 +1,6 @@
 import { Options as PrettierOptions, format } from 'prettier'
 import { Project, SourceFile, VariableDeclarationKind } from 'ts-morph'
-import { type LexiconDoc } from '@atproto/lexicon'
+import { type LexiconDoc } from '@bluesky-social/lexicon'
 import { type GeneratedFile } from '../types'
 
 const PRETTIER_OPTS: PrettierOptions = {
@@ -14,7 +14,7 @@ const PRETTIER_OPTS: PrettierOptions = {
 export const utilTs = (project) =>
   gen(project, '/util.ts', async (file) => {
     file.replaceWithText(`
-import { type ValidationResult } from '@atproto/lexicon'
+import { type ValidationResult } from '@bluesky-social/lexicon'
 
 export type OmitKey<T, K extends keyof T> = {
   [K2 in keyof T as K2 extends K ? never : K2]: T[K2]
@@ -141,10 +141,10 @@ export const lexiconsTs = (project, lexicons: LexiconDoc[]) =>
         .join('')
     }
 
-    //= import { type LexiconDoc, Lexicons } from '@atproto/lexicon'
+    //= import { type LexiconDoc, Lexicons } from '@bluesky-social/lexicon'
     file
       .addImportDeclaration({
-        moduleSpecifier: '@atproto/lexicon',
+        moduleSpecifier: '@bluesky-social/lexicon',
       })
       .addNamedImports([
         { name: 'LexiconDoc', isTypeOnly: true },

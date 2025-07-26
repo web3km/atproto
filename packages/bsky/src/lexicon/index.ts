@@ -8,7 +8,7 @@ import {
   type StreamConfigOrHandler,
   type MethodConfigOrHandler,
   createServer as createXrpcServer,
-} from '@atproto/xrpc-server'
+} from '@bluesky-social/xrpc-server'
 import { schemas } from './lexicons.js'
 import * as ComAtprotoAdminDeleteAccount from './types/com/atproto/admin/deleteAccount.js'
 import * as ComAtprotoAdminDisableAccountInvites from './types/com/atproto/admin/disableAccountInvites.js'

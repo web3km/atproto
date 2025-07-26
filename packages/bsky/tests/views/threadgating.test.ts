@@ -1,6 +1,6 @@
 import assert from 'node:assert'
-import { AtpAgent } from '@atproto/api'
-import { SeedClient, TestNetwork, basicSeed } from '@atproto/dev-env'
+import { AtpAgent } from '@bluesky-social/api'
+import { SeedClient, TestNetwork, basicSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 import {
   isNotFoundPost,

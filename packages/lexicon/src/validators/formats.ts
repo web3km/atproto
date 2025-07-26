@@ -1,6 +1,6 @@
 import { isValidISODateString } from 'iso-datestring-validator'
 import { CID } from 'multiformats/cid'
-import { validateLanguage } from '@atproto/common-web'
+import { validateLanguage } from '@bluesky-social/common-web'
 import {
   ensureValidAtUri,
   ensureValidDid,
@@ -8,7 +8,7 @@ import {
   ensureValidNsid,
   ensureValidRecordKey,
   isValidTid,
-} from '@atproto/syntax'
+} from '@bluesky-social/syntax'
 import { ValidationError, ValidationResult } from '../types'
 
 export function datetime(path: string, value: string): ValidationResult {

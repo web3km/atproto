@@ -12,9 +12,9 @@ import {
   AppBskyRichtextFacet,
   AtpAgent,
   ComAtprotoModerationCreateReport,
-} from '@atproto/api'
-import { BlobRef } from '@atproto/lexicon'
-import { AtUri } from '@atproto/syntax'
+} from '@bluesky-social/api'
+import { BlobRef } from '@bluesky-social/lexicon'
+import { AtUri } from '@bluesky-social/syntax'
 import { TestNetworkNoAppView } from '../network-no-appview'
 
 // Makes it simple to create data via the XRPC client,

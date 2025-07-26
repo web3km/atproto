@@ -1,5 +1,5 @@
-import { DidDocument, PoorlyFormattedDidDocumentError } from '@atproto/identity'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { DidDocument, PoorlyFormattedDidDocumentError } from '@bluesky-social/identity'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 
 // provides http-friendly errors during did resolution

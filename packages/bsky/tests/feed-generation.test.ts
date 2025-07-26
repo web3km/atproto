@@ -1,15 +1,15 @@
 import assert from 'node:assert'
-import { AtUri, AtpAgent } from '@atproto/api'
-import { TID } from '@atproto/common'
+import { AtUri, AtpAgent } from '@bluesky-social/api'
+import { TID } from '@bluesky-social/common'
 import {
   RecordRef,
   SeedClient,
   TestFeedGen,
   TestNetwork,
   basicSeed,
-} from '@atproto/dev-env'
-import { XRPCError } from '@atproto/xrpc'
-import { AuthRequiredError, MethodHandler } from '@atproto/xrpc-server'
+} from '@bluesky-social/dev-env'
+import { XRPCError } from '@bluesky-social/xrpc'
+import { AuthRequiredError, MethodHandler } from '@bluesky-social/xrpc-server'
 import { ids } from '../src/lexicon/lexicons'
 import {
   FeedViewPost,

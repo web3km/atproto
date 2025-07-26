@@ -1,4 +1,4 @@
-import { LexiconDoc, Lexicons } from '@atproto/lexicon'
+import { LexiconDoc, Lexicons } from '@bluesky-social/lexicon'
 import { CallOptions, QueryParams } from './types'
 import { combineHeaders } from './util'
 import { XrpcClient } from './xrpc-client'

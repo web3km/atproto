@@ -1,7 +1,7 @@
 import * as ui8 from 'uint8arrays'
-import * as common from '@atproto/common'
-import { MINUTE } from '@atproto/common'
-import * as crypto from '@atproto/crypto'
+import * as common from '@bluesky-social/common'
+import { MINUTE } from '@bluesky-social/common'
+import * as crypto from '@bluesky-social/crypto'
 import { AuthRequiredError } from './errors'
 
 type ServiceJwtParams = {

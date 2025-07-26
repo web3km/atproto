@@ -1,5 +1,5 @@
 import { CID } from 'multiformats/cid'
-import { RepoRecord } from '@atproto/lexicon'
+import { RepoRecord } from '@bluesky-social/lexicon'
 import { MissingBlocksError } from './error'
 import log from './logger'
 import { MST } from './mst'

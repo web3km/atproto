@@ -1,6 +1,6 @@
 import assert from 'node:assert'
-import { AppBskyFeedDefs, AtUri, AtpAgent } from '@atproto/api'
-import { SeedClient, TestNetwork, basicSeed } from '@atproto/dev-env'
+import { AppBskyFeedDefs, AtUri, AtpAgent } from '@bluesky-social/api'
+import { SeedClient, TestNetwork, basicSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 
 /**

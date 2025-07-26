@@ -1,4 +1,4 @@
-import { CLIENT_ASSERTION_TYPE_JWT_BEARER } from '@atproto/oauth-types'
+import { CLIENT_ASSERTION_TYPE_JWT_BEARER } from '@bluesky-social/oauth-types'
 
 export type ClientAuth =
   | { method: 'none' }

@@ -1,8 +1,8 @@
 import fs from 'node:fs'
 import { CID } from 'multiformats'
-import { TID, dataToCborBlock } from '@atproto/common'
-import * as crypto from '@atproto/crypto'
-import { Keypair, randomBytes } from '@atproto/crypto'
+import { TID, dataToCborBlock } from '@bluesky-social/common'
+import * as crypto from '@bluesky-social/crypto'
+import { Keypair, randomBytes } from '@bluesky-social/crypto'
 import {
   BlockMap,
   CollectionContents,

@@ -1,18 +1,18 @@
 import { CID } from 'multiformats/cid'
 import { WebSocket } from 'ws'
-import { AtpAgent } from '@atproto/api'
+import { AtpAgent } from '@bluesky-social/api'
 import {
   HOUR,
   MINUTE,
   cborDecode,
   readFromGenerator,
   wait,
-} from '@atproto/common'
-import { randomStr } from '@atproto/crypto'
-import { SeedClient, TestNetworkNoAppView } from '@atproto/dev-env'
-import * as repo from '@atproto/repo'
-import { readCar } from '@atproto/repo'
-import { ErrorFrame, Frame, MessageFrame, byFrame } from '@atproto/xrpc-server'
+} from '@bluesky-social/common'
+import { randomStr } from '@bluesky-social/crypto'
+import { SeedClient, TestNetworkNoAppView } from '@bluesky-social/dev-env'
+import * as repo from '@bluesky-social/repo'
+import { readCar } from '@bluesky-social/repo'
+import { ErrorFrame, Frame, MessageFrame, byFrame } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../src'
 import { AccountStatus } from '../../src/account-manager/account-manager'
 import {

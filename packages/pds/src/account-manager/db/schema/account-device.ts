@@ -1,4 +1,4 @@
-import { DeviceId } from '@atproto/oauth-provider'
+import { DeviceId } from '@bluesky-social/oauth-provider'
 import { DateISO } from '../../../db'
 
 export interface AccountDevice {

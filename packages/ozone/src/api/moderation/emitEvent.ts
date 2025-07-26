@@ -1,5 +1,5 @@
-import { isModEventDivert } from '@atproto/api/dist/client/types/tools/ozone/moderation/defs'
-import { AuthRequiredError, InvalidRequestError } from '@atproto/xrpc-server'
+import { isModEventDivert } from '@bluesky-social/api/dist/client/types/tools/ozone/moderation/defs'
+import { AuthRequiredError, InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AdminTokenOutput, ModeratorOutput } from '../../auth-verifier'
 import { AppContext } from '../../context'
 import { Server } from '../../lexicon'

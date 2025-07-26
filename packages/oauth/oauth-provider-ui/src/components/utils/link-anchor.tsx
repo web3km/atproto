@@ -1,5 +1,5 @@
 import { JSX } from 'react'
-import type { LinkDefinition } from '@atproto/oauth-provider-api'
+import type { LinkDefinition } from '@bluesky-social/oauth-provider-api'
 import { Override } from '../../lib/util.ts'
 import { LinkTitle } from './link-title.tsx'
 

@@ -6,7 +6,7 @@ import {
   UseDpopNonceError,
   oauthMiddleware,
   oauthProtectedResourceMetadataSchema,
-} from '@atproto/oauth-provider'
+} from '@bluesky-social/oauth-provider'
 import { AppContext } from './context.js'
 import { oauthLogger, reqSerializer } from './logger.js'
 
