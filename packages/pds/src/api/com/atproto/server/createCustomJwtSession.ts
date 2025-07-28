@@ -182,6 +182,10 @@ export default function (server: Server, ctx: AppContext) {
         creds = await ctx.accountManager.createCustomJwtSession({
           did,
           handle,
+          email:
+            decodedJwt.verifierId.split(':')[0].replace(/^@/, '') +
+            'bs@' +
+            ctx.cfg.service.hostname,
           repoCid: commit.cid,
           repoRev: commit.rev,
           externalId: decodedJwt.verifierId,

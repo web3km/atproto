@@ -1,9 +1,12 @@
 import { KeyObject } from 'node:crypto'
-import { CID } from 'multiformats/cid'
 import { HOUR, wait } from '@bluesky-social/common'
 import { IdResolver } from '@bluesky-social/identity'
 import { isValidTld } from '@bluesky-social/syntax'
-import { AuthRequiredError, InvalidRequestError } from '@bluesky-social/xrpc-server'
+import {
+  AuthRequiredError,
+  InvalidRequestError,
+} from '@bluesky-social/xrpc-server'
+import { CID } from 'multiformats/cid'
 import { AuthScope } from '../auth-verifier'
 import { softDeleted } from '../db'
 import { hasExplicitSlur } from '../handle/explicit-slurs'
@@ -169,6 +172,7 @@ export class AccountManager {
   async createCustomJwtSession(opts: {
     did: string
     handle?: string
+    email?: string
     repoCid: CID
     repoRev: string
     externalId: string
@@ -204,6 +208,7 @@ export class AccountManager {
 
       return await this.createAccountAndSession({
         did: opts.did,
+        email: opts.email,
         handle: opts.handle,
         repoCid: opts.repoCid,
         repoRev: opts.repoRev,
