@@ -56,6 +56,8 @@ export default function (server: Server, ctx: AppContext) {
         },
       )
 
+      console.log('blob:', blob)
+
       return {
         encoding: 'application/json',
         body: {
