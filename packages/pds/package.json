@@ -81,7 +81,7 @@
     "@bluesky-social/dev-env": "workspace:^",
     "@bluesky-social/lex-cli": "workspace:^",
     "@bluesky-social/oauth-client-browser-example": "workspace:*",
-    "@bluesky-social/pds-entryway": "npm:@bluesky-social/pds@0.3.0-entryway.3",
+    "@bluesky-social/pds-entryway": "npm:@bluesky-social/pds@0.4.160",
     "@did-plc/server": "^0.0.1",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",

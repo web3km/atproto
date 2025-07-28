@@ -1981,7 +1981,7 @@
   - @bluesky-social/identity@0.3.0
   - @bluesky-social/common-web@0.2.2
   - @bluesky-social/bsky@0.0.12
-  - @bluesky-social/pds@0.3.0
+  - @bluesky-social/pds@0.4.160
   - @bluesky-social/lexicon@0.2.3
   - @bluesky-social/syntax@0.1.3
   - @bluesky-social/xrpc-server@0.3.3
