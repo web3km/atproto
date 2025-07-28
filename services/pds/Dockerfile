@@ -27,6 +27,15 @@ COPY ./packages/lexicon ./packages/lexicon
 COPY ./packages/repo ./packages/repo
 COPY ./packages/xrpc ./packages/xrpc
 COPY ./packages/xrpc-server ./packages/xrpc-server
+COPY ./packages/bsky ./packages/bsky
+COPY ./packages/sync ./packages/sync
+COPY ./packages/dev-env ./packages/dev-env
+COPY ./packages/bsync ./packages/bsync
+COPY ./packages/ozone ./packages/ozone
+COPY ./packages/oauth/jwk-webcrypto  ./packages/oauth/jwk-webcrypto
+COPY ./packages/oauth/oauth-client-browser ./packages/oauth/oauth-client-browser
+COPY ./packages/oauth/oauth-client ./packages/oauth/oauth-client
+COPY ./packages/oauth/oauth-client-browser-example ./packages/oauth/oauth-client-browser-example
 COPY ./packages/oauth/jwk ./packages/oauth/jwk
 COPY ./packages/oauth/jwk-jose ./packages/oauth/jwk-jose
 COPY ./packages/oauth/oauth-types ./packages/oauth/oauth-types
@@ -41,10 +50,13 @@ COPY ./packages/internal/simple-store ./packages/internal/simple-store
 COPY ./packages/internal/simple-store-memory ./packages/internal/simple-store-memory
 COPY ./packages/internal/rollup-plugin-bundle-manifest ./packages/internal/rollup-plugin-bundle-manifest
 COPY ./packages/internal/xrpc-utils ./packages/internal/xrpc-utils
+COPY ./packages/internal/did-resolver ./packages/internal/did-resolver
+COPY ./packages/internal/handle-resolver ./packages/internal/handle-resolver
+COPY ./packages/internal/identity-resolver ./packages/internal/identity-resolver
 COPY ./services/pds ./services/pds
 
 # install all deps
-RUN pnpm install 
+RUN pnpm install
 # build all packages with external node_modules
 RUN pnpm build > /dev/null
 # clean up
