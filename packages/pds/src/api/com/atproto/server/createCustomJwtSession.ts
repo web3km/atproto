@@ -1,8 +1,15 @@
-import * as plc from '@did-plc/lib'
 import { DidDocument, MINUTE, check } from '@bluesky-social/common'
-import { ExportableKeypair, Keypair, Secp256k1Keypair } from '@bluesky-social/crypto'
+import {
+  ExportableKeypair,
+  Keypair,
+  Secp256k1Keypair,
+} from '@bluesky-social/crypto'
 import { AtprotoData, ensureAtpDocument } from '@bluesky-social/identity'
-import { AuthRequiredError, InvalidRequestError } from '@bluesky-social/xrpc-server'
+import {
+  AuthRequiredError,
+  InvalidRequestError,
+} from '@bluesky-social/xrpc-server'
+import * as plc from '@did-plc/lib'
 import {
   AccountStatus,
   formatAccountStatus,
@@ -12,9 +19,57 @@ import { AppContext } from '../../../../context'
 import { softDeleted } from '../../../../db/util'
 import { baseNormalizeAndValidate } from '../../../../handle'
 import { Server } from '../../../../lexicon'
+import { ids } from '../../../../lexicon/lexicons'
 import { InputSchema as CreateCustomJwtSessionInput } from '../../../../lexicon/types/com/atproto/server/createCustomJwtSession'
 import { syncEvtDataFromCommit } from '../../../../sequencer'
 import { didDocForSession, safeResolveDidDoc } from './util'
+
+// 从 JWT 中提取 username 并创建 profile 记录
+const createProfileFromJwt = async (
+  ctx: AppContext,
+  did: string,
+  display_name: string,
+  req: any,
+) => {
+  if (!display_name || typeof display_name !== 'string') {
+    return
+  }
+
+  try {
+    const { prepareCreate } = await import('../../../../repo')
+    const profileWrite = await prepareCreate({
+      did,
+      collection: ids.AppBskyActorProfile,
+      rkey: 'self',
+      record: {
+        $type: ids.AppBskyActorProfile,
+        displayName: display_name,
+        createdAt: new Date().toISOString(),
+      },
+    })
+
+    const profileCommit = await ctx.actorStore.transact(
+      did,
+      async (actorTxn) => {
+        return await actorTxn.repo.processWrites([profileWrite])
+      },
+    )
+
+    // 序列化 profile 更新
+    await ctx.sequencer.sequenceCommit(did, profileCommit)
+
+    req.log.info(
+      { did, display_name },
+      'successfully created profile with displayName from JWT',
+    )
+  } catch (err) {
+    req.log.error(
+      { did, display_name, err },
+      'failed to create profile with displayName from JWT',
+    )
+    // 不抛出错误，因为账户创建已经成功，profile 创建失败不应该影响整个流程
+  }
+}
 
 export default function (server: Server, ctx: AppContext) {
   server.com.atproto.server.createCustomJwtSession({
@@ -30,6 +85,11 @@ export default function (server: Server, ctx: AppContext) {
       const decodedJwt = await jwtVerifier.verifyJwt(
         input.body.options.id_token,
       )
+
+      // 从 JWT claims 中提取 username
+      const display_name =
+        decodedJwt.claims.display_name || decodedJwt.claims.username
+
       input.body.handle =
         decodedJwt.verifierId.split(':')[0].replace(/^@/, '') +
         'bs.' +
@@ -41,6 +101,10 @@ export default function (server: Server, ctx: AppContext) {
           ctx.accountManager.createSession(user.did, null, isSoftDeleted),
           didDocForSession(ctx, user.did),
         ])
+
+        // 为已有账号创建或更新 profile
+        await createProfileFromJwt(ctx, user.did, display_name, req)
+
         const { status, active } = formatAccountStatus(user)
         return {
           encoding: 'application/json',
@@ -96,6 +160,9 @@ export default function (server: Server, ctx: AppContext) {
           externalProvider: 'custom_jwt',
         })
         console.log('creds:', creds)
+
+        // 为新账号创建 profile 记录
+        await createProfileFromJwt(ctx, did, display_name, req)
 
         if (!deactivated) {
           await ctx.sequencer.sequenceIdentityEvt(did, handle)
