@@ -1,12 +1,12 @@
 import AwaitLock from 'await-lock'
-import { TID, retry } from '@atproto/common-web'
-import { AtUri, ensureValidDid } from '@atproto/syntax'
+import { TID, retry } from '@bluesky-social/common-web'
+import { AtUri, ensureValidDid } from '@bluesky-social/syntax'
 import {
   FetchHandler,
   FetchHandlerOptions,
   XrpcClient,
   buildFetchHandler,
-} from '@atproto/xrpc'
+} from '@bluesky-social/xrpc'
 import {
   AppBskyActorDefs,
   AppBskyActorProfile,

@@ -2,6 +2,15 @@ import assert from 'node:assert'
 import { IncomingMessage } from 'node:http'
 import { Readable } from 'node:stream'
 import { pipeline } from 'node:stream/promises'
+import { check, schema } from '@bluesky-social/common'
+import {
+  LexXrpcProcedure,
+  LexXrpcQuery,
+  LexXrpcSubscription,
+  LexiconDoc,
+  Lexicons,
+  lexToJson,
+} from '@bluesky-social/lexicon'
 import express, {
   Application,
   ErrorRequestHandler,
@@ -10,15 +19,6 @@ import express, {
   RequestHandler,
   Router,
 } from 'express'
-import { check, schema } from '@atproto/common'
-import {
-  LexXrpcProcedure,
-  LexXrpcQuery,
-  LexXrpcSubscription,
-  LexiconDoc,
-  Lexicons,
-  lexToJson,
-} from '@atproto/lexicon'
 import {
   InternalServerError,
   InvalidRequestError,
@@ -596,4 +596,4 @@ const defaultPoints: CalcPointsFn = () => 1
  *
  * @see {@link https://expressjs.com/en/guide/behind-proxies.html}
  */
-const defaultKey: CalcKeyFn<HandlerContext> = ({ req }) => req.ip
+const defaultKey: CalcKeyFn<HandlerContext> = ({ req }) => req.ip ?? null

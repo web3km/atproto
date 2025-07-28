@@ -1,6 +1,6 @@
 import { useLingui } from '@lingui/react/macro'
 import { ReactNode, useMemo } from 'react'
-import type { LocalizedString } from '@atproto/oauth-provider-api'
+import type { LocalizedString } from '@bluesky-social/oauth-provider-api'
 
 export type MultiLangStringProps = {
   value: LocalizedString

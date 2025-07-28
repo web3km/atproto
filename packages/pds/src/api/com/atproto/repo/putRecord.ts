@@ -1,7 +1,10 @@
+import { BlobRef } from '@bluesky-social/lexicon'
+import { AtUri } from '@bluesky-social/syntax'
+import {
+  AuthRequiredError,
+  InvalidRequestError,
+} from '@bluesky-social/xrpc-server'
 import { CID } from 'multiformats/cid'
-import { BlobRef } from '@atproto/lexicon'
-import { AtUri } from '@atproto/syntax'
-import { AuthRequiredError, InvalidRequestError } from '@atproto/xrpc-server'
 import { ActorStoreTransactor } from '../../../../actor-store/actor-store-transactor'
 import { AppContext } from '../../../../context'
 import { Server } from '../../../../lexicon'
@@ -46,6 +49,13 @@ export default function (server: Server, ctx: AppContext) {
         swapCommit,
         swapRecord,
       } = input.body
+      console.log('repo:', repo)
+      console.log('collection:', collection)
+      console.log('rkey:', rkey)
+      console.log('record:', record)
+      console.log('validate:', validate)
+      console.log('swapCommit:', swapCommit)
+      console.log('swapRecord:', swapRecord)
       const account = await ctx.accountManager.getAccount(repo, {
         includeDeactivated: true,
       })
@@ -133,6 +143,10 @@ export default function (server: Server, ctx: AppContext) {
             )
           })
       }
+      console.log('write.uri', write?.uri.toString())
+      console.log('write.cid', write?.cid.toString())
+      console.log('commit', commit?.cid.toString())
+      console.log('rev', commit?.rev)
 
       return {
         encoding: 'application/json',

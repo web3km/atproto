@@ -1,4 +1,4 @@
-import { Did, assertDidPlc, didDocumentValidator } from '@atproto/did'
+import { Did, assertDidPlc, didDocumentValidator } from '@bluesky-social/did'
 import {
   Fetch,
   bindFetch,

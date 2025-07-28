@@ -1,6 +1,6 @@
 import { Trans, useLingui } from '@lingui/react/macro'
 import { ReactNode } from 'react'
-import type { Account } from '@atproto/oauth-provider-api'
+import type { Account } from '@bluesky-social/oauth-provider-api'
 import { Button } from '../../../components/forms/button.tsx'
 import {
   FormCard,

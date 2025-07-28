@@ -1,15 +1,15 @@
-# @atproto/xrpc-server: atproto HTTP API server library
+# @bluesky-social/xrpc-server: atproto HTTP API server library
 
 TypeScript library for implementing [atproto](https://atproto.com) HTTP API services, with Lexicon schema validation.
 
-[![NPM](https://img.shields.io/npm/v/@atproto/xrpc-server)](https://www.npmjs.com/package/@atproto/xrpc-server)
+[![NPM](https://img.shields.io/npm/v/@bluesky-social/xrpc-server)](https://www.npmjs.com/package/@bluesky-social/xrpc-server)
 [![Github CI Status](https://github.com/bluesky-social/atproto/actions/workflows/repo.yaml/badge.svg)](https://github.com/bluesky-social/atproto/actions/workflows/repo.yaml)
 
 ## Usage
 
 ```typescript
-import { LexiconDoc } from '@atproto/lexicon'
-import * as xrpc from '@atproto/xrpc-server'
+import { LexiconDoc } from '@bluesky-social/lexicon'
+import * as xrpc from '@bluesky-social/xrpc-server'
 import express from 'express'
 
 const lexicons: LexiconDoc[] = [

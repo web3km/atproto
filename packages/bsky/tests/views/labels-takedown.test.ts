@@ -1,6 +1,6 @@
 import assert from 'node:assert'
-import { AppBskyLabelerDefs, AtpAgent } from '@atproto/api'
-import { RecordRef, SeedClient, TestNetwork, basicSeed } from '@atproto/dev-env'
+import { AppBskyLabelerDefs, AtpAgent } from '@bluesky-social/api'
+import { RecordRef, SeedClient, TestNetwork, basicSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 
 describe('bsky takedown labels', () => {

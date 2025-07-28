@@ -1,5 +1,5 @@
-import { AtpAgent } from '@atproto/api'
-import { MINUTE } from '@atproto/common'
+import { AtpAgent } from '@bluesky-social/api'
+import { MINUTE } from '@bluesky-social/common'
 import { BackgroundQueue } from './background'
 import { crawlerLogger as log } from './logger'
 

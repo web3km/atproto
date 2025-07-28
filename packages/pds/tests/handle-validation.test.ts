@@ -1,4 +1,4 @@
-import { isValidTld } from '@atproto/syntax'
+import { isValidTld } from '@bluesky-social/syntax'
 import { ensureHandleServiceConstraints } from '../src/handle'
 
 describe('handle validation', () => {

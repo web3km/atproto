@@ -4,8 +4,8 @@ import { Selectable, sql } from 'kysely'
 import {
   AppBskyNotificationDeclaration,
   ChatBskyActorDeclaration,
-} from '@atproto/api'
-import { keyBy } from '@atproto/common'
+} from '@bluesky-social/api'
+import { keyBy } from '@bluesky-social/common'
 import { parseRecordBytes } from '../../../hydration/util'
 import { Service } from '../../../proto/bsky_connect'
 import { VerificationMeta } from '../../../proto/bsky_pb'

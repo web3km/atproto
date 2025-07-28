@@ -1,6 +1,6 @@
 import assert from 'node:assert'
-import { AppBskyFeedGetPostThread, AtUri, AtpAgent } from '@atproto/api'
-import { SeedClient, TestNetwork, basicSeed } from '@atproto/dev-env'
+import { AppBskyFeedGetPostThread, AtUri, AtpAgent } from '@bluesky-social/api'
+import { SeedClient, TestNetwork, basicSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 import { isThreadViewPost } from '../../src/lexicon/types/app/bsky/feed/defs'
 import {

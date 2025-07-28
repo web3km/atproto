@@ -8,9 +8,9 @@ import {
 } from 'node:http'
 import { AddressInfo } from 'node:net'
 import { type Browser, type Page, launch } from 'puppeteer'
-import { TestNetworkNoAppView } from '@atproto/dev-env'
+import { TestNetworkNoAppView } from '@bluesky-social/dev-env'
 // @ts-expect-error (json file)
-import files from '@atproto/oauth-client-browser-example'
+import files from '@bluesky-social/oauth-client-browser-example'
 
 class PageHelper implements AsyncDisposable {
   constructor(protected readonly page: Page) {}

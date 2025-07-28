@@ -1,5 +1,5 @@
-import { TID, cidForCbor, streamToBuffer } from '@atproto/common'
-import * as crypto from '@atproto/crypto'
+import { TID, cidForCbor, streamToBuffer } from '@bluesky-social/common'
+import * as crypto from '@bluesky-social/crypto'
 import { RecordCidClaim, RecordPath, Repo, RepoContents } from '../src'
 import { MemoryBlockstore } from '../src/storage'
 import * as sync from '../src/sync'

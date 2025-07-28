@@ -1,4 +1,4 @@
-import { SkeletonHandler } from '@atproto/pds'
+import { SkeletonHandler } from '@bluesky-social/pds'
 import { TestFeedGen } from './feed-gen'
 import { TestPds } from './pds'
 import { TestPlc } from './plc'

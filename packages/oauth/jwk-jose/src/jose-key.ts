@@ -1,18 +1,4 @@
 import {
-  type GenerateKeyPairOptions,
-  type GenerateKeyPairResult,
-  type JWK,
-  type JWTVerifyOptions,
-  type KeyLike,
-  SignJWT,
-  errors,
-  exportJWK,
-  generateKeyPair,
-  importJWK,
-  importPKCS8,
-  jwtVerify,
-} from 'jose'
-import {
   Jwk,
   JwkError,
   JwtCreateError,
@@ -26,7 +12,20 @@ import {
   jwkValidator,
   jwtHeaderSchema,
   jwtPayloadSchema,
-} from '@atproto/jwk'
+} from '@bluesky-social/jwk'
+import {
+  type GenerateKeyPairOptions,
+  type GenerateKeyPairResult,
+  type JWTVerifyOptions,
+  type KeyLike,
+  SignJWT,
+  errors,
+  exportJWK,
+  generateKeyPair,
+  importJWK,
+  importPKCS8,
+  jwtVerify,
+} from 'jose'
 import { RequiredKey, either } from './util.js'
 
 const { JOSEError } = errors
@@ -54,7 +53,7 @@ export class JoseKey<J extends Jwk = Jwk> extends Key<J> {
       throw new JwkError(`Key cannot be used with algorithm "${alg}"`)
     }
     try {
-      return await importJWK(this.jwk as JWK, alg)
+      return await importJWK(this.jwk as any, alg)
     } catch (cause) {
       throw new JwkError('Failed to import JWK', undefined, { cause })
     }
@@ -232,7 +231,7 @@ export class JoseKey<J extends Jwk = Jwk> extends Key<J> {
   }
 
   static async fromJWK(
-    input: string | Record<string, unknown>,
+    input: string | any,
     inputKid?: string,
   ): Promise<JoseKey> {
     const jwk = typeof input === 'string' ? JSON.parse(input) : input

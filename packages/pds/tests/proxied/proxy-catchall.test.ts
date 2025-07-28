@@ -4,10 +4,10 @@ import { AddressInfo } from 'node:net'
 import { setTimeout as sleep } from 'node:timers/promises'
 import * as plc from '@did-plc/lib'
 import express from 'express'
-import AtpAgent from '@atproto/api'
-import { Keypair } from '@atproto/crypto'
-import { TestNetworkNoAppView } from '@atproto/dev-env'
-import { LexiconDoc } from '@atproto/lexicon'
+import AtpAgent from '@bluesky-social/api'
+import { Keypair } from '@bluesky-social/crypto'
+import { TestNetworkNoAppView } from '@bluesky-social/dev-env'
+import { LexiconDoc } from '@bluesky-social/lexicon'
 
 const lexicons = [
   {

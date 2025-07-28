@@ -1,7 +1,7 @@
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import createHttpError from 'http-errors'
 import { z } from 'zod'
-import { signedJwtSchema } from '@atproto/jwk'
+import { signedJwtSchema } from '@bluesky-social/jwk'
 import {
   API_ENDPOINT_PREFIX,
   ActiveAccountSession,
@@ -9,14 +9,14 @@ import {
   ActiveOAuthSession,
   ApiEndpoints,
   ISODateString,
-} from '@atproto/oauth-provider-api'
+} from '@bluesky-social/oauth-provider-api'
 import {
   OAuthAuthorizationRequestParameters,
   OAuthRedirectUri,
   OAuthResponseMode,
   oauthRedirectUriSchema,
   oauthResponseModeSchema,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import { signInDataSchema } from '../account/sign-in-data.js'
 import { signUpInputSchema } from '../account/sign-up-input.js'
 import { DeviceId, deviceIdSchema } from '../device/device-id.js'

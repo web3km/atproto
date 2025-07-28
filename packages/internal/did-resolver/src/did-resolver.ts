@@ -1,4 +1,4 @@
-import { Did, DidDocument } from '@atproto/did'
+import { Did, DidDocument } from '@bluesky-social/did'
 import { ResolveDidOptions } from './did-method.js'
 
 export type ResolvedDocument<D extends Did, M extends string = string> =

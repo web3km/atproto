@@ -1,6 +1,6 @@
 import { Code, ConnectError, ServiceImpl } from '@connectrpc/connect'
 import { sql } from 'kysely'
-import { ensureValidNsid, ensureValidRecordKey } from '@atproto/syntax'
+import { ensureValidNsid, ensureValidRecordKey } from '@bluesky-social/syntax'
 import { AppContext } from '../context'
 import { Database } from '../db'
 import { OperationMethod, createOperationChannel } from '../db/schema/operation'

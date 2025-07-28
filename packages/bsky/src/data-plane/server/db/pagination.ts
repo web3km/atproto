@@ -1,6 +1,6 @@
 import { sql } from 'kysely'
-import { ensureValidRecordKey } from '@atproto/syntax'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { ensureValidRecordKey } from '@bluesky-social/syntax'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AnyQb, DbRef } from './util'
 
 type KeysetCursor = { primary: string; secondary: string }

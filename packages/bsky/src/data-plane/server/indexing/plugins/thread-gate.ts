@@ -1,6 +1,6 @@
 import { CID } from 'multiformats/cid'
-import { AtUri, normalizeDatetimeAlways } from '@atproto/syntax'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { AtUri, normalizeDatetimeAlways } from '@bluesky-social/syntax'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import * as lex from '../../../../lexicon/lexicons'
 import * as Threadgate from '../../../../lexicon/types/app/bsky/feed/threadgate'
 import { BackgroundQueue } from '../../background'

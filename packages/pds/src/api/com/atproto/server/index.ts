@@ -5,6 +5,7 @@ import checkAccountStatus from './checkAccountStatus'
 import confirmEmail from './confirmEmail'
 import createAccount from './createAccount'
 import createAppPassword from './createAppPassword'
+import createCustomJwtSession from './createCustomJwtSession'
 import createInviteCode from './createInviteCode'
 import createInviteCodes from './createInviteCodes'
 import createSession from './createSession'
@@ -29,6 +30,7 @@ import updateEmail from './updateEmail'
 export default function (server: Server, ctx: AppContext) {
   describeServer(server, ctx)
   createAccount(server, ctx)
+  createCustomJwtSession(server, ctx)
   createInviteCode(server, ctx)
   createInviteCodes(server, ctx)
   getAccountInviteCodes(server, ctx)

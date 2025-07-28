@@ -1,7 +1,7 @@
 import assert from 'node:assert'
 import path from 'node:path'
-import { DAY, HOUR, SECOND } from '@atproto/common'
-import { BrandingInput, HcaptchaConfig } from '@atproto/oauth-provider'
+import { DAY, HOUR, SECOND } from '@bluesky-social/common'
+import { BrandingInput, HcaptchaConfig } from '@bluesky-social/oauth-provider'
 import { ServerEnvironment } from './env'
 
 // off-config but still from env:
@@ -198,6 +198,14 @@ export const envToCfg = (env: ServerEnvironment): ServerConfig => {
     }
   }
 
+  let jwkConfig: ServerConfig['jwksConfig'] = null
+  if (env.jwkEndpoint && env.jwtVerifierId) {
+    jwkConfig = {
+      jwksEndpoint: env.jwkEndpoint,
+      jwtVerifierId: env.jwtVerifierId,
+    }
+  }
+
   let reportServiceCfg: ServerConfig['reportService'] = null
   if (env.reportServiceUrl) {
     assert(
@@ -332,6 +340,7 @@ export const envToCfg = (env: ServerEnvironment): ServerConfig => {
     bskyAppView: bskyAppViewCfg,
     modService: modServiceCfg,
     reportService: reportServiceCfg,
+    jwksConfig: jwkConfig,
     redis: redisCfg,
     rateLimits: rateLimitsCfg,
     crawlers: crawlersCfg,
@@ -355,6 +364,7 @@ export type ServerConfig = {
   bskyAppView: BksyAppViewConfig | null
   modService: ModServiceConfig | null
   reportService: ReportServiceConfig | null
+  jwksConfig: JwksConfig | null
   redis: RedisScratchConfig | null
   rateLimits: RateLimitsConfig
   crawlers: string[]
@@ -507,4 +517,9 @@ export type ModServiceConfig = {
 export type ReportServiceConfig = {
   url: string
   did: string
+}
+
+export type JwksConfig = {
+  jwksEndpoint: string
+  jwtVerifierId: string
 }

@@ -1,7 +1,7 @@
 import {
   OAuthAuthorizationDetails,
   OAuthAuthorizationRequestParameters,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import { ClientAuth, ClientAuthLegacy } from '../client/client-auth.js'
 import { ClientId } from '../client/client-id.js'
 import { DeviceId } from '../device/device-id.js'

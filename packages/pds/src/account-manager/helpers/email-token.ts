@@ -1,5 +1,5 @@
-import { MINUTE, lessThanAgoMs } from '@atproto/common'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { MINUTE, lessThanAgoMs } from '@bluesky-social/common'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { getRandomToken } from '../../api/com/atproto/server/util'
 import { AccountDb, EmailTokenPurpose } from '../db'
 

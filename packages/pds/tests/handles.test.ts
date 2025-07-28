@@ -1,6 +1,6 @@
-import { AtpAgent } from '@atproto/api'
-import { SeedClient, TestNetworkNoAppView } from '@atproto/dev-env'
-import { IdResolver } from '@atproto/identity'
+import { AtpAgent } from '@bluesky-social/api'
+import { SeedClient, TestNetworkNoAppView } from '@bluesky-social/dev-env'
+import { IdResolver } from '@bluesky-social/identity'
 import { AppContext } from '../src'
 import basicSeed from './seeds/basic'
 

@@ -1,5 +1,5 @@
-import { randomStr } from '@atproto/crypto'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { randomStr } from '@bluesky-social/crypto'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AppPassword } from '../../lexicon/types/com/atproto/server/createAppPassword'
 import { AccountDb } from '../db'
 import * as scrypt from './scrypt'

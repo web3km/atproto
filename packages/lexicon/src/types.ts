@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { NSID } from '@atproto/syntax'
+import { NSID } from '@bluesky-social/syntax'
 import { requiredPropertiesRefinement } from './util'
 
 // primitives

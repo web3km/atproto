@@ -1,10 +1,10 @@
-import { WebcryptoKey } from '@atproto/jwk-webcrypto'
+import { WebcryptoKey } from '@bluesky-social/jwk-webcrypto'
 import {
   DigestAlgorithm,
   Key,
   RuntimeImplementation,
   RuntimeLock,
-} from '@atproto/oauth-client'
+} from '@bluesky-social/oauth-client'
 
 /**
  * @see {@link // https://developer.mozilla.org/en-US/docs/Web/API/LockManager/request}

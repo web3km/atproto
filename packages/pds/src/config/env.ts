@@ -1,4 +1,4 @@
-import { envBool, envInt, envList, envStr } from '@atproto/common'
+import { envBool, envInt, envList, envStr } from '@bluesky-social/common'
 
 export const readEnv = (): ServerEnvironment => {
   return {
@@ -100,6 +100,10 @@ export const readEnv = (): ServerEnvironment => {
     bskyAppViewUrl: envStr('PDS_BSKY_APP_VIEW_URL'),
     bskyAppViewDid: envStr('PDS_BSKY_APP_VIEW_DID'),
     bskyAppViewCdnUrlPattern: envStr('PDS_BSKY_APP_VIEW_CDN_URL_PATTERN'),
+
+    // jwks
+    jwkEndpoint: envStr('PDS_JWK_ENDPOINT'),
+    jwtVerifierId: envStr('PDS_JWT_VERIFIER_ID'),
 
     // mod service
     modServiceUrl: envStr('PDS_MOD_SERVICE_URL'),
@@ -247,6 +251,10 @@ export type ServerEnvironment = {
   bskyAppViewUrl?: string
   bskyAppViewDid?: string
   bskyAppViewCdnUrlPattern?: string
+
+  // jwks
+  jwkEndpoint?: string
+  jwtVerifierId?: string
 
   // mod service
   modServiceUrl?: string

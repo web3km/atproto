@@ -5,7 +5,7 @@ import {
   AtUri,
   ToolsOzoneModerationDefs,
   ToolsOzoneVerificationDefs,
-} from '@atproto/api'
+} from '@bluesky-social/api'
 import { Database } from '../db'
 import { CreatedAtUriKeyset, paginate } from '../db/pagination'
 import { Verification } from '../db/schema/verification'

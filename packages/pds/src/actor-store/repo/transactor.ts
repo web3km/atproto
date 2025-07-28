@@ -1,8 +1,8 @@
 import { CID } from 'multiformats/cid'
-import * as crypto from '@atproto/crypto'
-import { BlobStore, Repo, WriteOpAction, formatDataKey } from '@atproto/repo'
-import { AtUri } from '@atproto/syntax'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import * as crypto from '@bluesky-social/crypto'
+import { BlobStore, Repo, WriteOpAction, formatDataKey } from '@bluesky-social/repo'
+import { AtUri } from '@bluesky-social/syntax'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { BackgroundQueue } from '../../background'
 import { createWriteToOp, writeToOp } from '../../repo'
 import {

@@ -1,17 +1,17 @@
 import { Selectable, sql } from 'kysely'
 import { CID } from 'multiformats/cid'
-import { AtpAgent, ComAtprotoSyncGetLatestCommit } from '@atproto/api'
-import { DAY, HOUR } from '@atproto/common'
-import { IdResolver, getPds } from '@atproto/identity'
-import { ValidationError } from '@atproto/lexicon'
+import { AtpAgent, ComAtprotoSyncGetLatestCommit } from '@bluesky-social/api'
+import { DAY, HOUR } from '@bluesky-social/common'
+import { IdResolver, getPds } from '@bluesky-social/identity'
+import { ValidationError } from '@bluesky-social/lexicon'
 import {
   VerifiedRepo,
   WriteOpAction,
   getAndParseRecord,
   readCarWithRoot,
   verifyRepo,
-} from '@atproto/repo'
-import { AtUri } from '@atproto/syntax'
+} from '@bluesky-social/repo'
+import { AtUri } from '@bluesky-social/syntax'
 import { subLogger } from '../../../logger'
 import { retryXrpc } from '../../../util/retry'
 import { BackgroundQueue } from '../background'

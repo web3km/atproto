@@ -1,3 +1,6 @@
+.git-bk
+tmp
+publish.sh
 node_modules
 lerna-debug.log
 npm-debug.log

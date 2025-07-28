@@ -1,8 +1,8 @@
-import { AtpAgent } from '@atproto/api'
-import { wait } from '@atproto/common'
-import { Keypair } from '@atproto/crypto'
-import { TestNetworkNoAppView } from '@atproto/dev-env'
-import { readCarWithRoot, verifyRepo } from '@atproto/repo'
+import { AtpAgent } from '@bluesky-social/api'
+import { wait } from '@bluesky-social/common'
+import { Keypair } from '@bluesky-social/crypto'
+import { TestNetworkNoAppView } from '@bluesky-social/dev-env'
+import { readCarWithRoot, verifyRepo } from '@bluesky-social/repo'
 import { AppContext } from '../src/context'
 import { PreparedCreate, prepareCreate } from '../src/repo'
 

@@ -1,10 +1,10 @@
-import { isAtprotoDid } from '@atproto/did'
-import type { Account } from '@atproto/oauth-provider-api'
+import { isAtprotoDid } from '@bluesky-social/did'
+import type { Account } from '@bluesky-social/oauth-provider-api'
 import {
   OAuthAuthorizationRequestParameters,
   OAuthAuthorizationServerMetadata,
-} from '@atproto/oauth-types'
-import { isValidHandle } from '@atproto/syntax'
+} from '@bluesky-social/oauth-types'
+import { isValidHandle } from '@bluesky-social/syntax'
 import { ClientAuth } from '../client/client-auth.js'
 import { ClientId } from '../client/client-id.js'
 import { Client } from '../client/client.js'

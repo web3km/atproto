@@ -1,5 +1,5 @@
-import type { SignedJwt } from '@atproto/jwk'
-import type { OAuthClientMetadata } from '@atproto/oauth-types'
+import type { SignedJwt } from '@bluesky-social/jwk'
+import type { OAuthClientMetadata } from '@bluesky-social/oauth-types'
 import type { Account, DeviceMetadata, ISODateString } from './types.js'
 
 // These are the endpoints implemented by the OAuth provider, for its UI to

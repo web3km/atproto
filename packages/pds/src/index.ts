@@ -6,18 +6,18 @@ import 'express-async-errors'
 
 import events from 'node:events'
 import http from 'node:http'
-import { PlcClientError } from '@did-plc/lib'
-import cors from 'cors'
-import express from 'express'
-import { HttpTerminator, createHttpTerminator } from 'http-terminator'
-import { DAY, HOUR, MINUTE, SECOND } from '@atproto/common'
+import { DAY, HOUR, MINUTE, SECOND } from '@bluesky-social/common'
 import {
   MemoryRateLimiter,
   MethodHandler,
   RedisRateLimiter,
   ResponseType,
   XRPCError,
-} from '@atproto/xrpc-server'
+} from '@bluesky-social/xrpc-server'
+import { PlcClientError } from '@did-plc/lib'
+import cors from 'cors'
+import express from 'express'
+import { HttpTerminator, createHttpTerminator } from 'http-terminator'
 import apiRoutes from './api'
 import * as authRoutes from './auth-routes'
 import * as basicRoutes from './basic-routes'
@@ -116,7 +116,7 @@ export class PDS {
               ) {
                 return true
               }
-              if (bypassIps && bypassIps.includes(req.ip)) {
+              if (bypassIps && req.ip && bypassIps.includes(req.ip)) {
                 return true
               }
               return false

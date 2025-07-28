@@ -5,7 +5,7 @@ import {
   check,
   ipldToJson,
   jsonToIpld,
-} from '@atproto/common-web'
+} from '@bluesky-social/common-web'
 import { BlobRef, jsonBlobRef } from './blob-refs'
 
 export type LexValue =

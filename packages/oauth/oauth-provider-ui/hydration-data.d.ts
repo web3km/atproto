@@ -2,8 +2,8 @@ import type {
   CustomizationData,
   ScopeDetail,
   Session,
-} from '@atproto/oauth-provider-api'
-import type { OAuthClientMetadata } from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-provider-api'
+import type { OAuthClientMetadata } from '@bluesky-social/oauth-types'
 
 export type AuthorizeData = {
   requestUri: string

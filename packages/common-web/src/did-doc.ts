@@ -29,7 +29,7 @@ export const getHandle = (doc: DidDocument): string | undefined => {
   return undefined
 }
 
-// @NOTE we parse to type/publicKeyMultibase to avoid the dependency on @atproto/crypto
+// @NOTE we parse to type/publicKeyMultibase to avoid the dependency on @bluesky-social/crypto
 export const getSigningKey = (
   doc: DidDocument,
 ): { type: string; publicKeyMultibase: string } | undefined => {

@@ -5,7 +5,7 @@ import {
   RequestData,
   RequestId,
   UpdateRequestData,
-} from '@atproto/oauth-provider'
+} from '@bluesky-social/oauth-provider'
 import { fromDateISO, fromJson, toDateISO, toJson } from '../../db'
 import { AccountDb, AuthorizationRequest } from '../db'
 

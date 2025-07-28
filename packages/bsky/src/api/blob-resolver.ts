@@ -7,8 +7,8 @@ import {
   VerifyCidError,
   VerifyCidTransform,
   createDecoders,
-} from '@atproto/common'
-import { AtprotoDid, isAtprotoDid } from '@atproto/did'
+} from '@bluesky-social/common'
+import { AtprotoDid, isAtprotoDid } from '@bluesky-social/did'
 import {
   ACCEPT_ENCODING_COMPRESSED,
   ACCEPT_ENCODING_UNCOMPRESSED,

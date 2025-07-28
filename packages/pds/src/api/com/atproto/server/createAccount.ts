@@ -1,10 +1,10 @@
 import * as plc from '@did-plc/lib'
 import { isEmailValid } from '@hapi/address'
 import { isDisposableEmail } from 'disposable-email-domains-js'
-import { DidDocument, MINUTE, check } from '@atproto/common'
-import { ExportableKeypair, Keypair, Secp256k1Keypair } from '@atproto/crypto'
-import { AtprotoData, ensureAtpDocument } from '@atproto/identity'
-import { AuthRequiredError, InvalidRequestError } from '@atproto/xrpc-server'
+import { DidDocument, MINUTE, check } from '@bluesky-social/common'
+import { ExportableKeypair, Keypair, Secp256k1Keypair } from '@bluesky-social/crypto'
+import { AtprotoData, ensureAtpDocument } from '@bluesky-social/identity'
+import { AuthRequiredError, InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AccountStatus } from '../../../../account-manager/account-manager'
 import { NEW_PASSWORD_MAX_LENGTH } from '../../../../account-manager/helpers/scrypt'
 import { AppContext } from '../../../../context'
@@ -38,6 +38,16 @@ export default function (server: Server, ctx: AppContext) {
       } = ctx.entrywayAgent
         ? await validateInputsForEntrywayPds(ctx, input.body)
         : await validateInputsForLocalPds(ctx, input.body, requester)
+
+      console.log('createAccount.did:', did)
+      console.log('createAccount.handle:', handle)
+      console.log('createAccount.email:', email)
+      console.log('createAccount.password:', password)
+      console.log('createAccount.inviteCode:', inviteCode)
+      console.log('createAccount.signingKey:', signingKey)
+      console.log('createAccount.plcOp:', plcOp)
+      console.log('createAccount.deactivated:', deactivated)
+      console.log('input.body:', input.body)
 
       let didDoc: DidDocument | undefined
       let creds: { accessJwt: string; refreshJwt: string }

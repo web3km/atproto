@@ -1,5 +1,5 @@
-import { AtpAgent, BlobRef } from '@atproto/api'
-import { SeedClient, TestNetworkNoAppView } from '@atproto/dev-env'
+import { AtpAgent, BlobRef } from '@bluesky-social/api'
+import { SeedClient, TestNetworkNoAppView } from '@bluesky-social/dev-env'
 import { AppContext } from '../src'
 import { ids } from '../src/lexicon/lexicons'
 

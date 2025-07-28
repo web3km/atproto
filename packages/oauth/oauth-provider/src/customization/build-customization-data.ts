@@ -1,4 +1,4 @@
-import { CustomizationData } from '@atproto/oauth-provider-api'
+import { CustomizationData } from '@bluesky-social/oauth-provider-api'
 import { Customization } from './customization.js'
 
 export function buildCustomizationData({

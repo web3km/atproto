@@ -1,4 +1,4 @@
-import { Did, DidError, didDocumentValidator, didWebToUrl } from '@atproto/did'
+import { Did, DidError, didDocumentValidator, didWebToUrl } from '@bluesky-social/did'
 import {
   Fetch,
   bindFetch,

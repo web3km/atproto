@@ -1,4 +1,4 @@
-import { AuthRequiredError } from '@atproto/xrpc-server'
+import { AuthRequiredError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../context'
 import { Server } from '../../lexicon'
 import {

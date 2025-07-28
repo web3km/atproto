@@ -1,13 +1,13 @@
 import {
   ComAtprotoModerationDefs,
   ToolsOzoneModerationDefs,
-} from '@atproto/api'
+} from '@bluesky-social/api'
 import {
   ModeratorClient,
   SeedClient,
   TestNetwork,
   basicSeed,
-} from '@atproto/dev-env'
+} from '@bluesky-social/dev-env'
 
 describe('reporter-stats', () => {
   let network: TestNetwork

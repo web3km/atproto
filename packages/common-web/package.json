@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/common-web",
+  "name": "@bluesky-social/common-web",
   "version": "0.4.2",
   "license": "MIT",
   "description": "Shared web-platform-friendly code for atproto libraries",

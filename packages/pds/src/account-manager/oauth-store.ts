@@ -1,7 +1,7 @@
 import assert from 'node:assert'
 import { Client, createOp as createPlcOp } from '@did-plc/lib'
 import { Selectable } from 'kysely'
-import { Keypair, Secp256k1Keypair } from '@atproto/crypto'
+import { Keypair, Secp256k1Keypair } from '@bluesky-social/crypto'
 import {
   Account,
   AccountStore,
@@ -32,11 +32,11 @@ import {
   TokenInfo,
   TokenStore,
   UpdateRequestData,
-} from '@atproto/oauth-provider'
+} from '@bluesky-social/oauth-provider'
 import {
   AuthRequiredError as XrpcAuthRequiredError,
   InvalidRequestError as XrpcInvalidRequestError,
-} from '@atproto/xrpc-server'
+} from '@bluesky-social/xrpc-server'
 import { ActorStore } from '../actor-store/actor-store'
 import { BackgroundQueue } from '../background'
 import { fromDateISO } from '../db'

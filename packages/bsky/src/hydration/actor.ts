@@ -1,5 +1,5 @@
-import { AppBskyNotificationDeclaration } from '@atproto/api'
-import { mapDefined } from '@atproto/common'
+import { AppBskyNotificationDeclaration } from '@bluesky-social/api'
+import { mapDefined } from '@bluesky-social/common'
 import { DataPlaneClient } from '../data-plane/client'
 import { Record as ProfileRecord } from '../lexicon/types/app/bsky/actor/profile'
 import { Record as StatusRecord } from '../lexicon/types/app/bsky/actor/status'

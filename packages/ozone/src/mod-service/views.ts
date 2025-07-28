@@ -3,12 +3,12 @@ import {
   AppBskyActorDefs,
   AtpAgent,
   ComAtprotoRepoGetRecord,
-} from '@atproto/api'
-import { chunkArray, dedupeStrs } from '@atproto/common'
-import { Keypair } from '@atproto/crypto'
-import { IdResolver } from '@atproto/identity'
-import { BlobRef } from '@atproto/lexicon'
-import { AtUri, INVALID_HANDLE, normalizeDatetimeAlways } from '@atproto/syntax'
+} from '@bluesky-social/api'
+import { chunkArray, dedupeStrs } from '@bluesky-social/common'
+import { Keypair } from '@bluesky-social/crypto'
+import { IdResolver } from '@bluesky-social/identity'
+import { BlobRef } from '@bluesky-social/lexicon'
+import { AtUri, INVALID_HANDLE, normalizeDatetimeAlways } from '@bluesky-social/syntax'
 import { Database } from '../db'
 import { LabelRow } from '../db/schema/label'
 import { ids } from '../lexicon/lexicons'

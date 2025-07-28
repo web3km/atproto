@@ -5,7 +5,7 @@ import {
   XrpcClient,
   type FetchHandler,
   type FetchHandlerOptions,
-} from '@atproto/xrpc'
+} from '@bluesky-social/xrpc'
 import { schemas } from './lexicons.js'
 import { CID } from 'multiformats/cid'
 import { type OmitKey, type Un$Typed } from './util.js'
@@ -58,6 +58,7 @@ import * as ComAtprotoServerCheckAccountStatus from './types/com/atproto/server/
 import * as ComAtprotoServerConfirmEmail from './types/com/atproto/server/confirmEmail.js'
 import * as ComAtprotoServerCreateAccount from './types/com/atproto/server/createAccount.js'
 import * as ComAtprotoServerCreateAppPassword from './types/com/atproto/server/createAppPassword.js'
+import * as ComAtprotoServerCreateCustomJwtSession from './types/com/atproto/server/createCustomJwtSession.js'
 import * as ComAtprotoServerCreateInviteCode from './types/com/atproto/server/createInviteCode.js'
 import * as ComAtprotoServerCreateInviteCodes from './types/com/atproto/server/createInviteCodes.js'
 import * as ComAtprotoServerCreateSession from './types/com/atproto/server/createSession.js'
@@ -128,8 +129,8 @@ import * as AppBskyFeedGetFeedGenerators from './types/app/bsky/feed/getFeedGene
 import * as AppBskyFeedGetFeedSkeleton from './types/app/bsky/feed/getFeedSkeleton.js'
 import * as AppBskyFeedGetLikes from './types/app/bsky/feed/getLikes.js'
 import * as AppBskyFeedGetListFeed from './types/app/bsky/feed/getListFeed.js'
-import * as AppBskyFeedGetPostThread from './types/app/bsky/feed/getPostThread.js'
 import * as AppBskyFeedGetPosts from './types/app/bsky/feed/getPosts.js'
+import * as AppBskyFeedGetPostThread from './types/app/bsky/feed/getPostThread.js'
 import * as AppBskyFeedGetQuotes from './types/app/bsky/feed/getQuotes.js'
 import * as AppBskyFeedGetRepostedBy from './types/app/bsky/feed/getRepostedBy.js'
 import * as AppBskyFeedGetSuggestedFeeds from './types/app/bsky/feed/getSuggestedFeeds.js'
@@ -334,6 +335,7 @@ export * as ComAtprotoServerCheckAccountStatus from './types/com/atproto/server/
 export * as ComAtprotoServerConfirmEmail from './types/com/atproto/server/confirmEmail.js'
 export * as ComAtprotoServerCreateAccount from './types/com/atproto/server/createAccount.js'
 export * as ComAtprotoServerCreateAppPassword from './types/com/atproto/server/createAppPassword.js'
+export * as ComAtprotoServerCreateCustomJwtSession from './types/com/atproto/server/createCustomJwtSession.js'
 export * as ComAtprotoServerCreateInviteCode from './types/com/atproto/server/createInviteCode.js'
 export * as ComAtprotoServerCreateInviteCodes from './types/com/atproto/server/createInviteCodes.js'
 export * as ComAtprotoServerCreateSession from './types/com/atproto/server/createSession.js'
@@ -404,8 +406,8 @@ export * as AppBskyFeedGetFeedGenerators from './types/app/bsky/feed/getFeedGene
 export * as AppBskyFeedGetFeedSkeleton from './types/app/bsky/feed/getFeedSkeleton.js'
 export * as AppBskyFeedGetLikes from './types/app/bsky/feed/getLikes.js'
 export * as AppBskyFeedGetListFeed from './types/app/bsky/feed/getListFeed.js'
-export * as AppBskyFeedGetPostThread from './types/app/bsky/feed/getPostThread.js'
 export * as AppBskyFeedGetPosts from './types/app/bsky/feed/getPosts.js'
+export * as AppBskyFeedGetPostThread from './types/app/bsky/feed/getPostThread.js'
 export * as AppBskyFeedGetQuotes from './types/app/bsky/feed/getQuotes.js'
 export * as AppBskyFeedGetRepostedBy from './types/app/bsky/feed/getRepostedBy.js'
 export * as AppBskyFeedGetSuggestedFeeds from './types/app/bsky/feed/getSuggestedFeeds.js'
@@ -1280,6 +1282,17 @@ export class ComAtprotoServerNS {
       .call('com.atproto.server.createAppPassword', opts?.qp, data, opts)
       .catch((e) => {
         throw ComAtprotoServerCreateAppPassword.toKnownErr(e)
+      })
+  }
+
+  createCustomJwtSession(
+    data?: ComAtprotoServerCreateCustomJwtSession.InputSchema,
+    opts?: ComAtprotoServerCreateCustomJwtSession.CallOptions,
+  ): Promise<ComAtprotoServerCreateCustomJwtSession.Response> {
+    return this._client
+      .call('com.atproto.server.createCustomJwtSession', opts?.qp, data, opts)
+      .catch((e) => {
+        throw ComAtprotoServerCreateCustomJwtSession.toKnownErr(e)
       })
   }
 
@@ -2187,6 +2200,13 @@ export class AppBskyFeedNS {
       })
   }
 
+  getPosts(
+    params?: AppBskyFeedGetPosts.QueryParams,
+    opts?: AppBskyFeedGetPosts.CallOptions,
+  ): Promise<AppBskyFeedGetPosts.Response> {
+    return this._client.call('app.bsky.feed.getPosts', params, undefined, opts)
+  }
+
   getPostThread(
     params?: AppBskyFeedGetPostThread.QueryParams,
     opts?: AppBskyFeedGetPostThread.CallOptions,
@@ -2196,13 +2216,6 @@ export class AppBskyFeedNS {
       .catch((e) => {
         throw AppBskyFeedGetPostThread.toKnownErr(e)
       })
-  }
-
-  getPosts(
-    params?: AppBskyFeedGetPosts.QueryParams,
-    opts?: AppBskyFeedGetPosts.CallOptions,
-  ): Promise<AppBskyFeedGetPosts.Response> {
-    return this._client.call('app.bsky.feed.getPosts', params, undefined, opts)
   }
 
   getQuotes(

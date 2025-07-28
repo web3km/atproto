@@ -9,7 +9,7 @@ import type {
   SignInInput,
   SignUpInput,
   VerifyHandleAvailabilityInput,
-} from '@atproto/oauth-provider-api'
+} from '@bluesky-social/oauth-provider-api'
 import { Api, UnknownRequestUriError } from '../lib/api.ts'
 import { upsert } from '../lib/util.ts'
 

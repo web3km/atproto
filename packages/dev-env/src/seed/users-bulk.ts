@@ -1,4 +1,4 @@
-import { chunkArray } from '@atproto/common-web'
+import { chunkArray } from '@bluesky-social/common-web'
 import { SeedClient } from './client'
 
 export default async (sc: SeedClient, max = Infinity) => {

@@ -8,7 +8,7 @@ import {
   type StreamConfigOrHandler,
   type MethodConfigOrHandler,
   createServer as createXrpcServer,
-} from '@atproto/xrpc-server'
+} from '@bluesky-social/xrpc-server'
 import { schemas } from './lexicons.js'
 import * as ComAtprotoAdminDeleteAccount from './types/com/atproto/admin/deleteAccount.js'
 import * as ComAtprotoAdminDisableAccountInvites from './types/com/atproto/admin/disableAccountInvites.js'
@@ -52,6 +52,7 @@ import * as ComAtprotoServerCheckAccountStatus from './types/com/atproto/server/
 import * as ComAtprotoServerConfirmEmail from './types/com/atproto/server/confirmEmail.js'
 import * as ComAtprotoServerCreateAccount from './types/com/atproto/server/createAccount.js'
 import * as ComAtprotoServerCreateAppPassword from './types/com/atproto/server/createAppPassword.js'
+import * as ComAtprotoServerCreateCustomJwtSession from './types/com/atproto/server/createCustomJwtSession.js'
 import * as ComAtprotoServerCreateInviteCode from './types/com/atproto/server/createInviteCode.js'
 import * as ComAtprotoServerCreateInviteCodes from './types/com/atproto/server/createInviteCodes.js'
 import * as ComAtprotoServerCreateSession from './types/com/atproto/server/createSession.js'
@@ -109,8 +110,8 @@ import * as AppBskyFeedGetFeedGenerators from './types/app/bsky/feed/getFeedGene
 import * as AppBskyFeedGetFeedSkeleton from './types/app/bsky/feed/getFeedSkeleton.js'
 import * as AppBskyFeedGetLikes from './types/app/bsky/feed/getLikes.js'
 import * as AppBskyFeedGetListFeed from './types/app/bsky/feed/getListFeed.js'
-import * as AppBskyFeedGetPostThread from './types/app/bsky/feed/getPostThread.js'
 import * as AppBskyFeedGetPosts from './types/app/bsky/feed/getPosts.js'
+import * as AppBskyFeedGetPostThread from './types/app/bsky/feed/getPostThread.js'
 import * as AppBskyFeedGetQuotes from './types/app/bsky/feed/getQuotes.js'
 import * as AppBskyFeedGetRepostedBy from './types/app/bsky/feed/getRepostedBy.js'
 import * as AppBskyFeedGetSuggestedFeeds from './types/app/bsky/feed/getSuggestedFeeds.js'
@@ -837,6 +838,18 @@ export class ComAtprotoServerNS {
     >,
   ) {
     const nsid = 'com.atproto.server.createAppPassword' // @ts-ignore
+    return this._server.xrpc.method(nsid, cfg)
+  }
+
+  createCustomJwtSession<A extends Auth = void>(
+    cfg: MethodConfigOrHandler<
+      A,
+      ComAtprotoServerCreateCustomJwtSession.QueryParams,
+      ComAtprotoServerCreateCustomJwtSession.HandlerInput,
+      ComAtprotoServerCreateCustomJwtSession.HandlerOutput
+    >,
+  ) {
+    const nsid = 'com.atproto.server.createCustomJwtSession' // @ts-ignore
     return this._server.xrpc.method(nsid, cfg)
   }
 
@@ -1599,18 +1612,6 @@ export class AppBskyFeedNS {
     return this._server.xrpc.method(nsid, cfg)
   }
 
-  getPostThread<A extends Auth = void>(
-    cfg: MethodConfigOrHandler<
-      A,
-      AppBskyFeedGetPostThread.QueryParams,
-      AppBskyFeedGetPostThread.HandlerInput,
-      AppBskyFeedGetPostThread.HandlerOutput
-    >,
-  ) {
-    const nsid = 'app.bsky.feed.getPostThread' // @ts-ignore
-    return this._server.xrpc.method(nsid, cfg)
-  }
-
   getPosts<A extends Auth = void>(
     cfg: MethodConfigOrHandler<
       A,
@@ -1620,6 +1621,18 @@ export class AppBskyFeedNS {
     >,
   ) {
     const nsid = 'app.bsky.feed.getPosts' // @ts-ignore
+    return this._server.xrpc.method(nsid, cfg)
+  }
+
+  getPostThread<A extends Auth = void>(
+    cfg: MethodConfigOrHandler<
+      A,
+      AppBskyFeedGetPostThread.QueryParams,
+      AppBskyFeedGetPostThread.HandlerInput,
+      AppBskyFeedGetPostThread.HandlerOutput
+    >,
+  ) {
+    const nsid = 'app.bsky.feed.getPostThread' // @ts-ignore
     return this._server.xrpc.method(nsid, cfg)
   }
 

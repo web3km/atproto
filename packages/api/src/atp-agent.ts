@@ -1,4 +1,4 @@
-import { getPdsEndpoint, isValidDidDoc } from '@atproto/common-web'
+import { getPdsEndpoint, isValidDidDoc } from '@bluesky-social/common-web'
 import {
   ErrorResponseBody,
   Gettable,
@@ -6,10 +6,11 @@ import {
   XRPCError,
   XrpcClient,
   errorResponseBody,
-} from '@atproto/xrpc'
+} from '@bluesky-social/xrpc'
 import { Agent } from './agent'
 import {
   ComAtprotoServerCreateAccount,
+  ComAtprotoServerCreateCustomJwtSession,
   ComAtprotoServerCreateSession,
   ComAtprotoServerGetSession,
   ComAtprotoServerNS,
@@ -17,6 +18,7 @@ import {
 import { schemas } from './client/lexicons'
 import { SessionManager } from './session-manager'
 import {
+  AtpAgentCreateCustomJwtSessionOpts,
   AtpAgentLoginOpts,
   AtpPersistSessionHandler,
   AtpSessionData,
@@ -142,6 +144,12 @@ export class AtpAgent extends Agent {
     opts: AtpAgentLoginOpts,
   ): Promise<ComAtprotoServerCreateSession.Response> {
     return this.sessionManager.login(opts)
+  }
+
+  async createCustomJwtSession(
+    opts: AtpAgentCreateCustomJwtSessionOpts,
+  ): Promise<ComAtprotoServerCreateCustomJwtSession.Response> {
+    return this.sessionManager.createCustomJwtSession(opts)
   }
 
   async logout(): Promise<void> {
@@ -321,6 +329,37 @@ export class CredentialSession implements SessionManager {
         emailAuthFactor: res.data.emailAuthFactor,
         active: res.data.active ?? true,
         status: res.data.status,
+      }
+      this._updateApiEndpoint(res.data.didDoc)
+      this.persistSession?.('create', this.session)
+      return res
+    } catch (e) {
+      this.session = undefined
+      this.persistSession?.('create-failed', undefined)
+      throw e
+    }
+  }
+
+  async createCustomJwtSession(
+    opts: AtpAgentCreateCustomJwtSessionOpts,
+  ): Promise<ComAtprotoServerCreateCustomJwtSession.Response> {
+    try {
+      const res = await this.server.createCustomJwtSession({
+        verifier: opts.verifier,
+        options: {
+          id_token: opts.idToken,
+        },
+      })
+      this.session = {
+        accessJwt: res.data.accessJwt,
+        refreshJwt: res.data.refreshJwt,
+        handle: res.data.handle,
+        did: res.data.did,
+        email: undefined,
+        emailConfirmed: undefined,
+        emailAuthFactor: undefined,
+        active: true,
+        status: undefined,
       }
       this._updateApiEndpoint(res.data.didDoc)
       this.persistSession?.('create', this.session)

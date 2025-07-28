@@ -1,5 +1,5 @@
-import { type LexUserType, type LexiconDoc } from '@atproto/lexicon'
-import { NSID } from '@atproto/syntax'
+import { type LexUserType, type LexiconDoc } from '@bluesky-social/lexicon'
+import { NSID } from '@bluesky-social/syntax'
 
 export interface DefTreeNodeUserType {
   nsid: string

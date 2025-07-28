@@ -1,4 +1,4 @@
-# @atproto/common-web
+# @bluesky-social/common-web
 
 ## 0.4.2
 

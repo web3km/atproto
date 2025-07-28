@@ -1,4 +1,4 @@
-import { OAuthTokenType } from '@atproto/oauth-types'
+import { OAuthTokenType } from '@bluesky-social/oauth-types'
 import { Code } from '../request/code.js'
 
 /**

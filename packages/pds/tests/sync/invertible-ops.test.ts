@@ -1,8 +1,8 @@
 import { CID } from 'multiformats/cid'
-import { AtUri } from '@atproto/api'
-import { SeedClient, TestNetworkNoAppView } from '@atproto/dev-env'
-import * as repo from '@atproto/repo'
-import { Subscription } from '@atproto/xrpc-server'
+import { AtUri } from '@bluesky-social/api'
+import { SeedClient, TestNetworkNoAppView } from '@bluesky-social/dev-env'
+import * as repo from '@bluesky-social/repo'
+import { Subscription } from '@bluesky-social/xrpc-server'
 import {
   OutputSchema as SubscribeReposOutput,
   RepoOp,

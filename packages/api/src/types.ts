@@ -51,6 +51,14 @@ export interface AtpAgentLoginOpts {
 }
 
 /**
+ * AtpAgent createCustomJwtSession() opts
+ */
+export interface AtpAgentCreateCustomJwtSessionOpts {
+  verifier: string
+  idToken: string
+}
+
+/**
  * AtpAgent global config opts
  */
 export interface AtpAgentGlobalOpts {
