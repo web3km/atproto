@@ -1,4 +1,4 @@
-import { Did, DidDocument } from '@atproto/did'
+import { Did, DidDocument } from '@bluesky-social/did'
 import {
   SimpleStoreMemory,
   SimpleStoreMemoryOptions,

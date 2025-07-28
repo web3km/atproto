@@ -1,4 +1,4 @@
-import { RefreshToken } from '@atproto/oauth-provider'
+import { RefreshToken } from '@bluesky-social/oauth-provider'
 import { AccountDb } from '../db'
 
 /**

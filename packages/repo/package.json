@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/repo",
+  "name": "@bluesky-social/repo",
   "version": "0.8.5",
   "license": "MIT",
   "description": "atproto repo and MST implementation",
@@ -24,10 +24,10 @@
     "build": "tsc --build tsconfig.build.json"
   },
   "dependencies": {
-    "@atproto/common": "workspace:^",
-    "@atproto/common-web": "workspace:^",
-    "@atproto/crypto": "workspace:^",
-    "@atproto/lexicon": "workspace:^",
+    "@bluesky-social/common": "workspace:^",
+    "@bluesky-social/common-web": "workspace:^",
+    "@bluesky-social/crypto": "workspace:^",
+    "@bluesky-social/lexicon": "workspace:^",
     "@ipld/dag-cbor": "^7.0.0",
     "multiformats": "^9.9.0",
     "uint8arrays": "3.0.0",

@@ -1,6 +1,6 @@
-export type { OAuthClientMetadata } from '@atproto/oauth-types'
+export type { OAuthClientMetadata } from '@bluesky-social/oauth-types'
 
-// @NOTE: not importing these from @atproto/oauth-types here because 1) we don't
+// @NOTE: not importing these from @bluesky-social/oauth-types here because 1) we don't
 // need to validate here and 2) we prefer not to import un-necessary code to
 // improve bundle size (~100k impact)
 export const isOAuthClientIdLoopback = (clientId: string) =>

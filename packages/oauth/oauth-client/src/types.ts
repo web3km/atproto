@@ -4,12 +4,12 @@ import {
   oauthClientIdDiscoverableSchema,
   oauthClientIdLoopbackSchema,
   oauthClientMetadataSchema,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import { Simplify } from './util.js'
 
 // Note: These types are not prefixed with `OAuth` because they are not specific
 // to OAuth. They are specific to this packages. OAuth specific types are in
-// `@atproto/oauth-types`.
+// `@bluesky-social/oauth-types`.
 
 export type AuthorizeOptions = Simplify<
   Omit<

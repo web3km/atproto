@@ -1,5 +1,5 @@
-import AtpAgent, { AppBskyEmbedRecord } from '@atproto/api'
-import { SeedClient, TestNetwork } from '@atproto/dev-env'
+import AtpAgent, { AppBskyEmbedRecord } from '@bluesky-social/api'
+import { SeedClient, TestNetwork } from '@bluesky-social/dev-env'
 import { ids } from '../src/lexicon/lexicons'
 import { Users, postgatesSeed } from './seed/postgates'
 

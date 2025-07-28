@@ -1,6 +1,6 @@
-import { mapDefined } from '@atproto/common'
-import { normalizeDatetimeAlways } from '@atproto/syntax'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { mapDefined } from '@bluesky-social/common'
+import { normalizeDatetimeAlways } from '@bluesky-social/syntax'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import {
   HydrateCtx,

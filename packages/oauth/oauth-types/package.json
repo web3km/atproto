@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/oauth-types",
+  "name": "@bluesky-social/oauth-types",
   "version": "0.4.0",
   "license": "MIT",
   "description": "OAuth typing & validation library",
@@ -25,7 +25,7 @@
     }
   },
   "dependencies": {
-    "@atproto/jwk": "workspace:*",
+    "@bluesky-social/jwk": "workspace:*",
     "zod": "^3.23.8"
   },
   "devDependencies": {

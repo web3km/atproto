@@ -1,7 +1,7 @@
 import type { IncomingMessage } from 'node:http'
 import type { CID } from 'multiformats/cid'
-import { type LexiconDoc, Lexicons } from '@atproto/lexicon'
-import type { Auth, ErrorFrame } from '@atproto/xrpc-server'
+import { type LexiconDoc, Lexicons } from '@bluesky-social/lexicon'
+import type { Auth, ErrorFrame } from '@bluesky-social/xrpc-server'
 
 // @NOTE: this file is an ugly copy job of codegen output. I'd like to clean this whole thing up
 

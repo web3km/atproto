@@ -1,6 +1,6 @@
 import { CID } from 'multiformats/cid'
-import { BlobNotFoundError } from '@atproto/repo'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { BlobNotFoundError } from '@bluesky-social/repo'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AuthScope } from '../../../../auth-verifier'
 import { AppContext } from '../../../../context'
 import { Server } from '../../../../lexicon'

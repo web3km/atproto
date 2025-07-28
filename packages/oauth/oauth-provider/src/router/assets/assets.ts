@@ -1,5 +1,5 @@
-import type { HydrationData as FeHydrationData } from '@atproto/oauth-provider-frontend/hydration-data'
-import type { HydrationData as UiHydrationData } from '@atproto/oauth-provider-ui/hydration-data'
+import type { HydrationData as FeHydrationData } from '@bluesky-social/oauth-provider-frontend/hydration-data'
+import type { HydrationData as UiHydrationData } from '@bluesky-social/oauth-provider-ui/hydration-data'
 import { CspConfig } from '../../lib/csp/index.js'
 import { combineMiddlewares } from '../../lib/http/middleware.js'
 import { Simplify } from '../../lib/util/type.js'
@@ -9,14 +9,14 @@ import { parseAssetsManifest } from './assets-manifest.js'
 // with a single expression:
 //
 // const { getAssets, assetsMiddleware } = parseAssetsManifest(
-//   require.resolve('@atproto/oauth-provider-ui/bundle-manifest.json'),
+//   require.resolve('@bluesky-social/oauth-provider-ui/bundle-manifest.json'),
 // )
 
 const ui = parseAssetsManifest(
-  require.resolve('@atproto/oauth-provider-ui/bundle-manifest.json'),
+  require.resolve('@bluesky-social/oauth-provider-ui/bundle-manifest.json'),
 )
 const fe = parseAssetsManifest(
-  require.resolve('@atproto/oauth-provider-frontend/bundle-manifest.json'),
+  require.resolve('@bluesky-social/oauth-provider-frontend/bundle-manifest.json'),
 )
 
 export type HydrationData = Simplify<UiHydrationData & FeHydrationData>

@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/react/macro'
-import type { LinkDefinition } from '@atproto/oauth-provider-api'
+import type { LinkDefinition } from '@bluesky-social/oauth-provider-api'
 import { MultiLangString } from './multi-lang-string.tsx'
 
 export type LinkNameProps = {

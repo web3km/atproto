@@ -1,5 +1,5 @@
-import { MINUTE } from '@atproto/common'
-import { AuthRequiredError, InvalidRequestError } from '@atproto/xrpc-server'
+import { MINUTE } from '@bluesky-social/common'
+import { AuthRequiredError, InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AccountStatus } from '../../../../account-manager/account-manager'
 import { OLD_PASSWORD_MAX_LENGTH } from '../../../../account-manager/helpers/scrypt'
 import { AppContext } from '../../../../context'

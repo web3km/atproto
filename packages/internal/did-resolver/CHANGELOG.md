@@ -39,7 +39,7 @@
   - @atproto-labs/simple-store-memory@0.1.2
   - @atproto-labs/simple-store@0.1.2
   - @atproto-labs/fetch@0.2.1
-  - @atproto/did@0.1.5
+  - @bluesky-social/did@0.1.5
 
 ## 0.1.9
 
@@ -48,7 +48,7 @@
 - [#3454](https://github.com/bluesky-social/atproto/pull/3454) [`cc2a1222b`](https://github.com/bluesky-social/atproto/commit/cc2a1222bd2b8ddd70d70dad174c1c63246a2d87) Thanks [@matthieusieben](https://github.com/matthieusieben)! - Improve error descriptions
 
 - Updated dependencies [[`cc2a1222b`](https://github.com/bluesky-social/atproto/commit/cc2a1222bd2b8ddd70d70dad174c1c63246a2d87)]:
-  - @atproto/did@0.1.4
+  - @bluesky-social/did@0.1.4
 
 ## 0.1.8
 
@@ -77,7 +77,7 @@
 - [#2874](https://github.com/bluesky-social/atproto/pull/2874) [`7f26b1765`](https://github.com/bluesky-social/atproto/commit/7f26b176526b9856a8f61faca6f065f0afd43abf) Thanks [@matthieusieben](https://github.com/matthieusieben)! - Add "allowHttp" did:web method option
 
 - Updated dependencies [[`9d40ccbb6`](https://github.com/bluesky-social/atproto/commit/9d40ccbb69103fae9aae7e3cec31e9b3116f3ba2)]:
-  - @atproto/did@0.1.3
+  - @bluesky-social/did@0.1.3
 
 ## 0.1.4
 
@@ -91,14 +91,14 @@
 ### Patch Changes
 
 - Updated dependencies [[`cb4abbb67`](https://github.com/bluesky-social/atproto/commit/cb4abbb673c69a8a89b49dca5c038f3da2153c6c), [`cb4abbb67`](https://github.com/bluesky-social/atproto/commit/cb4abbb673c69a8a89b49dca5c038f3da2153c6c), [`cb4abbb67`](https://github.com/bluesky-social/atproto/commit/cb4abbb673c69a8a89b49dca5c038f3da2153c6c)]:
-  - @atproto/did@0.1.2
+  - @bluesky-social/did@0.1.2
 
 ## 0.1.2
 
 ### Patch Changes
 
 - Updated dependencies [[`b934b396b`](https://github.com/bluesky-social/atproto/commit/b934b396b13ba32bf2bf7e75ecdf6871e5f310dd)]:
-  - @atproto/did@0.1.1
+  - @bluesky-social/did@0.1.1
 
 ## 0.1.1
 
@@ -123,4 +123,4 @@
   - @atproto-labs/simple-store@0.1.0
   - @atproto-labs/fetch@0.1.0
   - @atproto-labs/pipe@0.1.0
-  - @atproto/did@0.1.0
+  - @bluesky-social/did@0.1.0

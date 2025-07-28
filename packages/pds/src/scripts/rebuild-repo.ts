@@ -1,12 +1,12 @@
 import readline from 'node:readline/promises'
-import { TID } from '@atproto/common'
+import { TID } from '@bluesky-social/common'
 import {
   BlockMap,
   CidSet,
   MST,
   MemoryBlockstore,
   signCommit,
-} from '@atproto/repo'
+} from '@bluesky-social/repo'
 import { AccountManager } from '../account-manager/account-manager'
 import { ActorStore } from '../actor-store/actor-store'
 import { Sequencer } from '../sequencer'

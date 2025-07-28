@@ -1,5 +1,5 @@
-import { AtpAgent } from '@atproto/api'
-import { RecordRef, SeedClient, TestNetwork, usersSeed } from '@atproto/dev-env'
+import { AtpAgent } from '@bluesky-social/api'
+import { RecordRef, SeedClient, TestNetwork, usersSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 
 describe('thread mutes', () => {

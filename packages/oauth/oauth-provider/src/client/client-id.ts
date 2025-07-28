@@ -1,4 +1,4 @@
-import { OAuthClientId, oauthClientIdSchema } from '@atproto/oauth-types'
+import { OAuthClientId, oauthClientIdSchema } from '@bluesky-social/oauth-types'
 
 export type ClientId = OAuthClientId
 export const clientIdSchema = oauthClientIdSchema

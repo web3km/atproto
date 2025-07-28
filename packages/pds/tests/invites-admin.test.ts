@@ -1,6 +1,6 @@
-import { AtpAgent } from '@atproto/api'
-import { randomStr } from '@atproto/crypto'
-import { SeedClient, TestNetworkNoAppView } from '@atproto/dev-env'
+import { AtpAgent } from '@bluesky-social/api'
+import { randomStr } from '@bluesky-social/crypto'
+import { SeedClient, TestNetworkNoAppView } from '@bluesky-social/dev-env'
 
 describe('pds admin invite views', () => {
   let network: TestNetworkNoAppView

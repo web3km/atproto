@@ -1,7 +1,7 @@
 import {
   OAuthProtectedResourceMetadata,
   oauthProtectedResourceMetadataSchema,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import {
   Fetch,
   FetchResponseError,

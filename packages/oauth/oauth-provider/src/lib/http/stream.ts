@@ -1,7 +1,7 @@
 import type { IncomingMessage } from 'node:http'
 import { Readable } from 'node:stream'
 import createHttpError from 'http-errors'
-import { decodeStream, streamToNodeBuffer } from '@atproto/common'
+import { decodeStream, streamToNodeBuffer } from '@bluesky-social/common'
 import {
   KnownNames,
   KnownParser,

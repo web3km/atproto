@@ -1,4 +1,4 @@
-import { mapDefined } from '@atproto/common'
+import { mapDefined } from '@bluesky-social/common'
 import { AppContext } from '../../context'
 import { Server } from '../../lexicon'
 import { ids } from '../../lexicon/lexicons'

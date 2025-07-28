@@ -1,8 +1,8 @@
-# @atproto/dev-env: Local Developer Environment
+# @bluesky-social/dev-env: Local Developer Environment
 
 A command-line application for developers to construct and manage development environments.
 
-[![NPM](https://img.shields.io/npm/v/@atproto/dev-env)](https://www.npmjs.com/package/@atproto/dev-env)
+[![NPM](https://img.shields.io/npm/v/@bluesky-social/dev-env)](https://www.npmjs.com/package/@bluesky-social/dev-env)
 [![Github CI Status](https://github.com/bluesky-social/atproto/actions/workflows/repo.yaml/badge.svg)](https://github.com/bluesky-social/atproto/actions/workflows/repo.yaml)
 
 ## REPL API

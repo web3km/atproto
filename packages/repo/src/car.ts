@@ -8,7 +8,7 @@ import {
   schema,
   streamToBuffer,
   verifyCidForBytes,
-} from '@atproto/common'
+} from '@bluesky-social/common'
 import { BlockMap } from './block-map'
 import { CarBlock } from './types'
 

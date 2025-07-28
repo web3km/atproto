@@ -1,5 +1,5 @@
 import { JWK, importJWK, jwtVerify } from 'jose'
-import { AuthRequiredError } from '@atproto/xrpc-server'
+import { AuthRequiredError } from '@bluesky-social/xrpc-server'
 
 export interface JwtVerifierConfig {
   jwkEndpoint: string

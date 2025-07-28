@@ -1,5 +1,5 @@
-import { Key, Keyset } from '@atproto/jwk'
-import { OAuthAuthorizationServerMetadata } from '@atproto/oauth-types'
+import { Key, Keyset } from '@bluesky-social/jwk'
+import { OAuthAuthorizationServerMetadata } from '@bluesky-social/oauth-types'
 import { Fetch } from '@atproto-labs/fetch'
 import { GetCachedOptions } from './oauth-authorization-server-metadata-resolver.js'
 import {

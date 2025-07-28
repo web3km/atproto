@@ -7,9 +7,9 @@ import {
   allFulfilled,
   createDecoders,
   getPdsEndpoint,
-} from '@atproto/common'
-import { IdResolver } from '@atproto/identity'
-import { ResponseType, XRPCError } from '@atproto/xrpc'
+} from '@bluesky-social/common'
+import { IdResolver } from '@bluesky-social/identity'
+import { ResponseType, XRPCError } from '@bluesky-social/xrpc'
 import { BlobDivertConfig } from '../config'
 import { Database } from '../db'
 import { retryHttp } from '../util'

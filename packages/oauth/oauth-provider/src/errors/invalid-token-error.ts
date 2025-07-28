@@ -1,6 +1,6 @@
 import { errors } from 'jose'
 import { ZodError } from 'zod'
-import { JwtVerifyError } from '@atproto/jwk'
+import { JwtVerifyError } from '@bluesky-social/jwk'
 import { OAuthError } from './oauth-error.js'
 import { WWWAuthenticateError } from './www-authenticate-error.js'
 

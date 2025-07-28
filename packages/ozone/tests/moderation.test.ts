@@ -2,8 +2,8 @@ import {
   AtpAgent,
   ChatBskyConvoDefs,
   ToolsOzoneModerationEmitEvent,
-} from '@atproto/api'
-import { HOUR } from '@atproto/common'
+} from '@bluesky-social/api'
+import { HOUR } from '@bluesky-social/common'
 import {
   ImageRef,
   ModeratorClient,
@@ -12,8 +12,8 @@ import {
   TestNetwork,
   TestOzone,
   basicSeed,
-} from '@atproto/dev-env'
-import { AtUri } from '@atproto/syntax'
+} from '@bluesky-social/dev-env'
+import { AtUri } from '@bluesky-social/syntax'
 import { EventReverser } from '../src'
 import { ImageInvalidator } from '../src/image-invalidator'
 import { ids } from '../src/lexicon/lexicons'

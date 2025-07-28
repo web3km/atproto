@@ -1,4 +1,4 @@
-import { getPdsEndpoint, isValidDidDoc } from '@atproto/common-web'
+import { getPdsEndpoint, isValidDidDoc } from '@bluesky-social/common-web'
 import {
   ErrorResponseBody,
   Gettable,
@@ -6,7 +6,7 @@ import {
   XRPCError,
   XrpcClient,
   errorResponseBody,
-} from '@atproto/xrpc'
+} from '@bluesky-social/xrpc'
 import { Agent } from './agent'
 import {
   ComAtprotoServerCreateAccount,

@@ -12,13 +12,13 @@ This API is a client for ATProtocol servers. It communicates using HTTP. It incl
 First install the package:
 
 ```sh
-yarn add @atproto/api
+yarn add @bluesky-social/api
 ```
 
 Then in your application:
 
 ```typescript
-import { AtpAgent } from '@atproto/api'
+import { AtpAgent } from '@bluesky-social/api'
 
 const agent = new AtpAgent({ service: 'https://example.com' })
 ```
@@ -42,10 +42,10 @@ class.
 >
 > This method is deprecated in favor of OAuth based session management. It is
 > recommended to use OAuth based session management (through the
-> `@atproto/oauth-client-*` packages).
+> `@bluesky-social/oauth-client-*` packages).
 
 ```typescript
-import { AtpAgent, AtpSessionEvent, AtpSessionData } from '@atproto/api'
+import { AtpAgent, AtpSessionEvent, AtpSessionData } from '@bluesky-social/api'
 
 // configure connection to the server, without account authentication
 const agent = new AtpAgent({
@@ -80,20 +80,20 @@ await agent.login({
 Depending on the environment used by your application, different OAuth clients
 are available:
 
-- [@atproto/oauth-client-browser](https://www.npmjs.com/package/@atproto/oauth-client-browser):
+- [@bluesky-social/oauth-client-browser](https://www.npmjs.com/package/@bluesky-social/oauth-client-browser):
   for the browser.
-- [@atproto/oauth-client-node](https://www.npmjs.com/package/@atproto/oauth-client-node): for
+- [@bluesky-social/oauth-client-node](https://www.npmjs.com/package/@bluesky-social/oauth-client-node): for
   Node.js.
-- [@atproto/oauth-client](https://www.npmjs.com/package/@atproto/oauth-client):
+- [@bluesky-social/oauth-client](https://www.npmjs.com/package/@bluesky-social/oauth-client):
   Lower level; compatible with most JS engines.
 
-Every `@atproto/oauth-client-*` implementation has a different way to obtain an
+Every `@bluesky-social/oauth-client-*` implementation has a different way to obtain an
 `OAuthSession` instance that can be used to instantiate an `Agent` (from
-`@atproto/api`). Here is an example restoring a previously saved session:
+`@bluesky-social/api`). Here is an example restoring a previously saved session:
 
 ```typescript
-import { Agent } from '@atproto/api'
-import { OAuthClient } from '@atproto/oauth-client'
+import { Agent } from '@bluesky-social/api'
+import { OAuthClient } from '@bluesky-social/oauth-client'
 
 const oauthClient = new OAuthClient({
   // ...
@@ -174,7 +174,7 @@ if (agent instanceof AtpAgent) {
 The package includes a complete types system which includes validation and type-guards. For example, to validate a post record:
 
 ```typescript
-import { AppBskyFeedPost } from '@atproto/api'
+import { AppBskyFeedPost } from '@bluesky-social/api'
 
 const post = {...}
 if (AppBskyFeedPost.isRecord(post)) {
@@ -197,7 +197,7 @@ Some records (ie posts) use the `app.bsky.richtext` lexicon. At the moment richt
 ℹ️ It is **strongly** recommended to use this package's `RichText` library. Javascript encodes strings in utf16 while the protocol (and most other programming environments) use utf8. Converting between the two is challenging, but `RichText` handles that for you.
 
 ```typescript
-import { RichText } from '@atproto/api'
+import { RichText } from '@bluesky-social/api'
 
 // creating richtext
 const rt = new RichText({
@@ -245,7 +245,7 @@ Applying the moderation system is a challenging task, but we've done our best to
 For more information, see the [Moderation Documentation](./docs/moderation.md).
 
 ```typescript
-import { moderatePost } from '@atproto/api'
+import { moderatePost } from '@bluesky-social/api'
 
 // First get the user's moderation prefs and their label definitions
 // =
@@ -348,7 +348,7 @@ If you want to provide your own `fetch` implementation, you can do so by
 instantiating the sessionManager with a custom fetch implementation:
 
 ```typescript
-import { AtpAgent } from '@atproto/api'
+import { AtpAgent } from '@bluesky-social/api'
 
 const myFetch = (input: RequestInfo | URL, init?: RequestInit) => {
   console.log('requesting', input)

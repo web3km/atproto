@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/api",
+  "name": "@bluesky-social/api",
   "version": "0.15.25",
   "license": "MIT",
   "description": "Client library for atproto and Bluesky",
@@ -22,17 +22,17 @@
     "test": "jest"
   },
   "dependencies": {
-    "@atproto/common-web": "workspace:^",
-    "@atproto/lexicon": "workspace:^",
-    "@atproto/syntax": "workspace:^",
-    "@atproto/xrpc": "workspace:^",
+    "@bluesky-social/common-web": "workspace:^",
+    "@bluesky-social/lexicon": "workspace:^",
+    "@bluesky-social/syntax": "workspace:^",
+    "@bluesky-social/xrpc": "workspace:^",
     "await-lock": "^2.2.2",
     "multiformats": "^9.9.0",
     "tlds": "^1.234.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@atproto/lex-cli": "workspace:^",
+    "@bluesky-social/lex-cli": "workspace:^",
     "jest": "^28.1.2",
     "prettier": "^3.2.5",
     "typescript": "^5.6.3"

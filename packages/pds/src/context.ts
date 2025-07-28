@@ -5,21 +5,21 @@ import { Redis } from 'ioredis'
 import * as nodemailer from 'nodemailer'
 import * as ui8 from 'uint8arrays'
 import * as undici from 'undici'
-import { AtpAgent } from '@atproto/api'
-import { KmsKeypair, S3BlobStore } from '@atproto/aws'
-import * as crypto from '@atproto/crypto'
-import { IdResolver } from '@atproto/identity'
+import { AtpAgent } from '@bluesky-social/api'
+import { KmsKeypair, S3BlobStore } from '@bluesky-social/aws'
+import * as crypto from '@bluesky-social/crypto'
+import { IdResolver } from '@bluesky-social/identity'
 import {
   AccessTokenMode,
   JoseKey,
   OAuthProvider,
   OAuthVerifier,
-} from '@atproto/oauth-provider'
-import { BlobStore } from '@atproto/repo'
+} from '@bluesky-social/oauth-provider'
+import { BlobStore } from '@bluesky-social/repo'
 import {
   createServiceAuthHeaders,
   createServiceJwt,
-} from '@atproto/xrpc-server'
+} from '@bluesky-social/xrpc-server'
 import {
   Fetch,
   isUnicastIp,

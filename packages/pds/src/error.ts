@@ -1,6 +1,6 @@
 import { ErrorRequestHandler } from 'express'
-import { OAuthError } from '@atproto/oauth-provider'
-import { XRPCError } from '@atproto/xrpc-server'
+import { OAuthError } from '@bluesky-social/oauth-provider'
+import { XRPCError } from '@bluesky-social/xrpc-server'
 import { httpLogger as log } from './logger'
 
 export const handler: ErrorRequestHandler = (err, _req, res, next) => {

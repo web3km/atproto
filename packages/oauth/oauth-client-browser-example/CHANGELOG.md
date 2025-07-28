@@ -1,4 +1,4 @@
-# @atproto/oauth-client-browser-example
+# @bluesky-social/oauth-client-browser-example
 
 ## 0.0.5
 

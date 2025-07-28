@@ -4,7 +4,7 @@ import {
   SeedClient,
   TestNetwork,
   basicSeed,
-} from '@atproto/dev-env'
+} from '@bluesky-social/dev-env'
 import { isRepoRef } from '../src/lexicon/types/com/atproto/admin/defs'
 import { REASONMISLEADING } from '../src/lexicon/types/com/atproto/moderation/defs'
 import { isMain as isStrongRef } from '../src/lexicon/types/com/atproto/repo/strongRef'

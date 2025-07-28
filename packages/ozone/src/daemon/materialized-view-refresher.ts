@@ -1,5 +1,5 @@
 import { sql } from 'kysely'
-import { MINUTE } from '@atproto/common'
+import { MINUTE } from '@bluesky-social/common'
 import { BackgroundQueue, PeriodicBackgroundTask } from '../background'
 
 export class MaterializedViewRefresher extends PeriodicBackgroundTask {

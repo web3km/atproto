@@ -1,12 +1,12 @@
 import assert from 'node:assert'
-import { AtUri, AtpAgent } from '@atproto/api'
+import { AtUri, AtpAgent } from '@bluesky-social/api'
 import {
   SeedClient,
   TestNetworkNoAppView,
   TestPds,
   mockNetworkUtilities,
-} from '@atproto/dev-env'
-import { readCar } from '@atproto/repo'
+} from '@bluesky-social/dev-env'
+import { readCar } from '@bluesky-social/repo'
 import { ids } from '../src/lexicon/lexicons'
 
 describe('account migration', () => {

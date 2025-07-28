@@ -1,5 +1,5 @@
-import { ToolsOzoneModerationDefs } from '@atproto/api'
-import { AtUri } from '@atproto/syntax'
+import { ToolsOzoneModerationDefs } from '@bluesky-social/api'
+import { AtUri } from '@bluesky-social/syntax'
 import { AppContext } from '../../context'
 import { Server } from '../../lexicon'
 import { SubjectView } from '../../lexicon/types/tools/ozone/moderation/defs'

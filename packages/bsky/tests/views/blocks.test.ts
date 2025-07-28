@@ -1,6 +1,6 @@
 import assert from 'node:assert'
-import { AtUri, AtpAgent } from '@atproto/api'
-import { RecordRef, SeedClient, TestNetwork, basicSeed } from '@atproto/dev-env'
+import { AtUri, AtpAgent } from '@bluesky-social/api'
+import { RecordRef, SeedClient, TestNetwork, basicSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 import { isView as isRecordEmbedView } from '../../src/lexicon/types/app/bsky/embed/record'
 import { isPostView } from '../../src/lexicon/types/app/bsky/feed/defs'

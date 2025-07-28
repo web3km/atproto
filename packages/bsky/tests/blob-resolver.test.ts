@@ -1,8 +1,8 @@
 import { CID } from 'multiformats/cid'
 import { request } from 'undici'
-import { cidForCbor, verifyCidForBytes } from '@atproto/common'
-import { randomBytes } from '@atproto/crypto'
-import { TestNetwork, basicSeed } from '@atproto/dev-env'
+import { cidForCbor, verifyCidForBytes } from '@bluesky-social/common'
+import { randomBytes } from '@bluesky-social/crypto'
+import { TestNetwork, basicSeed } from '@bluesky-social/dev-env'
 
 describe('blob resolver', () => {
   let network: TestNetwork

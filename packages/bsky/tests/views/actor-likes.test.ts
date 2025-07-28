@@ -1,5 +1,5 @@
-import { AtUri, AtpAgent } from '@atproto/api'
-import { SeedClient, TestNetwork, basicSeed } from '@atproto/dev-env'
+import { AtUri, AtpAgent } from '@bluesky-social/api'
+import { SeedClient, TestNetwork, basicSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 
 describe('bsky actor likes feed views', () => {

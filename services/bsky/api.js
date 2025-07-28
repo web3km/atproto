@@ -44,8 +44,8 @@ const assert = require('node:assert')
 const cluster = require('node:cluster')
 const path = require('node:path')
 
-const { BskyAppView, ServerConfig } = require('@atproto/bsky')
-const { Secp256k1Keypair } = require('@atproto/crypto')
+const { BskyAppView, ServerConfig } = require('@bluesky-social/bsky')
+const { Secp256k1Keypair } = require('@bluesky-social/crypto')
 
 const main = async () => {
   const env = getEnv()

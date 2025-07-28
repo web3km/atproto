@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/oauth-client",
+  "name": "@bluesky-social/oauth-client",
   "version": "0.5.1",
   "license": "MIT",
   "description": "OAuth client for ATPROTO PDS. This package serves as common base for environment-specific implementations (NodeJS, Browser, React-Native).",
@@ -31,10 +31,10 @@
     "@atproto-labs/identity-resolver": "workspace:*",
     "@atproto-labs/simple-store": "workspace:*",
     "@atproto-labs/simple-store-memory": "workspace:*",
-    "@atproto/did": "workspace:*",
-    "@atproto/jwk": "workspace:*",
-    "@atproto/oauth-types": "workspace:*",
-    "@atproto/xrpc": "workspace:*",
+    "@bluesky-social/did": "workspace:*",
+    "@bluesky-social/jwk": "workspace:*",
+    "@bluesky-social/oauth-types": "workspace:*",
+    "@bluesky-social/xrpc": "workspace:*",
     "multiformats": "^9.9.0",
     "zod": "^3.23.8"
   },

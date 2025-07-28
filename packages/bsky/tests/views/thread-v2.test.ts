@@ -1,6 +1,6 @@
 import assert from 'node:assert'
-import { AppBskyUnspeccedDefs, AtpAgent } from '@atproto/api'
-import { SeedClient, TestNetwork, seedThreadV2 } from '@atproto/dev-env'
+import { AppBskyUnspeccedDefs, AtpAgent } from '@bluesky-social/api'
+import { SeedClient, TestNetwork, seedThreadV2 } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 import { ThreadItemPost } from '../../src/lexicon/types/app/bsky/unspecced/defs'
 import { OutputSchema as OutputSchemaHiddenThread } from '../../src/lexicon/types/app/bsky/unspecced/getPostThreadOtherV2'

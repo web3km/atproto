@@ -1,4 +1,4 @@
-import { AtUri } from '@atproto/syntax'
+import { AtUri } from '@bluesky-social/syntax'
 import { AppBskyActorDefs } from '../../client/index'
 import { ModerationDecision } from '../decision'
 import { ModerationOpts, ModerationSubjectUserList } from '../types'

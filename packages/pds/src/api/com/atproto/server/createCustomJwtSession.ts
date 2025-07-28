@@ -1,8 +1,8 @@
 import * as plc from '@did-plc/lib'
-import { DidDocument, MINUTE, check } from '@atproto/common'
-import { ExportableKeypair, Keypair, Secp256k1Keypair } from '@atproto/crypto'
-import { AtprotoData, ensureAtpDocument } from '@atproto/identity'
-import { AuthRequiredError, InvalidRequestError } from '@atproto/xrpc-server'
+import { DidDocument, MINUTE, check } from '@bluesky-social/common'
+import { ExportableKeypair, Keypair, Secp256k1Keypair } from '@bluesky-social/crypto'
+import { AtprotoData, ensureAtpDocument } from '@bluesky-social/identity'
+import { AuthRequiredError, InvalidRequestError } from '@bluesky-social/xrpc-server'
 import {
   AccountStatus,
   formatAccountStatus,

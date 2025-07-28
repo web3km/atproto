@@ -1,6 +1,6 @@
 import { Code, ConnectError } from '@connectrpc/connect'
 import * as ui8 from 'uint8arrays'
-import { getDidKeyFromMultibase } from '@atproto/identity'
+import { getDidKeyFromMultibase } from '@bluesky-social/identity'
 
 export const isDataplaneError = (
   err: unknown,

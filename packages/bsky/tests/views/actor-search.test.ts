@@ -1,6 +1,6 @@
-import { AtpAgent } from '@atproto/api'
-import { wait } from '@atproto/common'
-import { SeedClient, TestNetwork, usersBulkSeed } from '@atproto/dev-env'
+import { AtpAgent } from '@bluesky-social/api'
+import { wait } from '@bluesky-social/common'
+import { SeedClient, TestNetwork, usersBulkSeed } from '@bluesky-social/dev-env'
 import { ids } from '../../src/lexicon/lexicons'
 import { forSnapshot, paginateAll, stripViewer } from '../_util'
 

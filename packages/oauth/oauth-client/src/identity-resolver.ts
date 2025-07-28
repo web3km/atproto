@@ -28,9 +28,9 @@ import {
 // such as one based on the "com.atproto.identity.resolveHandle" XRPC method, or
 // using DNS-over-HTTPS). Once we decide to support such a behavior, the
 // `identityResolver` option below should be made mandatory, and the code bellow
-// should be removed from the @atproto/oauth-client package (and moved to the
-// environment specific package, such as @atproto/oauth-client-browser and
-// @atproto/oauth-client-node), allowing the dependency graph to be optimized
+// should be removed from the @bluesky-social/oauth-client package (and moved to the
+// environment specific package, such as @bluesky-social/oauth-client-browser and
+// @bluesky-social/oauth-client-node), allowing the dependency graph to be optimized
 // for the specific environment. When that is done, the
 // `AtprotoIdentityResolver` class should also be moved to its own package.
 

@@ -1,11 +1,11 @@
 import { CID } from 'multiformats/cid'
 import type { ClientOptions } from 'ws'
-import { Deferrable, createDeferrable, wait } from '@atproto/common'
+import { Deferrable, createDeferrable, wait } from '@bluesky-social/common'
 import {
   DidDocument,
   IdResolver,
   parseToAtprotoDocument,
-} from '@atproto/identity'
+} from '@bluesky-social/identity'
 import {
   RepoVerificationError,
   cborToLexRecord,
@@ -14,9 +14,9 @@ import {
   readCar,
   readCarWithRoot,
   verifyProofs,
-} from '@atproto/repo'
-import { AtUri } from '@atproto/syntax'
-import { Subscription } from '@atproto/xrpc-server'
+} from '@bluesky-social/repo'
+import { AtUri } from '@bluesky-social/syntax'
+import { Subscription } from '@bluesky-social/xrpc-server'
 import {
   AccountEvt,
   AccountStatus,

@@ -3,10 +3,10 @@ import * as http from 'node:http'
 import { AddressInfo } from 'node:net'
 import { Readable } from 'node:stream'
 import { brotliCompressSync, deflateSync, gzipSync } from 'node:zlib'
-import { cidForCbor } from '@atproto/common'
-import { randomBytes } from '@atproto/crypto'
-import { LexiconDoc } from '@atproto/lexicon'
-import { ResponseType, XrpcClient } from '@atproto/xrpc'
+import { cidForCbor } from '@bluesky-social/common'
+import { randomBytes } from '@bluesky-social/crypto'
+import { LexiconDoc } from '@bluesky-social/lexicon'
+import { ResponseType, XrpcClient } from '@bluesky-social/xrpc'
 import * as xrpcServer from '../src'
 import { logger } from '../src/logger'
 import { closeServer, createServer } from './_util'
@@ -531,7 +531,7 @@ describe('Bodies', () => {
       method: 'post',
       headers: { 'Content-Type': '' },
       body: randomBytes(BLOB_LIMIT),
-      // @ts-ignore see note in @atproto/xrpc/client.ts
+      // @ts-ignore see note in @bluesky-social/xrpc/client.ts
       duplex: 'half',
     })
     const resBody = await res.json()

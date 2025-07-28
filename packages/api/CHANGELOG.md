@@ -1,4 +1,4 @@
-# @atproto/api
+# @bluesky-social/api
 
 ## 0.15.25
 
@@ -13,8 +13,8 @@
 - [#4034](https://github.com/bluesky-social/atproto/pull/4034) [`34d7a0846`](https://github.com/bluesky-social/atproto/commit/34d7a0846bb14bb36a8cc2747fb7ce73005e59d1) Thanks [@foysalit](https://github.com/foysalit)! - Add age assurance event types to ozone lexicons
 
 - Updated dependencies [[`8ef976d38`](https://github.com/bluesky-social/atproto/commit/8ef976d3852df4bfa376e515e131cc0810a42f20)]:
-  - @atproto/lexicon@0.4.12
-  - @atproto/xrpc@0.7.1
+  - @bluesky-social/lexicon@0.4.12
+  - @bluesky-social/xrpc@0.7.1
 
 ## 0.15.23
 
@@ -129,9 +129,9 @@
 - [#3824](https://github.com/bluesky-social/atproto/pull/3824) [`3a65b68f7`](https://github.com/bluesky-social/atproto/commit/3a65b68f7dc63c8bfbea0ae615f8ae984272f2e4) Thanks [@rafaelbsky](https://github.com/rafaelbsky)! - Add app.bsky.actor.status lexicon
 
 - Updated dependencies [[`cc485d296`](https://github.com/bluesky-social/atproto/commit/cc485d29638488928b5efec3d4b0627040589812), [`f36ab48d9`](https://github.com/bluesky-social/atproto/commit/f36ab48d910fc4a3afcd22138ba014c814beb93b), [`f36ab48d9`](https://github.com/bluesky-social/atproto/commit/f36ab48d910fc4a3afcd22138ba014c814beb93b), [`f36ab48d9`](https://github.com/bluesky-social/atproto/commit/f36ab48d910fc4a3afcd22138ba014c814beb93b), [`cc485d296`](https://github.com/bluesky-social/atproto/commit/cc485d29638488928b5efec3d4b0627040589812)]:
-  - @atproto/common-web@0.4.2
-  - @atproto/xrpc@0.7.0
-  - @atproto/lexicon@0.4.11
+  - @bluesky-social/common-web@0.4.2
+  - @bluesky-social/xrpc@0.7.0
+  - @bluesky-social/lexicon@0.4.11
 
 ## 0.15.5
 
@@ -198,9 +198,9 @@
 - [#3680](https://github.com/bluesky-social/atproto/pull/3680) [`efb302db1`](https://github.com/bluesky-social/atproto/commit/efb302db1a615b68795c725a22489dbd0400e011) Thanks [@haileyok](https://github.com/haileyok)! - Add unspecced `getSuggestedFeeds` and associated types
 
 - Updated dependencies [[`4db923ca1`](https://github.com/bluesky-social/atproto/commit/4db923ca1c4fadd31d41c851933659e5186ee144)]:
-  - @atproto/common-web@0.4.1
-  - @atproto/lexicon@0.4.10
-  - @atproto/xrpc@0.6.12
+  - @bluesky-social/common-web@0.4.1
+  - @bluesky-social/lexicon@0.4.10
+  - @bluesky-social/xrpc@0.6.12
 
 ## 0.14.18
 
@@ -261,9 +261,9 @@
 ### Patch Changes
 
 - Updated dependencies [[`670b6b5de`](https://github.com/bluesky-social/atproto/commit/670b6b5de2bf91e6944761c98eb1126fb6a681ee)]:
-  - @atproto/syntax@0.4.0
-  - @atproto/lexicon@0.4.9
-  - @atproto/xrpc@0.6.11
+  - @bluesky-social/syntax@0.4.0
+  - @bluesky-social/lexicon@0.4.9
+  - @bluesky-social/xrpc@0.6.11
 
 ## 0.14.9
 
@@ -282,9 +282,9 @@
 - [#2264](https://github.com/bluesky-social/atproto/pull/2264) [`dc6e4ecb0`](https://github.com/bluesky-social/atproto/commit/dc6e4ecb0e09bbf4bc7a79c6ac43fb6da4166200) Thanks [@bnewbold](https://github.com/bnewbold)! - new com.atproto.identity endpoints: resolveDid, resolveIdentity, refreshIdentity
 
 - Updated dependencies [[`850e39843`](https://github.com/bluesky-social/atproto/commit/850e39843cb0ec9ea716675f7568c0c601f45e29)]:
-  - @atproto/syntax@0.3.4
-  - @atproto/lexicon@0.4.8
-  - @atproto/xrpc@0.6.10
+  - @bluesky-social/syntax@0.3.4
+  - @bluesky-social/lexicon@0.4.8
+  - @bluesky-social/xrpc@0.6.10
 
 ## 0.14.7
 
@@ -353,9 +353,9 @@
 - [#2999](https://github.com/bluesky-social/atproto/pull/2999) [`c53d943c8`](https://github.com/bluesky-social/atproto/commit/c53d943c8be5b8886254e020970a68c0f745b14c) Thanks [@matthieusieben](https://github.com/matthieusieben)! - Fixes a bug that would clear interests prefs when updating hidden posts
 
 - Updated dependencies [[`c53d943c8`](https://github.com/bluesky-social/atproto/commit/c53d943c8be5b8886254e020970a68c0f745b14c), [`c53d943c8`](https://github.com/bluesky-social/atproto/commit/c53d943c8be5b8886254e020970a68c0f745b14c), [`c53d943c8`](https://github.com/bluesky-social/atproto/commit/c53d943c8be5b8886254e020970a68c0f745b14c)]:
-  - @atproto/syntax@0.3.3
-  - @atproto/lexicon@0.4.7
-  - @atproto/xrpc@0.6.9
+  - @bluesky-social/syntax@0.3.3
+  - @bluesky-social/lexicon@0.4.7
+  - @bluesky-social/xrpc@0.6.9
 
 ## 0.13.35
 
@@ -380,10 +380,10 @@
 - [#3494](https://github.com/bluesky-social/atproto/pull/3494) [`87ed907a6`](https://github.com/bluesky-social/atproto/commit/87ed907a6b96b408c02c9af819cec8380a453254) Thanks [@estrattonbailey](https://github.com/estrattonbailey)! - Add `setPostInteractionSettings` for configuring default interaction settings for creation of posts
 
 - Updated dependencies [[`61dc0d60e`](https://github.com/bluesky-social/atproto/commit/61dc0d60e19b88c6427a54c6d95a391b5f4da7bd), [`8a30e0ed9`](https://github.com/bluesky-social/atproto/commit/8a30e0ed9239cb2037d54fb98e70e8b0cfbc3e39)]:
-  - @atproto/common-web@0.4.0
-  - @atproto/lexicon@0.4.6
-  - @atproto/syntax@0.3.2
-  - @atproto/xrpc@0.6.8
+  - @bluesky-social/common-web@0.4.0
+  - @bluesky-social/lexicon@0.4.6
+  - @bluesky-social/syntax@0.3.2
+  - @bluesky-social/xrpc@0.6.8
 
 ## 0.13.32
 
@@ -392,7 +392,7 @@
 - [#3352](https://github.com/bluesky-social/atproto/pull/3352) [`7f52e6735`](https://github.com/bluesky-social/atproto/commit/7f52e67354906c3bf9830d7a2924ab58d6160905) Thanks [@foysalit](https://github.com/foysalit)! - Auto resolve appeals when taking down
 
 - Updated dependencies [[`fb64d50ee`](https://github.com/bluesky-social/atproto/commit/fb64d50ee220316b9f1183e5c3259629489734c9)]:
-  - @atproto/xrpc@0.6.7
+  - @bluesky-social/xrpc@0.6.7
 
 ## 0.13.31
 
@@ -431,9 +431,9 @@
 ### Patch Changes
 
 - Updated dependencies [[`72eba67af`](https://github.com/bluesky-social/atproto/commit/72eba67af1af8320b5400bcb9319d5c3c8407d99), [`72eba67af`](https://github.com/bluesky-social/atproto/commit/72eba67af1af8320b5400bcb9319d5c3c8407d99)]:
-  - @atproto/common-web@0.3.2
-  - @atproto/lexicon@0.4.5
-  - @atproto/xrpc@0.6.6
+  - @bluesky-social/common-web@0.3.2
+  - @bluesky-social/lexicon@0.4.5
+  - @bluesky-social/xrpc@0.6.6
 
 ## 0.13.25
 
@@ -474,8 +474,8 @@
 - [#3222](https://github.com/bluesky-social/atproto/pull/3222) [`207728d2b`](https://github.com/bluesky-social/atproto/commit/207728d2b3b819af297ecb90e6373eb7721cbe34) Thanks [@gaearon](https://github.com/gaearon)! - Add optional reasons param to listNotifications
 
 - Updated dependencies [[`9fd65ba0f`](https://github.com/bluesky-social/atproto/commit/9fd65ba0fa4caca59fd0e6156145e4c2618e3a95)]:
-  - @atproto/lexicon@0.4.4
-  - @atproto/xrpc@0.6.5
+  - @bluesky-social/lexicon@0.4.4
+  - @bluesky-social/xrpc@0.6.5
 
 ## 0.13.19
 
@@ -508,9 +508,9 @@
 - [#2953](https://github.com/bluesky-social/atproto/pull/2953) [`561431fe4`](https://github.com/bluesky-social/atproto/commit/561431fe4897e81767dc768e9a31020d09bf86ff) Thanks [@rafaelbsky](https://github.com/rafaelbsky)! - Add convoView.opened to lexicon definition
 
 - Updated dependencies [[`bac9be2d3`](https://github.com/bluesky-social/atproto/commit/bac9be2d3ec904d1f984a871f43cf89aca17289d), [`bac9be2d3`](https://github.com/bluesky-social/atproto/commit/bac9be2d3ec904d1f984a871f43cf89aca17289d)]:
-  - @atproto/syntax@0.3.1
-  - @atproto/lexicon@0.4.3
-  - @atproto/xrpc@0.6.4
+  - @bluesky-social/syntax@0.3.1
+  - @bluesky-social/lexicon@0.4.3
+  - @bluesky-social/xrpc@0.6.4
 
 ## 0.13.15
 
@@ -571,9 +571,9 @@
 - [#2771](https://github.com/bluesky-social/atproto/pull/2771) [`2676206e4`](https://github.com/bluesky-social/atproto/commit/2676206e422233fefbf2d9d182e8d462f0957c93) Thanks [@mozzius](https://github.com/mozzius)! - Add pinned posts to profile record and getAuthorFeed
 
 - Updated dependencies [[`a07b21151`](https://github.com/bluesky-social/atproto/commit/a07b21151f1850340c4b7797ebb11521b1a6cdf3), [`a07b21151`](https://github.com/bluesky-social/atproto/commit/a07b21151f1850340c4b7797ebb11521b1a6cdf3), [`a07b21151`](https://github.com/bluesky-social/atproto/commit/a07b21151f1850340c4b7797ebb11521b1a6cdf3), [`eb20ff64a`](https://github.com/bluesky-social/atproto/commit/eb20ff64a2d8e3061c652e1e247bf9b0fe3c41a6), [`87a1f2426`](https://github.com/bluesky-social/atproto/commit/87a1f24262e0e644b6cf31cc7a0446d9127ffa94)]:
-  - @atproto/xrpc@0.6.3
-  - @atproto/common-web@0.3.1
-  - @atproto/lexicon@0.4.2
+  - @bluesky-social/xrpc@0.6.3
+  - @bluesky-social/common-web@0.3.1
+  - @bluesky-social/lexicon@0.4.2
 
 ## 0.13.7
 
@@ -584,7 +584,7 @@
 - [#2810](https://github.com/bluesky-social/atproto/pull/2810) [`33aa0c722`](https://github.com/bluesky-social/atproto/commit/33aa0c722226a18215af0ae1833c7c552fc7aaa7) Thanks [@estrattonbailey](https://github.com/estrattonbailey)! - Add NUX API
 
 - Updated dependencies [[`98711a147`](https://github.com/bluesky-social/atproto/commit/98711a147a8674337f605c6368f39fc10c2fae93)]:
-  - @atproto/xrpc@0.6.2
+  - @bluesky-social/xrpc@0.6.2
 
 ## 0.13.6
 
@@ -613,7 +613,7 @@
 - [#2714](https://github.com/bluesky-social/atproto/pull/2714) [`d9ffa3c46`](https://github.com/bluesky-social/atproto/commit/d9ffa3c460924010d7002b616cb7a0c66111cc6c) Thanks [@matthieusieben](https://github.com/matthieusieben)! - `Agent` is no longer an abstract class. Instead it can be instantiated using object implementing a new `SessionManager` interface. If your project extends `Agent` and overrides the constructor or any method implementations, consider that you may want to call them from `super`.
 
 - Updated dependencies [[`d9ffa3c46`](https://github.com/bluesky-social/atproto/commit/d9ffa3c460924010d7002b616cb7a0c66111cc6c), [`d9ffa3c46`](https://github.com/bluesky-social/atproto/commit/d9ffa3c460924010d7002b616cb7a0c66111cc6c), [`d9ffa3c46`](https://github.com/bluesky-social/atproto/commit/d9ffa3c460924010d7002b616cb7a0c66111cc6c)]:
-  - @atproto/xrpc@0.6.1
+  - @bluesky-social/xrpc@0.6.1
 
 ## 0.13.3
 
@@ -643,7 +643,7 @@
 
   #### Motivation
 
-  The motivation for these changes is the need to make the `@atproto/api` package
+  The motivation for these changes is the need to make the `@bluesky-social/api` package
   compatible with OAuth session management. We don't have OAuth client support
   "launched" and documented quite yet, so you can keep using the current app
   password authentication system. When we do "launch" OAuth support and begin
@@ -665,7 +665,7 @@
   management, retries, cryptographic signing, and other request-specific logic can
   be implemented in the fetch handler itself rather than by the calling code.
 
-  A new abstract class named `Agent`, has been added to `@atproto/api`. This class
+  A new abstract class named `Agent`, has been added to `@bluesky-social/api`. This class
   will be the base class for all Bluesky agents classes in the `@atproto`
   ecosystem. It is meant to be extended by implementations that provide session
   management and fetch handling.
@@ -677,7 +677,7 @@
   `AtpAgent`.
 
   ```ts
-  import { Agent, AtpAgent } from "@atproto/api";
+  import { Agent, AtpAgent } from "@bluesky-social/api";
 
   async function setupAgent(
     service: string,
@@ -698,7 +698,7 @@
   ```
 
   ```ts
-  import { Agent } from "@atproto/api";
+  import { Agent } from "@bluesky-social/api";
 
   async function doStuffWithAgent(agent: Agent, arg: string) {
     return agent.resolveHandle(arg);
@@ -706,7 +706,7 @@
   ```
 
   ```ts
-  import { Agent, AtpAgent } from "@atproto/api";
+  import { Agent, AtpAgent } from "@bluesky-social/api";
 
   class MyClass {
     agent: Agent;
@@ -723,7 +723,7 @@
   there are a couple of breaking changes you should be aware of:
 
   - Customizing `fetch`: The ability to customize the `fetch: FetchHandler`
-    property of `@atproto/xrpc`'s `Client` and `@atproto/api`'s `AtpAgent` classes
+    property of `@bluesky-social/xrpc`'s `Client` and `@bluesky-social/api`'s `AtpAgent` classes
     has been removed. Previously, the `fetch` property could be set to a function
     that would be used as the fetch handler for that instance, and was initialized
     to a default fetch handler. That property is still accessible in a read-only
@@ -764,10 +764,10 @@
 
   #### Deprecations
 
-  - The default export of the `@atproto/xrpc` package has been deprecated. Use
+  - The default export of the `@bluesky-social/xrpc` package has been deprecated. Use
     named exports instead.
   - The `Client` and `ServiceClient` classes are now deprecated. They are replaced by a single `XrpcClient` class.
-  - The default export of the `@atproto/api` package has been deprecated. Use
+  - The default export of the `@bluesky-social/api` package has been deprecated. Use
     named exports instead.
   - The `BskyAgent` has been deprecated. Use the `AtpAgent` class instead.
   - The `xrpc` property of the `AtpClient` instances has been deprecated. The
@@ -777,7 +777,7 @@
 
   #### Migration
 
-  ##### The `@atproto/api` package
+  ##### The `@bluesky-social/api` package
 
   If you were relying on the `AtpBaseClient` solely to perform validation, use
   this:
@@ -790,7 +790,7 @@
   <td>
 
   ```ts
-  import { AtpBaseClient, ComAtprotoSyncSubscribeRepos } from "@atproto/api";
+  import { AtpBaseClient, ComAtprotoSyncSubscribeRepos } from "@bluesky-social/api";
 
   const baseClient = new AtpBaseClient();
 
@@ -803,7 +803,7 @@
   <td>
 
   ```ts
-  import { lexicons } from "@atproto/api";
+  import { lexicons } from "@bluesky-social/api";
 
   lexicons.assertValidXrpcMessage("io.example.doStuff", {
     // ...
@@ -824,7 +824,7 @@
   <td>
 
   ```ts
-  import { BskyAgent } from "@atproto/api";
+  import { BskyAgent } from "@bluesky-social/api";
 
   class MyAgent extends BskyAgent {
     private accessToken?: string;
@@ -849,7 +849,7 @@
   <td>
 
   ```ts
-  import { Agent } from "@atproto/api";
+  import { Agent } from "@bluesky-social/api";
 
   class MyAgent extends Agent {
     private accessToken?: string;
@@ -895,7 +895,7 @@
   <td>
 
   ```ts
-  import { BskyAgent } from "@atproto/api";
+  import { BskyAgent } from "@bluesky-social/api";
   import { RateLimitThreshold } from "rate-limit-threshold";
 
   const agent = new BskyAgent();
@@ -912,7 +912,7 @@
   <td>
 
   ```ts
-  import { AtpAgent } from "@atproto/api";
+  import { AtpAgent } from "@bluesky-social/api";
   import { RateLimitThreshold } from "rate-limit-threshold";
 
   class LimitedAtpAgent extends AtpAgent {
@@ -947,7 +947,7 @@
   <td>
 
   ```ts
-  import { BskyAgent, defaultFetchHandler } from "@atproto/api";
+  import { BskyAgent, defaultFetchHandler } from "@bluesky-social/api";
 
   BskyAgent.configure({
     fetch: async (httpUri, httpMethod, httpHeaders, httpReqBody) => {
@@ -964,7 +964,7 @@
   <td>
 
   ```ts
-  import { AtpAgent } from "@atproto/api";
+  import { AtpAgent } from "@bluesky-social/api";
 
   class MyAtpAgent extends AtpAgent {
     constructor(options: AtpAgentOptions) {
@@ -1011,7 +1011,7 @@
   </tr>
   </table> -->
 
-  ##### The `@atproto/xrpc` package
+  ##### The `@bluesky-social/xrpc` package
 
   The `Client` and `ServiceClient` classes are now **deprecated**. If you need a
   lexicon based client, you should update the code to use the `XrpcClient` class
@@ -1058,7 +1058,7 @@
 
     - There no longer exists a centralized lexicon registry. If you need a global
       lexicon registry, you can maintain one yourself using a `new Lexicons` (from
-      `@atproto/lexicon`).
+      `@bluesky-social/lexicon`).
     - The `FetchHandler` is no longer a statically defined property of the
       `Client` class. Instead, it is passed as an argument to the `XrpcClient`
       constructor.
@@ -1077,7 +1077,7 @@
   <td>
 
   ```ts
-  import client, { defaultFetchHandler } from "@atproto/xrpc";
+  import client, { defaultFetchHandler } from "@bluesky-social/xrpc";
 
   client.fetch = function (
     httpUri: string,
@@ -1106,7 +1106,7 @@
   <td>
 
   ```ts
-  import { XrpcClient } from "@atproto/xrpc";
+  import { XrpcClient } from "@bluesky-social/xrpc";
 
   const instance = new XrpcClient(
     async (url, init) => {
@@ -1141,7 +1141,7 @@
   previous example can be simplified to:
 
   ```ts
-  import { XrpcClient } from "@atproto/xrpc";
+  import { XrpcClient } from "@bluesky-social/xrpc";
 
   const instance = new XrpcClient("http://my-service.com", [
     {
@@ -1156,7 +1156,7 @@
   the `XrpcClient` as follows:
 
   ```ts
-  import { XrpcClient } from "@atproto/xrpc";
+  import { XrpcClient } from "@bluesky-social/xrpc";
 
   const instance = new XrpcClient(
     {
@@ -1179,7 +1179,7 @@
   functions:
 
   ```ts
-  import { XrpcClient } from "@atproto/xrpc";
+  import { XrpcClient } from "@bluesky-social/xrpc";
 
   const instance = new XrpcClient(
     {
@@ -1204,8 +1204,8 @@
 ### Patch Changes
 
 - Updated dependencies [[`b934b396b`](https://github.com/bluesky-social/atproto/commit/b934b396b13ba32bf2bf7e75ecdf6871e5f310dd), [`2bdf75d7a`](https://github.com/bluesky-social/atproto/commit/2bdf75d7a63924c10e7a311f16cb447d595b933e), [`b934b396b`](https://github.com/bluesky-social/atproto/commit/b934b396b13ba32bf2bf7e75ecdf6871e5f310dd), [`b934b396b`](https://github.com/bluesky-social/atproto/commit/b934b396b13ba32bf2bf7e75ecdf6871e5f310dd)]:
-  - @atproto/lexicon@0.4.1
-  - @atproto/xrpc@0.6.0
+  - @bluesky-social/lexicon@0.4.1
+  - @bluesky-social/xrpc@0.6.0
 
 ## 0.12.29
 
@@ -1402,10 +1402,10 @@
 - [#2338](https://github.com/bluesky-social/atproto/pull/2338) [`36f2e966c`](https://github.com/bluesky-social/atproto/commit/36f2e966cba6cc90ba4320520da5c7381cfb8086) Thanks [@pfrazee](https://github.com/pfrazee)! - Fix: correctly detected blocked quote-posts when moderating posts
 
 - Updated dependencies [[`f689bd51a`](https://github.com/bluesky-social/atproto/commit/f689bd51a2f4e02d4eca40eb2568a1fcb95494e9)]:
-  - @atproto/common-web@0.3.0
-  - @atproto/lexicon@0.4.0
-  - @atproto/syntax@0.3.0
-  - @atproto/xrpc@0.5.0
+  - @bluesky-social/common-web@0.3.0
+  - @bluesky-social/lexicon@0.4.0
+  - @bluesky-social/syntax@0.3.0
+  - @bluesky-social/xrpc@0.5.0
 
 ## 0.11.2
 
@@ -1437,10 +1437,10 @@
 ### Patch Changes
 
 - Updated dependencies [[`4eaadc0ac`](https://github.com/bluesky-social/atproto/commit/4eaadc0acb6b73b9745dd7a2b929d02e58083ab0)]:
-  - @atproto/common-web@0.2.4
-  - @atproto/lexicon@0.3.3
-  - @atproto/syntax@0.2.1
-  - @atproto/xrpc@0.4.3
+  - @bluesky-social/common-web@0.2.4
+  - @bluesky-social/lexicon@0.3.3
+  - @bluesky-social/syntax@0.2.1
+  - @bluesky-social/xrpc@0.4.3
 
 ## 0.10.5
 
@@ -1481,9 +1481,9 @@
 - [#2245](https://github.com/bluesky-social/atproto/pull/2245) [`61b3d2525`](https://github.com/bluesky-social/atproto/commit/61b3d25253353db2da1336004f94e7dc5adb0410) Thanks [@mary-ext](https://github.com/mary-ext)! - Properly calculate length of tag
 
 - Updated dependencies [[`0c815b964`](https://github.com/bluesky-social/atproto/commit/0c815b964c030aa0f277c40bf9786f130dc320f4)]:
-  - @atproto/syntax@0.2.0
-  - @atproto/lexicon@0.3.2
-  - @atproto/xrpc@0.4.2
+  - @bluesky-social/syntax@0.2.0
+  - @bluesky-social/lexicon@0.3.2
+  - @bluesky-social/xrpc@0.4.2
 
 ## 0.10.1
 
@@ -1608,9 +1608,9 @@
 - [#1912](https://github.com/bluesky-social/atproto/pull/1912) [`378fc613`](https://github.com/bluesky-social/atproto/commit/378fc6132f621ca517897c9467ed5bba134b3776) Thanks [@devinivy](https://github.com/devinivy)! - Contains breaking lexicon changes: removing legacy com.atproto admin endpoints, making uri field required on app.bsky list views.
 
 - Updated dependencies [[`3c0ef382`](https://github.com/bluesky-social/atproto/commit/3c0ef382c12a413cc971ae47ffb341236c545f60)]:
-  - @atproto/syntax@0.1.5
-  - @atproto/lexicon@0.3.1
-  - @atproto/xrpc@0.4.1
+  - @bluesky-social/syntax@0.1.5
+  - @bluesky-social/lexicon@0.3.1
+  - @bluesky-social/xrpc@0.4.1
 
 ## 0.6.23
 
@@ -1625,10 +1625,10 @@
 - [#1788](https://github.com/bluesky-social/atproto/pull/1788) [`84e2d4d2`](https://github.com/bluesky-social/atproto/commit/84e2d4d2b6694f344d80c18672c78b650189d423) Thanks [@bnewbold](https://github.com/bnewbold)! - update license to "MIT or Apache2"
 
 - Updated dependencies [[`ce49743d`](https://github.com/bluesky-social/atproto/commit/ce49743d7f8800d33116b88001d7b512553c2c89), [`84e2d4d2`](https://github.com/bluesky-social/atproto/commit/84e2d4d2b6694f344d80c18672c78b650189d423)]:
-  - @atproto/lexicon@0.3.0
-  - @atproto/xrpc@0.4.0
-  - @atproto/common-web@0.2.3
-  - @atproto/syntax@0.1.4
+  - @bluesky-social/lexicon@0.3.0
+  - @bluesky-social/xrpc@0.4.0
+  - @bluesky-social/common-web@0.2.3
+  - @bluesky-social/syntax@0.1.4
 
 ## 0.6.21
 
@@ -1639,10 +1639,10 @@
 - [`35d108ce`](https://github.com/bluesky-social/atproto/commit/35d108ce94866ce1b3d147cd0620a0ba1c4ebcd7) Thanks [@devinivy](https://github.com/devinivy)! - Allow pds to serve did doc with credentials, API client to respect PDS listed in the did doc.
 
 - Updated dependencies [[`35d108ce`](https://github.com/bluesky-social/atproto/commit/35d108ce94866ce1b3d147cd0620a0ba1c4ebcd7)]:
-  - @atproto/common-web@0.2.2
-  - @atproto/lexicon@0.2.3
-  - @atproto/syntax@0.1.3
-  - @atproto/xrpc@0.3.3
+  - @bluesky-social/common-web@0.2.2
+  - @bluesky-social/lexicon@0.2.3
+  - @bluesky-social/syntax@0.1.3
+  - @bluesky-social/xrpc@0.3.3
 
 ## 0.6.20
 
@@ -1651,10 +1651,10 @@
 - [#1568](https://github.com/bluesky-social/atproto/pull/1568) [`41ee177f`](https://github.com/bluesky-social/atproto/commit/41ee177f5a440490280d17acd8a89bcddaffb23b) Thanks [@dholms](https://github.com/dholms)! - Added email verification and update flows
 
 - Updated dependencies [[`41ee177f`](https://github.com/bluesky-social/atproto/commit/41ee177f5a440490280d17acd8a89bcddaffb23b)]:
-  - @atproto/common-web@0.2.1
-  - @atproto/lexicon@0.2.2
-  - @atproto/syntax@0.1.2
-  - @atproto/xrpc@0.3.2
+  - @bluesky-social/common-web@0.2.1
+  - @bluesky-social/lexicon@0.2.2
+  - @bluesky-social/syntax@0.1.2
+  - @bluesky-social/xrpc@0.3.2
 
 ## 0.6.19
 
@@ -1691,9 +1691,9 @@
 ### Patch Changes
 
 - Updated dependencies [[`b1dc3555`](https://github.com/bluesky-social/atproto/commit/b1dc355504f9f2e047093dc56682b8034518cf80)]:
-  - @atproto/syntax@0.1.1
-  - @atproto/lexicon@0.2.1
-  - @atproto/xrpc@0.3.1
+  - @bluesky-social/syntax@0.1.1
+  - @bluesky-social/lexicon@0.2.1
+  - @bluesky-social/xrpc@0.3.1
 
 ## 0.6.13
 

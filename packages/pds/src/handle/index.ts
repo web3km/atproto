@@ -1,8 +1,8 @@
 import {
   InvalidHandleError,
   normalizeAndEnsureValidHandle,
-} from '@atproto/syntax'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+} from '@bluesky-social/syntax'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { reservedSubdomains } from './reserved'
 
 export const baseNormalizeAndValidate = (handle: string) => {

@@ -1,7 +1,7 @@
 import { CID } from 'multiformats'
 import * as uint8arrays from 'uint8arrays'
-import { cidForCbor } from '@atproto/common'
-import { sha256 } from '@atproto/crypto'
+import { cidForCbor } from '@bluesky-social/common'
+import { sha256 } from '@bluesky-social/crypto'
 import { ReadableBlockstore } from '../storage'
 import { Leaf, MST, MstOpts, NodeData, NodeEntry } from './mst'
 

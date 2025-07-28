@@ -1,6 +1,6 @@
 import assert from 'node:assert'
-import { Un$Typed } from '@atproto/api'
-import { UpstreamFailureError } from '@atproto/xrpc-server'
+import { Un$Typed } from '@bluesky-social/api'
+import { UpstreamFailureError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import { Server } from '../../../../lexicon'
 import { Preferences } from '../../../../lexicon/types/app/bsky/notification/defs'

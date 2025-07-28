@@ -1,4 +1,4 @@
-# @atproto/crypto
+# @bluesky-social/crypto
 
 ## 0.4.4
 

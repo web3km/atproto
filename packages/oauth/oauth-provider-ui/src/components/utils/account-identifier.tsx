@@ -1,5 +1,5 @@
 import { JSX } from 'react'
-import type { Account } from '@atproto/oauth-provider-api'
+import type { Account } from '@bluesky-social/oauth-provider-api'
 import { Override } from '../../lib/util.ts'
 
 export type AccountIdentifierProps = Override<

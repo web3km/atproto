@@ -1,7 +1,7 @@
 import {
   OAuthIssuerIdentifier,
   isOAuthClientIdLoopback,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import { Client } from '../client/client.js'
 import { DeviceId } from '../device/device-id.js'
 import { InvalidRequestError } from '../errors/invalid-request-error.js'

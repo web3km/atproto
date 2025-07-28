@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto'
 import type { Redis, RedisOptions } from 'ioredis'
-import { Jwks, Keyset } from '@atproto/jwk'
-import type { Account } from '@atproto/oauth-provider-api'
+import { Jwks, Keyset } from '@bluesky-social/jwk'
+import type { Account } from '@bluesky-social/oauth-provider-api'
 import {
   CLIENT_ASSERTION_TYPE_JWT_BEARER,
   OAuthAccessToken,
@@ -22,7 +22,7 @@ import {
   OAuthTokenType,
   atprotoLoopbackClientMetadata,
   oauthAuthorizationRequestParametersSchema,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import { safeFetchWrap } from '@atproto-labs/fetch-node'
 import { SimpleStore } from '@atproto-labs/simple-store'
 import { SimpleStoreMemory } from '@atproto-labs/simple-store-memory'

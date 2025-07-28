@@ -43,6 +43,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['@atproto/oauth-provider-api', '@atproto/syntax'],
+    include: ['@bluesky-social/oauth-provider-api', '@bluesky-social/syntax'],
   },
 })

@@ -1,4 +1,4 @@
-export * from '@atproto/did'
+export * from '@bluesky-social/did'
 
 export * from './did-cache-memory.js'
 export * from './did-cache.js'

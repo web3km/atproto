@@ -1,5 +1,5 @@
 import assert from 'node:assert'
-import { DeviceId } from '@atproto/oauth-provider'
+import { DeviceId } from '@bluesky-social/oauth-provider'
 import { toDateISO } from '../../db'
 import { AccountDb } from '../db'
 import { selectAccountQB } from './account'

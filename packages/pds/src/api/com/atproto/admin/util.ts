@@ -1,5 +1,5 @@
 import express from 'express'
-import { INVALID_HANDLE } from '@atproto/syntax'
+import { INVALID_HANDLE } from '@bluesky-social/syntax'
 import { ActorAccount } from '../../../../account-manager/helpers/account'
 import { CodeDetail } from '../../../../account-manager/helpers/invite'
 

@@ -1,5 +1,5 @@
-import { INVALID_HANDLE } from '@atproto/syntax'
-import { InvalidRequestError } from '@atproto/xrpc-server'
+import { INVALID_HANDLE } from '@bluesky-social/syntax'
+import { InvalidRequestError } from '@bluesky-social/xrpc-server'
 import { AppContext } from '../../../../context'
 import { Server } from '../../../../lexicon'
 import { assertValidDidDocumentForService } from './util'

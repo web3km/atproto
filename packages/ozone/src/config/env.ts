@@ -1,4 +1,4 @@
-import { envBool, envInt, envList, envStr } from '@atproto/common'
+import { envBool, envInt, envList, envStr } from '@bluesky-social/common'
 
 export const readEnv = (): OzoneEnvironment => {
   return {

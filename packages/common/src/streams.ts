@@ -38,7 +38,7 @@ export const streamToBytes = async (stream: AsyncIterable<Uint8Array>) =>
   // reason, we convert the Buffer to a Uint8Array.
   new Uint8Array(await streamToNodeBuffer(stream))
 
-// streamToBuffer identifier name already taken by @atproto/common-web
+// streamToBuffer identifier name already taken by @bluesky-social/common-web
 export const streamToNodeBuffer = async (
   stream: Iterable<Uint8Array> | AsyncIterable<Uint8Array>,
 ): Promise<Buffer> => {

@@ -1,5 +1,5 @@
 {
-  "name": "@atproto/syntax",
+  "name": "@bluesky-social/syntax",
   "version": "0.4.0",
   "license": "MIT",
   "description": "Validation for atproto identifiers and formats: DID, handle, NSID, AT URI, etc",

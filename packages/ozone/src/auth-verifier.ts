@@ -1,11 +1,11 @@
 import express from 'express'
 import * as ui8 from 'uint8arrays'
-import { IdResolver } from '@atproto/identity'
+import { IdResolver } from '@bluesky-social/identity'
 import {
   AuthRequiredError,
   parseReqNsid,
   verifyJwt,
-} from '@atproto/xrpc-server'
+} from '@bluesky-social/xrpc-server'
 import { TeamService } from './team'
 
 type ReqCtx = {

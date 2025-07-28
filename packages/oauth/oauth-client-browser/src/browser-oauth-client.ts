@@ -7,14 +7,14 @@ import {
   OAuthClientOptions,
   OAuthSession,
   SessionEventMap,
-} from '@atproto/oauth-client'
+} from '@bluesky-social/oauth-client'
 import {
   OAuthClientMetadataInput,
   OAuthResponseMode,
   assertOAuthDiscoverableClientId,
   atprotoLoopbackClientMetadata,
   isOAuthClientIdLoopback,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import { BrowserOAuthDatabase } from './browser-oauth-database.js'
 import { BrowserRuntimeImplementation } from './browser-runtime-implementation.js'
 import { LoginContinuedInParentWindowError } from './errors.js'
@@ -48,7 +48,7 @@ export type BrowserOAuthClientOptions = Simplify<
   >
 >
 
-const NAMESPACE = `@@atproto/oauth-client-browser`
+const NAMESPACE = `@@bluesky-social/oauth-client-browser`
 
 //- Popup channel
 

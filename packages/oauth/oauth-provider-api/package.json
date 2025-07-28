@@ -1,8 +1,8 @@
 {
-  "name": "@atproto/oauth-provider-api",
+  "name": "@bluesky-social/oauth-provider-api",
   "version": "0.1.6",
   "license": "MIT",
-  "description": "Shared data types for the @atproto/oauth-provider and @atproto/oauth-provider-ui packages",
+  "description": "Shared data types for the @bluesky-social/oauth-provider and @bluesky-social/oauth-provider-ui packages",
   "keywords": [
     "atproto",
     "oauth",
@@ -25,8 +25,8 @@
     }
   },
   "dependencies": {
-    "@atproto/jwk": "workspace:*",
-    "@atproto/oauth-types": "workspace:*"
+    "@bluesky-social/jwk": "workspace:*",
+    "@bluesky-social/oauth-types": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.6.3"

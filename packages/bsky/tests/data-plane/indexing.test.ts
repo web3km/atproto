@@ -7,12 +7,12 @@ import {
   AppBskyFeedRepost,
   AppBskyGraphFollow,
   AtpAgent,
-} from '@atproto/api'
-import { TID, cidForCbor } from '@atproto/common'
-import { SeedClient, TestNetwork, basicSeed, usersSeed } from '@atproto/dev-env'
-import { repoPrepare } from '@atproto/pds'
-import { WriteOpAction } from '@atproto/repo'
-import { AtUri } from '@atproto/syntax'
+} from '@bluesky-social/api'
+import { TID, cidForCbor } from '@bluesky-social/common'
+import { SeedClient, TestNetwork, basicSeed, usersSeed } from '@bluesky-social/dev-env'
+import { repoPrepare } from '@bluesky-social/pds'
+import { WriteOpAction } from '@bluesky-social/repo'
+import { AtUri } from '@bluesky-social/syntax'
 import { Database } from '../../src/data-plane/server/db'
 import { ids } from '../../src/lexicon/lexicons'
 import { forSnapshot } from '../_util'

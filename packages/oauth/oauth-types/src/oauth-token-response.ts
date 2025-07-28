@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { signedJwtSchema } from '@atproto/jwk'
+import { signedJwtSchema } from '@bluesky-social/jwk'
 import { oauthAuthorizationDetailsSchema } from './oauth-authorization-details.js'
 import { oauthTokenTypeSchema } from './oauth-token-type.js'
 

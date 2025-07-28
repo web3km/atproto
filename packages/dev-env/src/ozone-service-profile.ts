@@ -1,5 +1,5 @@
-import { AtpAgent } from '@atproto/api'
-import { Secp256k1Keypair } from '@atproto/crypto'
+import { AtpAgent } from '@bluesky-social/api'
+import { Secp256k1Keypair } from '@bluesky-social/crypto'
 import { TestPds } from './pds'
 
 export class OzoneServiceProfile {

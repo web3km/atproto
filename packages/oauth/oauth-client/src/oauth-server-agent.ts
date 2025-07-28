@@ -1,5 +1,5 @@
-import { AtprotoDid } from '@atproto/did'
-import { Key, Keyset } from '@atproto/jwk'
+import { AtprotoDid } from '@bluesky-social/did'
+import { Key, Keyset } from '@bluesky-social/jwk'
 import {
   OAuthAuthorizationRequestPar,
   OAuthAuthorizationServerMetadata,
@@ -7,7 +7,7 @@ import {
   OAuthParResponse,
   OAuthTokenRequest,
   oauthParResponseSchema,
-} from '@atproto/oauth-types'
+} from '@bluesky-social/oauth-types'
 import { Fetch, Json, bindFetch, fetchJsonProcessor } from '@atproto-labs/fetch'
 import { SimpleStore } from '@atproto-labs/simple-store'
 import {

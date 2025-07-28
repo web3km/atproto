@@ -1,7 +1,7 @@
 import { CID } from 'multiformats/cid'
-import { RepoRecord } from '@atproto/lexicon'
-import { BlockMap, CommitData, WriteOpAction } from '@atproto/repo'
-import { AtUri } from '@atproto/syntax'
+import { RepoRecord } from '@bluesky-social/lexicon'
+import { BlockMap, CommitData, WriteOpAction } from '@bluesky-social/repo'
+import { AtUri } from '@bluesky-social/syntax'
 
 export type ValidationStatus = 'valid' | 'unknown' | undefined
 
