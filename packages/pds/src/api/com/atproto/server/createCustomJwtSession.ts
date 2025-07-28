@@ -24,7 +24,7 @@ import { InputSchema as CreateCustomJwtSessionInput } from '../../../../lexicon/
 import { syncEvtDataFromCommit } from '../../../../sequencer'
 import { didDocForSession, safeResolveDidDoc } from './util'
 
-// 从 JWT 中提取 username 并创建 profile 记录
+// 从 JWT 中提取 username 并创建或更新 profile 记录
 const createProfileFromJwt = async (
   ctx: AppContext,
   did: string,
@@ -36,17 +36,44 @@ const createProfileFromJwt = async (
   }
 
   try {
-    const { prepareCreate } = await import('../../../../repo')
-    const profileWrite = await prepareCreate({
-      did,
-      collection: ids.AppBskyActorProfile,
-      rkey: 'self',
-      record: {
-        $type: ids.AppBskyActorProfile,
-        displayName: display_name,
-        createdAt: new Date().toISOString(),
-      },
-    })
+    const { prepareCreate, prepareUpdate } = await import('../../../../repo')
+
+    // 检查是否已存在 profile 记录
+    const existingRecord = await ctx.actorStore
+      .read(did, async (store) => {
+        const { AtUri } = await import('@bluesky-social/syntax')
+        const uri = AtUri.make(did, ids.AppBskyActorProfile, 'self')
+        return store.record.getRecord(uri, null, true)
+      })
+      .catch(() => null)
+
+    let profileWrite
+    if (existingRecord) {
+      // 如果 profile 已存在，更新 displayName
+      const { CID } = await import('multiformats/cid')
+      profileWrite = await prepareUpdate({
+        did,
+        collection: ids.AppBskyActorProfile,
+        rkey: 'self',
+        record: {
+          ...existingRecord.value,
+          displayName: display_name,
+        },
+        swapCid: CID.parse(existingRecord.cid),
+      })
+    } else {
+      // 如果 profile 不存在，创建新的
+      profileWrite = await prepareCreate({
+        did,
+        collection: ids.AppBskyActorProfile,
+        rkey: 'self',
+        record: {
+          $type: ids.AppBskyActorProfile,
+          displayName: display_name,
+          createdAt: new Date().toISOString(),
+        },
+      })
+    }
 
     const profileCommit = await ctx.actorStore.transact(
       did,
@@ -59,13 +86,13 @@ const createProfileFromJwt = async (
     await ctx.sequencer.sequenceCommit(did, profileCommit)
 
     req.log.info(
-      { did, display_name },
-      'successfully created profile with displayName from JWT',
+      { did, display_name, action: existingRecord ? 'updated' : 'created' },
+      'successfully created/updated profile with displayName from JWT',
     )
   } catch (err) {
     req.log.error(
       { did, display_name, err },
-      'failed to create profile with displayName from JWT',
+      'failed to create/update profile with displayName from JWT',
     )
     // 不抛出错误，因为账户创建已经成功，profile 创建失败不应该影响整个流程
   }
@@ -88,7 +115,8 @@ export default function (server: Server, ctx: AppContext) {
 
       // 从 JWT claims 中提取 username
       const display_name =
-        decodedJwt.claims.display_name || decodedJwt.claims.username
+        decodedJwt.claims.display_name ||
+        decodedJwt.verifierId.split(':')[0].replace(/^@/, '')
 
       input.body.handle =
         decodedJwt.verifierId.split(':')[0].replace(/^@/, '') +
