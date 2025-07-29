@@ -360,6 +360,7 @@ export class CredentialSession implements SessionManager {
         emailAuthFactor: undefined,
         active: true,
         status: undefined,
+        isNew: res.data.isNew,
       }
       this._updateApiEndpoint(res.data.didDoc)
       this.persistSession?.('create', this.session)

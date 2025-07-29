@@ -2612,6 +2612,10 @@ export const schemaDict = {
                 type: 'unknown',
                 description: 'Complete DID document.',
               },
+              isNew: {
+                type: 'boolean',
+                description: 'Whether the account is new.',
+              },
             },
           },
         },

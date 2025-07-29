@@ -37,6 +37,8 @@ export interface OutputSchema {
   did: string
   /** Complete DID document. */
   didDoc?: { [_ in string]: unknown }
+  /** Whether the account is new. */
+  isNew?: boolean
 }
 
 export interface HandlerInput {

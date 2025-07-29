@@ -30,6 +30,7 @@ export interface AtpSessionData {
   emailAuthFactor?: boolean
   active: boolean
   status?: string
+  isNew?: boolean
 }
 
 /**
