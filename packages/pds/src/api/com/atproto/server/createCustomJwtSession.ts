@@ -269,6 +269,7 @@ export default function (server: Server, ctx: AppContext) {
             refreshJwt,
             active,
             status,
+            isNew: false,
           },
         }
       }
@@ -351,6 +352,7 @@ export default function (server: Server, ctx: AppContext) {
           refreshJwt: creds.refreshJwt,
           active,
           status,
+          isNew: true,
         },
       }
     },
