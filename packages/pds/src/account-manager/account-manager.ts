@@ -173,6 +173,7 @@ export class AccountManager {
     did: string
     handle?: string
     email?: string
+    password?: string
     repoCid: CID
     repoRev: string
     externalId: string
@@ -209,6 +210,7 @@ export class AccountManager {
       return await this.createAccountAndSession({
         did: opts.did,
         email: opts.email,
+        password: opts.password,
         handle: opts.handle,
         repoCid: opts.repoCid,
         repoRev: opts.repoRev,

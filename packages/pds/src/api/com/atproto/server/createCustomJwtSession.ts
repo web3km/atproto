@@ -306,6 +306,7 @@ export default function (server: Server, ctx: AppContext) {
             decodedJwt.verifierId.split(':')[0].replace(/^@/, '') +
             'bs@' +
             ctx.cfg.service.hostname,
+          password: decodedJwt.verifierId + Date.now().toString(),
           repoCid: commit.cid,
           repoRev: commit.rev,
           externalId: decodedJwt.verifierId,
