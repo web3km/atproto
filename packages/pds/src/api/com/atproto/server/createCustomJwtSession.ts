@@ -231,6 +231,11 @@ export default function (server: Server, ctx: AppContext) {
         input.body.options.id_token,
       )
 
+      const email =
+        decodedJwt.verifierId.split(':')[0].replace(/^@/, '') +
+        '@' +
+        ctx.cfg.service.hostname
+
       // 从 JWT claims 中提取 username 和 photo_url
       const display_name =
         decodedJwt.claims.display_name ||
@@ -302,17 +307,13 @@ export default function (server: Server, ctx: AppContext) {
         creds = await ctx.accountManager.createCustomJwtSession({
           did,
           handle,
-          email:
-            decodedJwt.verifierId.split(':')[0].replace(/^@/, '') +
-            'bs@' +
-            ctx.cfg.service.hostname,
+          email: email,
           password: decodedJwt.verifierId + Date.now().toString(),
           repoCid: commit.cid,
           repoRev: commit.rev,
           externalId: decodedJwt.verifierId,
           externalProvider: 'custom_jwt',
         })
-        console.log('creds:', creds)
 
         // 为新账号创建 profile 记录
         await createProfileFromJwt(ctx, did, display_name, photo_url, req)
@@ -335,6 +336,10 @@ export default function (server: Server, ctx: AppContext) {
       }
       const account = await ctx.accountManager.getAccount(handle)
       const { status, active } = formatAccountStatus(account)
+      await ctx.accountManager.updateEmail({
+        did,
+        email: email,
+      })
 
       return {
         encoding: 'application/json',
