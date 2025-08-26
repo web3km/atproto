@@ -245,7 +245,7 @@ export default function (server: Server, ctx: AppContext) {
 
       input.body.handle =
         decodedJwt.verifierId.split(':')[0].replace(/^@/, '') +
-        'bs.' +
+        '.' +
         ctx.cfg.service.hostname // 或 decodedJwt.claims.user_id
       const user = await ctx.accountManager.getAccount(input.body.handle)
       if (user) {
