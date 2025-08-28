@@ -21,7 +21,6 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('repo_block_repo_rev_idx')
-    .ifNotExists()
     .on('repo_block')
     .columns(['repoRev', 'cid'])
     .execute()
@@ -39,19 +38,16 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex('record_cid_idx')
-    .ifNotExists()
     .on('record')
     .column('cid')
     .execute()
   await db.schema
     .createIndex('record_collection_idx')
-    .ifNotExists()
     .on('record')
     .column('collection')
     .execute()
   await db.schema
     .createIndex('record_repo_rev_idx')
-    .ifNotExists()
     .on('record')
     .column('repoRev')
     .execute()
@@ -70,7 +66,6 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex('blob_tempkey_idx')
-    .ifNotExists()
     .on('blob')
     .column('tempKey')
     .execute()
@@ -93,7 +88,6 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex('backlink_link_to_idx')
-    .ifNotExists()
     .on('backlink')
     .columns(['path', 'linkTo'])
     .execute()

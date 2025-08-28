@@ -13,7 +13,6 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('jwt_account_external_unique')
-    .ifNotExists()
     .unique()
     .on('jwt_account')
     .columns(['externalId', 'externalProvider'])

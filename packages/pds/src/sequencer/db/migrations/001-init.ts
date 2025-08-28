@@ -14,21 +14,18 @@ export async function up(db: Kysely<unknown>): Promise<void> {
   // for filtering seqs based on did
   await db.schema
     .createIndex('repo_seq_did_idx')
-    .ifNotExists()
     .on('repo_seq')
     .column('did')
     .execute()
   // for filtering seqs based on event type
   await db.schema
     .createIndex('repo_seq_event_type_idx')
-    .ifNotExists()
     .on('repo_seq')
     .column('eventType')
     .execute()
   // for entering into the seq stream at a particular time
   await db.schema
     .createIndex('repo_seq_sequenced_at_index')
-    .ifNotExists()
     .on('repo_seq')
     .column('sequencedAt')
     .execute()

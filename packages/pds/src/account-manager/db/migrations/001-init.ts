@@ -23,7 +23,6 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex('invite_code_for_account_idx')
-    .ifNotExists()
     .on('invite_code')
     .column('forAccount')
     .execute()
@@ -48,7 +47,6 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema // Aids in refresh token cleanup
     .createIndex('refresh_token_did_idx')
-    .ifNotExists()
     .on('refresh_token')
     .column('did')
     .execute()
@@ -72,14 +70,12 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex(`actor_handle_lower_idx`)
-    .ifNotExists()
     .unique()
     .on('actor')
     .expression(sql`lower("handle")`)
     .execute()
   await db.schema
     .createIndex('actor_cursor_idx')
-    .ifNotExists()
     .on('actor')
     .columns(['createdAt', 'did'])
     .execute()
@@ -95,7 +91,6 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex(`account_email_lower_idx`)
-    .ifNotExists()
     .unique()
     .on('account')
     .expression(sql`lower("email")`)

@@ -16,7 +16,6 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('authorization_request_code_idx')
-    .ifNotExists()
     .unique()
     .on('authorization_request')
     // https://github.com/kysely-org/kysely/issues/302
@@ -25,7 +24,6 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('authorization_request_expires_at_idx')
-    .ifNotExists()
     .on('authorization_request')
     .column('expiresAt')
     .execute()
@@ -86,14 +84,12 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('token_did_idx')
-    .ifNotExists()
     .on('token')
     .column('did')
     .execute()
 
   await db.schema
     .createIndex('token_code_idx')
-    .ifNotExists()
     .unique()
     .on('token')
     // https://github.com/kysely-org/kysely/issues/302
@@ -117,7 +113,6 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('used_refresh_token_id_idx')
-    .ifNotExists()
     .on('used_refresh_token')
     .column('tokenId')
     .execute()
