@@ -3,6 +3,7 @@ import { Kysely, sql } from 'kysely'
 export async function up(db: Kysely<unknown>): Promise<void> {
   await db.schema
     .createTable('authorization_request')
+    .ifNotExists()
     .addColumn('id', 'varchar', (col) => col.primaryKey())
     .addColumn('did', 'varchar')
     .addColumn('deviceId', 'varchar')
@@ -15,6 +16,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('authorization_request_code_idx')
+    .ifNotExists()
     .unique()
     .on('authorization_request')
     // https://github.com/kysely-org/kysely/issues/302
@@ -23,12 +25,14 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('authorization_request_expires_at_idx')
+    .ifNotExists()
     .on('authorization_request')
     .column('expiresAt')
     .execute()
 
   await db.schema
     .createTable('device')
+    .ifNotExists()
     .addColumn('id', 'varchar', (col) => col.primaryKey())
     .addColumn('sessionId', 'varchar', (col) => col.notNull())
     .addColumn('userAgent', 'varchar')
@@ -39,6 +43,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createTable('device_account')
+    .ifNotExists()
     .addColumn('did', 'varchar', (col) => col.notNull())
     .addColumn('deviceId', 'varchar', (col) => col.notNull())
     .addColumn('authenticatedAt', 'varchar', (col) => col.notNull())
@@ -59,6 +64,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createTable('token')
+    .ifNotExists()
     .addColumn('id', 'integer', (col) => col.primaryKey().autoIncrement())
     .addColumn('did', 'varchar', (col) => col.notNull())
     .addColumn('tokenId', 'varchar', (col) => col.notNull())
@@ -80,12 +86,14 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('token_did_idx')
+    .ifNotExists()
     .on('token')
     .column('did')
     .execute()
 
   await db.schema
     .createIndex('token_code_idx')
+    .ifNotExists()
     .unique()
     .on('token')
     // https://github.com/kysely-org/kysely/issues/302
@@ -94,6 +102,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createTable('used_refresh_token')
+    .ifNotExists()
     .addColumn('refreshToken', 'varchar', (col) => col.primaryKey())
     .addColumn('tokenId', 'integer', (col) => col.notNull())
     .addForeignKeyConstraint(
@@ -108,6 +117,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('used_refresh_token_id_idx')
+    .ifNotExists()
     .on('used_refresh_token')
     .column('tokenId')
     .execute()

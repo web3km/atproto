@@ -3,6 +3,7 @@ import { Kysely } from 'kysely'
 export async function up(db: Kysely<unknown>): Promise<void> {
   await db.schema
     .createTable('jwt_account')
+    .ifNotExists()
     .addColumn('did', 'varchar', (col) => col.notNull())
     .addColumn('externalId', 'varchar', (col) => col.notNull())
     .addColumn('externalProvider', 'varchar', (col) => col.notNull())
@@ -12,6 +13,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('jwt_account_external_unique')
+    .ifNotExists()
     .unique()
     .on('jwt_account')
     .columns(['externalId', 'externalProvider'])

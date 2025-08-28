@@ -3,6 +3,7 @@ import { Kysely, sql } from 'kysely'
 export async function up(db: Kysely<unknown>): Promise<void> {
   await db.schema
     .createTable('app_password')
+    .ifNotExists()
     .addColumn('did', 'varchar', (col) => col.notNull())
     .addColumn('name', 'varchar', (col) => col.notNull())
     .addColumn('passwordScrypt', 'varchar', (col) => col.notNull())
@@ -12,6 +13,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createTable('invite_code')
+    .ifNotExists()
     .addColumn('code', 'varchar', (col) => col.primaryKey())
     .addColumn('availableUses', 'integer', (col) => col.notNull())
     .addColumn('disabled', 'int2', (col) => col.defaultTo(0))
@@ -21,12 +23,14 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex('invite_code_for_account_idx')
+    .ifNotExists()
     .on('invite_code')
     .column('forAccount')
     .execute()
 
   await db.schema
     .createTable('invite_code_use')
+    .ifNotExists()
     .addColumn('code', 'varchar', (col) => col.notNull())
     .addColumn('usedBy', 'varchar', (col) => col.notNull())
     .addColumn('usedAt', 'varchar', (col) => col.notNull())
@@ -35,6 +39,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createTable('refresh_token')
+    .ifNotExists()
     .addColumn('id', 'varchar', (col) => col.primaryKey())
     .addColumn('did', 'varchar', (col) => col.notNull())
     .addColumn('expiresAt', 'varchar', (col) => col.notNull())
@@ -43,12 +48,14 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema // Aids in refresh token cleanup
     .createIndex('refresh_token_did_idx')
+    .ifNotExists()
     .on('refresh_token')
     .column('did')
     .execute()
 
   await db.schema
     .createTable('repo_root')
+    .ifNotExists()
     .addColumn('did', 'varchar', (col) => col.primaryKey())
     .addColumn('cid', 'varchar', (col) => col.notNull())
     .addColumn('rev', 'varchar', (col) => col.notNull())
@@ -57,6 +64,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createTable('actor')
+    .ifNotExists()
     .addColumn('did', 'varchar', (col) => col.primaryKey())
     .addColumn('handle', 'varchar')
     .addColumn('createdAt', 'varchar', (col) => col.notNull())
@@ -64,18 +72,21 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex(`actor_handle_lower_idx`)
+    .ifNotExists()
     .unique()
     .on('actor')
     .expression(sql`lower("handle")`)
     .execute()
   await db.schema
     .createIndex('actor_cursor_idx')
+    .ifNotExists()
     .on('actor')
     .columns(['createdAt', 'did'])
     .execute()
 
   await db.schema
     .createTable('account')
+    .ifNotExists()
     .addColumn('did', 'varchar', (col) => col.primaryKey())
     .addColumn('email', 'varchar', (col) => col.notNull())
     .addColumn('passwordScrypt', 'varchar', (col) => col.notNull())
@@ -84,6 +95,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex(`account_email_lower_idx`)
+    .ifNotExists()
     .unique()
     .on('account')
     .expression(sql`lower("email")`)
@@ -91,6 +103,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createTable('email_token')
+    .ifNotExists()
     .addColumn('purpose', 'varchar', (col) => col.notNull())
     .addColumn('did', 'varchar', (col) => col.notNull())
     .addColumn('token', 'varchar', (col) => col.notNull())

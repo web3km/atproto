@@ -3,6 +3,7 @@ import { Kysely } from 'kysely'
 export async function up(db: Kysely<unknown>): Promise<void> {
   await db.schema
     .createTable('repo_root')
+    .ifNotExists()
     .addColumn('did', 'varchar', (col) => col.primaryKey())
     .addColumn('cid', 'varchar', (col) => col.notNull())
     .addColumn('rev', 'varchar', (col) => col.notNull())
@@ -11,6 +12,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createTable('repo_block')
+    .ifNotExists()
     .addColumn('cid', 'varchar', (col) => col.primaryKey())
     .addColumn('repoRev', 'varchar', (col) => col.notNull())
     .addColumn('size', 'integer', (col) => col.notNull())
@@ -19,12 +21,14 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createIndex('repo_block_repo_rev_idx')
+    .ifNotExists()
     .on('repo_block')
     .columns(['repoRev', 'cid'])
     .execute()
 
   await db.schema
     .createTable('record')
+    .ifNotExists()
     .addColumn('uri', 'varchar', (col) => col.primaryKey())
     .addColumn('cid', 'varchar', (col) => col.notNull())
     .addColumn('collection', 'varchar', (col) => col.notNull())
@@ -35,22 +39,26 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex('record_cid_idx')
+    .ifNotExists()
     .on('record')
     .column('cid')
     .execute()
   await db.schema
     .createIndex('record_collection_idx')
+    .ifNotExists()
     .on('record')
     .column('collection')
     .execute()
   await db.schema
     .createIndex('record_repo_rev_idx')
+    .ifNotExists()
     .on('record')
     .column('repoRev')
     .execute()
 
   await db.schema
     .createTable('blob')
+    .ifNotExists()
     .addColumn('cid', 'varchar', (col) => col.primaryKey())
     .addColumn('mimeType', 'varchar', (col) => col.notNull())
     .addColumn('size', 'integer', (col) => col.notNull())
@@ -62,12 +70,14 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex('blob_tempkey_idx')
+    .ifNotExists()
     .on('blob')
     .column('tempKey')
     .execute()
 
   await db.schema
     .createTable('record_blob')
+    .ifNotExists()
     .addColumn('blobCid', 'varchar', (col) => col.notNull())
     .addColumn('recordUri', 'varchar', (col) => col.notNull())
     .addPrimaryKeyConstraint(`record_blob_pkey`, ['blobCid', 'recordUri'])
@@ -75,6 +85,7 @@ export async function up(db: Kysely<unknown>): Promise<void> {
 
   await db.schema
     .createTable('backlink')
+    .ifNotExists()
     .addColumn('uri', 'varchar', (col) => col.notNull())
     .addColumn('path', 'varchar', (col) => col.notNull())
     .addColumn('linkTo', 'varchar', (col) => col.notNull())
@@ -82,12 +93,14 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .execute()
   await db.schema
     .createIndex('backlink_link_to_idx')
+    .ifNotExists()
     .on('backlink')
     .columns(['path', 'linkTo'])
     .execute()
 
   await db.schema
     .createTable('account_pref')
+    .ifNotExists()
     .addColumn('id', 'integer', (col) => col.autoIncrement().primaryKey())
     .addColumn('name', 'varchar', (col) => col.notNull())
     .addColumn('valueJson', 'text', (col) => col.notNull())
