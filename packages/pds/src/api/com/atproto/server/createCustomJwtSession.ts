@@ -227,6 +227,9 @@ export default function (server: Server, ctx: AppContext) {
         jwkEndpoint: ctx.cfg.jwksConfig?.jwksEndpoint || '',
         jwtVerifierId: ctx.cfg.jwksConfig?.jwtVerifierId || '',
       })
+
+      req.log.info({ id_token: input.body.options.id_token }, 'Received id_token for JWT verification')
+
       const decodedJwt = await jwtVerifier.verifyJwt(
         input.body.options.id_token,
       )
