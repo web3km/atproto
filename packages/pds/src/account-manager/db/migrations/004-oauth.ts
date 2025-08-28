@@ -14,19 +14,31 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .addColumn('code', 'varchar')
     .execute()
 
-  await db.schema
-    .createIndex('authorization_request_code_idx')
-    .unique()
-    .on('authorization_request')
-    // https://github.com/kysely-org/kysely/issues/302
-    .expression(sql`code DESC) WHERE (code IS NOT NULL`)
-    .execute()
+  try {
+    await db.schema
+      .createIndex('authorization_request_code_idx')
+      .unique()
+      .on('authorization_request')
+      // https://github.com/kysely-org/kysely/issues/302
+      .expression(sql`code DESC) WHERE (code IS NOT NULL`)
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
-  await db.schema
-    .createIndex('authorization_request_expires_at_idx')
-    .on('authorization_request')
-    .column('expiresAt')
-    .execute()
+  try {
+    await db.schema
+      .createIndex('authorization_request_expires_at_idx')
+      .on('authorization_request')
+      .column('expiresAt')
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
   await db.schema
     .createTable('device')
@@ -82,19 +94,31 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .addUniqueConstraint('token_id_unique_idx', ['tokenId'])
     .execute()
 
-  await db.schema
-    .createIndex('token_did_idx')
-    .on('token')
-    .column('did')
-    .execute()
+  try {
+    await db.schema
+      .createIndex('token_did_idx')
+      .on('token')
+      .column('did')
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
-  await db.schema
-    .createIndex('token_code_idx')
-    .unique()
-    .on('token')
-    // https://github.com/kysely-org/kysely/issues/302
-    .expression(sql`code DESC) WHERE (code IS NOT NULL`)
-    .execute()
+  try {
+    await db.schema
+      .createIndex('token_code_idx')
+      .unique()
+      .on('token')
+      // https://github.com/kysely-org/kysely/issues/302
+      .expression(sql`code DESC) WHERE (code IS NOT NULL`)
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
   await db.schema
     .createTable('used_refresh_token')
@@ -111,11 +135,17 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     )
     .execute()
 
-  await db.schema
-    .createIndex('used_refresh_token_id_idx')
-    .on('used_refresh_token')
-    .column('tokenId')
-    .execute()
+  try {
+    await db.schema
+      .createIndex('used_refresh_token_id_idx')
+      .on('used_refresh_token')
+      .column('tokenId')
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 }
 
 export async function down(db: Kysely<unknown>): Promise<void> {

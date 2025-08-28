@@ -21,11 +21,18 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .addColumn('createdBy', 'varchar', (col) => col.notNull())
     .addColumn('createdAt', 'varchar', (col) => col.notNull())
     .execute()
-  await db.schema
-    .createIndex('invite_code_for_account_idx')
-    .on('invite_code')
-    .column('forAccount')
-    .execute()
+
+  try {
+    await db.schema
+      .createIndex('invite_code_for_account_idx')
+      .on('invite_code')
+      .column('forAccount')
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
   await db.schema
     .createTable('invite_code_use')
@@ -45,11 +52,18 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .addColumn('nextId', 'varchar')
     .addColumn('appPasswordName', 'varchar')
     .execute()
-  await db.schema // Aids in refresh token cleanup
-    .createIndex('refresh_token_did_idx')
-    .on('refresh_token')
-    .column('did')
-    .execute()
+
+  try {
+    await db.schema // Aids in refresh token cleanup
+      .createIndex('refresh_token_did_idx')
+      .on('refresh_token')
+      .column('did')
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
   await db.schema
     .createTable('repo_root')
@@ -68,17 +82,31 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .addColumn('createdAt', 'varchar', (col) => col.notNull())
     .addColumn('takedownRef', 'varchar')
     .execute()
-  await db.schema
-    .createIndex(`actor_handle_lower_idx`)
-    .unique()
-    .on('actor')
-    .expression(sql`lower("handle")`)
-    .execute()
-  await db.schema
-    .createIndex('actor_cursor_idx')
-    .on('actor')
-    .columns(['createdAt', 'did'])
-    .execute()
+
+  try {
+    await db.schema
+      .createIndex(`actor_handle_lower_idx`)
+      .unique()
+      .on('actor')
+      .expression(sql`lower("handle")`)
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
+
+  try {
+    await db.schema
+      .createIndex('actor_cursor_idx')
+      .on('actor')
+      .columns(['createdAt', 'did'])
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
   await db.schema
     .createTable('account')
@@ -89,12 +117,19 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .addColumn('emailConfirmedAt', 'varchar')
     .addColumn('invitesDisabled', 'int2', (col) => col.notNull().defaultTo(0))
     .execute()
-  await db.schema
-    .createIndex(`account_email_lower_idx`)
-    .unique()
-    .on('account')
-    .expression(sql`lower("email")`)
-    .execute()
+
+  try {
+    await db.schema
+      .createIndex(`account_email_lower_idx`)
+      .unique()
+      .on('account')
+      .expression(sql`lower("email")`)
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
   await db.schema
     .createTable('email_token')

@@ -19,11 +19,17 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .addColumn('content', 'blob', (col) => col.notNull())
     .execute()
 
-  await db.schema
-    .createIndex('repo_block_repo_rev_idx')
-    .on('repo_block')
-    .columns(['repoRev', 'cid'])
-    .execute()
+  try {
+    await db.schema
+      .createIndex('repo_block_repo_rev_idx')
+      .on('repo_block')
+      .columns(['repoRev', 'cid'])
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
   await db.schema
     .createTable('record')
@@ -36,21 +42,42 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .addColumn('indexedAt', 'varchar', (col) => col.notNull())
     .addColumn('takedownRef', 'varchar')
     .execute()
-  await db.schema
-    .createIndex('record_cid_idx')
-    .on('record')
-    .column('cid')
-    .execute()
-  await db.schema
-    .createIndex('record_collection_idx')
-    .on('record')
-    .column('collection')
-    .execute()
-  await db.schema
-    .createIndex('record_repo_rev_idx')
-    .on('record')
-    .column('repoRev')
-    .execute()
+
+  try {
+    await db.schema
+      .createIndex('record_cid_idx')
+      .on('record')
+      .column('cid')
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
+
+  try {
+    await db.schema
+      .createIndex('record_collection_idx')
+      .on('record')
+      .column('collection')
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
+
+  try {
+    await db.schema
+      .createIndex('record_repo_rev_idx')
+      .on('record')
+      .column('repoRev')
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
   await db.schema
     .createTable('blob')
@@ -64,11 +91,18 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .addColumn('createdAt', 'varchar', (col) => col.notNull())
     .addColumn('takedownRef', 'varchar')
     .execute()
-  await db.schema
-    .createIndex('blob_tempkey_idx')
-    .on('blob')
-    .column('tempKey')
-    .execute()
+
+  try {
+    await db.schema
+      .createIndex('blob_tempkey_idx')
+      .on('blob')
+      .column('tempKey')
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
   await db.schema
     .createTable('record_blob')
@@ -86,11 +120,18 @@ export async function up(db: Kysely<unknown>): Promise<void> {
     .addColumn('linkTo', 'varchar', (col) => col.notNull())
     .addPrimaryKeyConstraint('backlinks_pkey', ['uri', 'path'])
     .execute()
-  await db.schema
-    .createIndex('backlink_link_to_idx')
-    .on('backlink')
-    .columns(['path', 'linkTo'])
-    .execute()
+
+  try {
+    await db.schema
+      .createIndex('backlink_link_to_idx')
+      .on('backlink')
+      .columns(['path', 'linkTo'])
+      .execute()
+  } catch (err: any) {
+    if (!err.message?.includes('already exists')) {
+      throw err
+    }
+  }
 
   await db.schema
     .createTable('account_pref')
